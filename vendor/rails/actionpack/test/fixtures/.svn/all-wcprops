@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures
+END
+topic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/topic.rb
+END
+developers_projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/developers_projects.yml
+END
+topics.yml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/topics.yml
+END
+replies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/replies.yml
+END
+developer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/developer.rb
+END
+developers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/developers.yml
+END
+company.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/company.rb
+END
+project.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/project.rb
+END
+projects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/projects.yml
+END
+reply.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/reply.rb
+END
+companies.yml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/companies.yml
+END

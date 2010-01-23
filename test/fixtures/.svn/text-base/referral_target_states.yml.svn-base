@@ -1,0 +1,31 @@
+new:
+  id: new
+  name: Incomplete
+
+waiting_acceptance:
+  id: waiting_acceptance
+  name: New
+
+in_progress:
+  id: in_progress
+  name: Ongoing
+
+new_info:
+  id: new_info
+  name: New Info
+
+waiting_response:
+  id: waiting_response
+  name: Action Requested
+
+declined:
+  id: declined
+  name: Not Accepted
+
+withdrawn_by_source:
+  id: withdrawn_by_source
+  name: Withdrawn By Source
+
+closed:
+  id: closed
+  name: Complete

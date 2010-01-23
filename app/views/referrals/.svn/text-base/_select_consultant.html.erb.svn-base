@@ -1,0 +1,10 @@
+<div class="bevel"><strong>Select a New Consultant:</strong></div>
+
+<div class="change_consultant">
+<%- form_tag change_consultant_referral_path(@target_referral), :id=>'change_consultant_form' do -%>
+<p> Select the new consultant: <%= select_target_physician(@target_referral,'physician_user', true) %>
+  <%= submit_tag 'Done', :class => 'section_save' %>
+</p>
+<%- end -%>
+</div>
+

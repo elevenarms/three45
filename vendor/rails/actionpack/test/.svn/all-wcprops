@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test
+END
+abstract_unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/abstract_unit.rb
+END
+action_view_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/action_view_test.rb
+END
+active_record_unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/active_record_unit.rb
+END
+testing_sandbox.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/testing_sandbox.rb
+END

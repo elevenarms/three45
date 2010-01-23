@@ -1,0 +1,55 @@
+<%- if @results.empty? -%>
+<p>No Messages</p>
+<%- else -%>
+<table cellspacing="0" cellpadding="0" width="100%">
+
+    <thead>
+      <tr>
+        <th class="<%=sort_heading_style("Status","status") %>"><%=sort_message_heading_link("Status","status") %></th>
+        <th class="<%=sort_heading_style("Type","type")%>"><%=sort_message_heading_link("Type","type") %></th>
+        <th class="<%=sort_heading_style("Created","created") %>"><%=sort_message_heading_link("Created","created") %></th>
+        <th class="<%=sort_heading_style("Subject","subject") %>" width="35%"><%=sort_message_heading_link("Subject","subject") %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <%- @results.each_with_index do |result, index| -%>
+    <tr id="<%=result.id%>_data" message_id="<%=result.id%>" referral_id="<%=@target_referral.id%>" class="data <%=render_odd_class(index+1)%> <%=message_status_to_style(result)%>">
+      <td><%=result.display_status%>&nbsp;</td>
+      <td><%=result.display_type%>&nbsp;</td>
+      <td><%=result.display_created_at%>&nbsp;</td>
+      <td><%=result.subject%>&nbsp;</td>
+    </tr>
+    <tr id="<%=result.id%>_summary" message_id="<%=result.id%>" referral_id="<%=@target_referral.id%>" class="summary" style="display: none">
+      <td id="<%=result.id%>_summary_content" colspan="6">
+        &nbsp;
+      </td>
+    </tr>
+    <%- end -%>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th colspan="6">
+          <br/>
+          Page:
+          <%- if @filter.page_number > 1 -%>
+          <%=link_to_remote "Prev", :update=>"grid", :url=>hash_for_referral_messages_url({ :referral_id=>@target_referral.id}).merge({:page_number=>(@filter.page_number-1)}), :method =>:get, :html=>{:class=>"page_link"} %>
+          <%- else -%>
+          &nbsp;
+          <%- end -%>
+          <%- for page in 1..@total_pages -%>
+          <%=link_to_remote "#{page}", :update=>"grid", :url=>hash_for_referral_messages_url({ :referral_id=>@target_referral.id}).merge({:page_number=>page}), :method =>:get, :html=>{:class=>(page == @filter.page_number ? "current_page_link" : "page_link")} %>
+          <%- end -%>
+          <%- if @filter.page_number < @total_pages -%>
+              |           <%=link_to_remote "Next", :update=>"grid", :url=>hash_for_referral_messages_url({ :referral_id=>@target_referral.id}).merge({:page_number=>(@filter.page_number+1)}), :method =>:get, :html=>{:class=>"page_link"} %>
+          <%- else -%>
+          &nbsp;
+          <%- end -%>
+        </th>
+      </tr>
+    </tfoot>
+
+  </table>
+<%- end -%>
+

@@ -1,0 +1,40 @@
+address_one:
+    id: address_one
+    street1: 123 Main Street
+    street2: Suite 400
+    city: Austin
+    state: Texas
+    zip_code: 78701
+    plus_four_code: 1234
+    latlng: 30.3,-97.7
+
+address_two:
+    id: address_two
+    street1: 456 Maple Drive
+    street2: Suite 100
+    city: Austin
+    state: Texas
+    zip_code: 78746
+    plus_four_code: 1234
+    latlng: 30.3,-97.7
+
+address_three:
+    id: address_three
+    street1: 5656 Bee Caves Rd
+    street2: Suite M-300
+    city: Austin
+    state: Texas
+    zip_code: 78746
+    plus_four_code: "0000"
+    latlng: 30.294664,-97.824788
+
+address_four:
+    id: address_four
+    street1: 4207 James Casey St
+    street2: Suite 215
+    city: Austin
+    state: Texas
+    zip_code: 78746
+    plus_four_code: "0000"
+    latlng: 30.225648,-97.773952
+

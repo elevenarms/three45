@@ -1,0 +1,73 @@
+<%- @page_title = "Manage Profile Tags" -%>
+<%- content_for :page_styles do -%>
+#add_profile_link {
+  padding-bottom: 10px;
+}
+
+#add_profile_tag_partial {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+<%- end -%>
+
+<%- content_for :page_scripts do -%>
+
+function tag_type_selected(e) {
+  tag_type_id = e.value;
+  target_profile_id = $('profile_tag_profile_id').value;
+  $('profile_tag_profile_id').value = target_profile_id;
+  new Ajax.Updater('scratch', '/profile_tags/new?target_profile_id='+target_profile_id+'&profile_tag[tag_type_id]='+tag_type_id, {asynchronous:true, evalScripts:true, method:'get'}); return false;
+}
+
+function tag_selected(e) {
+  tag_id = e.value;
+  tag_type_id = $('profile_tag_tag_type_id').value;
+  target_profile_id = $('profile_tag_profile_id').value;
+  new Ajax.Updater('scratch', '/profile_tags/new?target_profile_id='+target_profile_id+'&profile_tag[tag_type_id]='+tag_type_id+'&profile_tag[tag_id]='+tag_id, {asynchronous:true, evalScripts:true, method:'get'}); return false;
+}
+
+function child_tag_selected(e) {
+  tag_id = e.value;
+  tag_type_id = $('profile_tag_tag_type_id').value;
+  parent_tag_id = $('parent_tag_id').value;
+  target_profile_id = $('profile_tag_profile_id').value;
+  new Ajax.Updater('scratch', '/profile_tags/new?target_profile_id='+target_profile_id+'&profile_tag[tag_type_id]='+tag_type_id+'&profile_tag[tag_id]='+tag_id+'&parent_tag_id='+parent_tag_id, {asynchronous:true, evalScripts:true, method:'get'}); return false;
+}
+
+function all_checkbox_clicked(e) {
+  if(e.checked == true) {
+    $('profile_checkboxes').getElementsBySelector('input').each(function(item) {
+       item.checked = true;
+    });
+  }
+}
+
+
+function profile_checkbox_clicked(e) {
+  if(e.checked != true) {
+    $('check_all_profiles').checked = false;
+  }
+}
+
+<%- end -%>
+
+<div>&nbsp</div>
+
+<p><%= link_to "Back to Admin Home Page", :controller => session[:admin_type], :action => 'index' if session[:admin_type]%></p>
+
+<h3>Manage Profile Tags</h3>
+
+<div id="select_profile">
+
+<%- form_remote_tag(:update=>"scratch", :url=>{:controller=>"profile_tags", :action=>"show"}, :method =>:get, :html=>{}) do -%>
+<strong>Select a profile to manage: </strong> <%=select_tag "target_profile_id", options_for_select([["-- Select a Profile --", ""]] + @profiles.collect {|p| [p.display_name, p.id]}) %> <%=submit_tag "Select"%>
+<%- end -%>
+</div>
+
+<hr/>
+
+<div id="profile_tag_detail_partial">
+
+</div>
+
+<div>&nbsp;</div>

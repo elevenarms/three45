@@ -1,0 +1,16 @@
+
+<H3>Create a new Insurance Carrier </H3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<% form_for :tag, :url => { :action => 'add_carrier', :id => @tag } do |t| -%>
+  <p>Add  insurance carrier  <%= t.text_field :name %> </p> 
+<% end %>
+<p><strong>Current Carriers</strong></p>
+<table id="tags">
+  <tr>
+    <th>Tag Type</th>
+    <th>Tag Value</th>
+    <th></th>
+  </tr>
+  <%= render :partial => 'tag', :collection => @tags %>
+</table>
+ 

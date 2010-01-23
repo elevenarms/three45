@@ -1,0 +1,13 @@
+<h3> Users in workgroup: <%= @wkgrp.name %>
+</h3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% @wkgrp_users.each do |wu| %>
+  <p>
+    <%= wu.user[:first_name]%> <%= wu.user[:middle_name] %> <%= wu.user[:last_name] %>, 
+    <%= wu.user[:login] %>,  
+    <% ug = UserGroup.find_by_user_id(wu.user[:id]).group_id %>
+    <%= ug %>
+
+  </p>
+<% end %>

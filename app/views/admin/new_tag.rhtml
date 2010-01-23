@@ -1,0 +1,16 @@
+<p><%= link_to "List all tags", :action => 'list_tags' %></p>
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<% form_for :tag, :url => { :action => 'create_tag', :id => @tag } do |f| %>
+  <p>New tag name: </p>
+    <p><%= f.text_field :name %> </p>
+    <p>Existing tag type: </p>
+<p><%= f.select(:tag_type_id, @tag_types) %> </p>
+
+  <% fields_for :user do |u| %>
+    <p>Select a user to add this tag to: </p>
+    <p><%= u.select(:id, @users) %> </p>
+  <% end %>  
+  
+  <p><%= submit_tag 'Add new tag to user' %></p>
+<% end %>

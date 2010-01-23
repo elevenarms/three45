@@ -1,0 +1,47 @@
+<div id="profile_<%=profile_snippet.id%>" class="profile_snippet">
+
+ <div class="options" style="float:right; text-align:left">
+
+       <%- if context == "network" -%>
+           <div id="friendship_link_<%=profile_snippet.id%>">
+        <!--
+            Removed for the Alpha
+
+             <%- friendship = profile_in_friendship_with(profile_snippet) -%>
+             <%- if friendship -%>
+               <%=render_block_open_ajax_links(friendship)%>
+             <%- else -%>
+               <%=render_add_to_network_ajax_link(profile_snippet)%>
+             <%- end -%>
+             -->
+             &nbsp;
+           </div>
+       <%- elsif context == "referral" -%>
+       <div id="referral_link_<%=profile_snippet.id%>" style="padding-bottom:5px;">
+         <%=link_to "Pick Consultant", "/create_referral?id=#{profile_snippet.id}", :method => :post %>
+       </div>
+       <%- elsif context == "request_referral" and profile_snippet.user_profile? -%>
+       <div id="referral_link_<%=profile_snippet.id%>" style="padding-bottom:5px;">
+         <%=link_to "Pick Referrering Physician", "/create_referral?id=#{profile_snippet.id}&type=request_referral", :method => :post %>
+       </div>
+       <%- else -%>
+       <div style="padding-bottom:5px;">&nbsp;</div>
+       <%- end -%>
+   <div><%=link_to "View Profile", {:context=>context}.merge(hash_for_network_profile_path(:id=>profile_snippet.id)) %></div>
+
+ </div>
+
+ <div class="thumbnail"><%=display_thumbnail_or_empty(profile_snippet)%></div>
+ <div class="details">
+
+    <div class="name"><%=profile_snippet.display_name%></div>
+    <div class="belongs_to"><%=render_belongs_to(profile_snippet)%></div>
+    <div class="stats"><%=render_profile_referral_in_count(profile_snippet)%> / <%=render_profile_referral_out_count(profile_snippet)%></div>
+
+    <div class="specialty"><%=tag_list(profile_snippet.tags_for_type(:specialties), "None", context)%></div>
+
+ </div>
+
+ <div class="end"></div>
+
+</div>

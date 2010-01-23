@@ -1,0 +1,2 @@
+module FaxFilesHelper
+end

@@ -1,0 +1,31 @@
+9
+
+dir
+334
+svn+ssh://67.207.139.58/usr/local/svn/repos/trunk/webapp/vendor
+svn+ssh://67.207.139.58/usr/local/svn/repos
+
+
+
+2008-04-08T01:42:22.557167Z
+200
+jh
+has-props
+
+svn:special svn:externals svn:needs-lock
+svn:externals
+
+
+
+
+
+
+
+
+
+
+b3cc8395-7613-4221-9100-3ee0cd30621b
+
+plugins
+dir
+

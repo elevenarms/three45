@@ -1,0 +1,16 @@
+<%- @page_title = "Choose user" -%>
+<h3> Go directly to the chosen user's profile page.</h3>
+
+<p><%= link_to "New tag for user", :action => 'new_tag_for_user' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user, :url => { :action => 'render_user_profile', :id => @user } do |f| -%>
+  
+  <p>Select a user: </p>
+  <p><%= f.select(:id, @users) %> </p>
+
+    
+<p><%= submit_tag ' Get user profile' %></p>
+
+<% end -%>  
+

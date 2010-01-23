@@ -1,0 +1,109 @@
+workgroup_user_admin345:
+    id: workgroup_user_admin345
+    workgroup_id: workgroup_fictitious
+    user_id: admin345
+
+workgroup_user_mllamb:
+    id: workgroup_user_mllamb
+    workgroup_id: workgroup_fictitious
+    user_id: mllamb
+
+workgroup_user_hqmann:
+    id: workgroup_user_hqmann
+    workgroup_id: workgroup_fictitious
+    user_id: horace_quinn_mann
+
+workgroup_user_mpcurie:
+    id: workgroup_user_mpcurie
+    workgroup_id: workgroup_fictitious
+    user_id: marie_paris_curie
+
+workgroup_user_quentin:
+    id: workgroup_user_quentin
+    workgroup_id: workgroup_mccoy
+    user_id: 1
+
+workgroup_user_aaron:
+    id: workgroup_user_aaron
+    workgroup_id: workgroup_welby
+    user_id: 2
+
+workgroup_user_mike_the_chiro:
+    id: workgroup_user_mike_the_chiro
+    workgroup_id: workgroup_chiro
+    user_id: 3
+
+workgroup_user_dr_gillespie:
+    id: workgroup_user_dr_gillespie
+    workgroup_id: workgroup_kildare
+    user_id: dr_gillespie
+
+workgroup_user_stretch_brewster:
+    id: workgroup_user_stretch_brewster
+    workgroup_id: workgroup_phys_therapy
+    user_id: stretch_brewster
+
+workgroup_user_joyce_admin:
+    id: workgroup_user_joyce_admin
+    workgroup_id: workgroup_kildare
+    user_id: joyce_kildare_admin
+
+workgroup_user_quentin_jr:
+    id: workgroup_user_quentin_jr
+    workgroup_id: workgroup_mccoy
+    user_id: quentin_jr
+
+workgroup_user_quentin_admin:
+    id: workgroup_user_quentin_admin
+    workgroup_id: workgroup_mccoy
+    user_id: quentin_admin
+
+workgroup_user_mccoy:
+    id: workgroup_user_mccoy
+    workgroup_id: workgroup_mccoy
+    user_id: mccoy
+
+wkp_usr_thomas_c_baldacchino:
+  id: wkp_usr_thomas_c_baldacchino
+  workgroup_id: capital_cardio
+  user_id: thomas_c_baldacchino
+
+wkp_usr_james_b_williams:
+  id: wkp_usr_james_b_williams
+  workgroup_id: capital_cardio
+  user_id: james_b_williams
+
+wkp_usr_eric_j_frischhertz:
+  id: wkp_usr_eric_j_frischhertz
+  workgroup_id: capital_cardio
+  user_id: eric_j_frischhertz
+
+wkp_usr_samuel_j_dimaio:
+  id: wkp_usr_samuel_j_dimaio
+  workgroup_id: capital_cardio
+  user_id: samuel_j_dimaio
+
+wkp_usr_osvaldo_s_gigliotti:
+  id: wkp_usr_osvaldo_s_gigliotti
+  workgroup_id: capital_cardio
+  user_id: osvaldo_s_gigliotti
+
+wkp_usr_j_faroni:
+  id: wkp_usr_j_faroni
+  workgroup_id: capital_cardio
+  user_id: j_faroni
+
+wkp_usr_k_machuga:
+  id: wkp_usr_k_machuga
+  workgroup_id: capital_cardio
+  user_id: k_machuga
+
+wkp_usr_m_smith:
+  id: wkp_usr_m_smith
+  workgroup_id: capital_cardio
+  user_id: m_smith
+
+non_sub_uns:
+  id: nonsub_uns
+  workgroup_id: workgroup_nonsub
+  user_id: uns

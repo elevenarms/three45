@@ -1,0 +1,113 @@
+<%- @page_title = "Create a New Message" -%>
+
+<%- content_for :header do -%>
+<%= stylesheet_link_tag 'calendar-system.css' %>
+<%= javascript_include_tag 'calendar', 'calendar-en', 'calendar-setup' %>
+<%- end -%>
+
+<%- content_for :page_scripts do -%>
+
+function handleDropDownForIE(e) {
+
+    // Toggle visibility of the requested by date selector
+    if(e.value == 'request' || e.value == 'reply_request') {
+      $('response_required_by').show();
+    } else {
+      $('response_required_by').hide();
+    }
+
+}
+
+function handleCalUpdate(cal) {
+  // left for future UI hook
+}
+<%- end -%>
+
+<%- content_for :page_styles do -%>
+<%- end -%>
+
+<div>&nbsp;</div>
+
+<h3>Create a New Message</h3>
+
+<div class="left">
+
+  <fieldset>
+
+  <div class="message_form">
+
+<%- form_for :message, @message, :url=> referral_messages_path(@target_referral), :html => {:name => 'message_form'} do |f| -%>
+
+    <div class="type">
+
+    <label>Type:</label>
+
+    <%= f.select 'referral_message_type_id', @message_types.select {|t| t.id != 'reply_provided' and t.id != 'info_provided'}.collect {|t| [ t.name, t.id] }, {:include_blank=>true}, {:onChange=>"handleDropDownForIE(this)"}  %>
+
+    <%=error_message_on "message", "referral_message_type_id"%>
+
+    </div>
+
+    <div class="response_required_by" id="response_required_by" <%="style='display:none'" unless @message.request?%>>
+
+      <label>Reply Requested By: &nbsp;</label>
+
+      <%= calendar_field 'message', 'response_required_by',
+                      { :class => 'date',
+                        :field_title => 'Date',
+                        :button_title => 'Show calendar',
+                        :button_image => "/images/calendar.png"
+                      },
+                      { :firstDay => 1,
+                        :step => 1,
+                        :showOthers => true,
+                        :cache => true,
+                        :ifFormat => '%Y-%m-%d',
+                        :onUpdate => :handleCalUpdate
+                      }
+                %>
+
+      <%=error_message_on "message", "response_required_by"%>
+
+    </div>
+
+    <div class="subject">
+
+    <label>Subject:</label>
+
+    <%= f.text_field 'subject', :size => 60, :maxlength => 80 %>
+
+    <%=error_message_on "message", "subject"%>
+
+    </div>
+
+    <div class="message_text">
+
+      <label>Message: </label>
+
+      <%=f.text_area('message_text', {:cols=>50, :rows=>5})%>
+
+    </div>
+
+        <div id="hidden_ids"></div>
+
+<%- end -%>
+
+        </div>
+
+        <%= render :partial => 'attachments' %>
+
+    <div class="button_bar">
+
+        <a href="#" onclick="message_form.submit()">Send</a>&nbsp;&nbsp;
+        <%=link_to "Cancel", referral_path(@target_referral)%>
+
+        </div>
+
+</fieldset>
+
+</div>
+
+<div class="right">
+
+</div>

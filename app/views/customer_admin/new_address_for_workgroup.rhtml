@@ -1,0 +1,41 @@
+<%- @page_title = "Workgroup addresses" -%>
+<p><%= link_to "Back to Admin Home Page", :controller => session[:admin_type], :action => 'index' %></p>
+<h3> Current addresses for workgroup: <%= @workgroup.name %>  </h3>
+<% @workgroup_addresses.each do |wa| %>
+  <p>
+    <%= wa.address_type[:name]%>: 
+    <%= wa.address[:street1] %>, 
+    <%= wa.address[:street2] %>, 
+    <%= wa.address[:city] %>, 
+    <%= wa.address[:state] %>, 
+    <%= wa.address[:zip_code] %>,
+    <%= wa.address[:latlng] %>
+    <%= link_to "delete this address", :action => 'delete_address', :id => wa.id %>
+  </p>
+<% end %>
+<HR>
+<H3>Add a new addresses</H3>
+
+<% form_for :address, :url => { :controller => session[:admin_type], :action => 'add_address_to_workgroup', :id => @address } do |f| -%>
+
+      <% fields_for :address_type do |a| %>
+        <p>Type of address: </p>
+        <p><%= a.select(:id, @address_types) %> </p>
+      <% end %>
+  <p><label for="street1">Street (first line): </label><br/>
+  <%= f.text_field :street1 %></p>
+
+  <p><label for="street2">Street (second line): </label><br/>
+  <%= f.text_field :street2 %></p>
+
+  <p><label for="city">City: </label><br/>
+  <%= f.text_field :city %></p>
+
+  <p><label for="state">State: </label><br/>
+  <%= f.text_field :state %></p>
+
+  <p>Zip:</p>  
+  <p><%= f.text_field :zip_code%> </p>
+
+  <p><%= submit_tag 'Add this address' %></p>
+<% end -%>

@@ -1,0 +1,15 @@
+complete:
+  id: complete
+  name: Complete
+
+waiting_response:
+  id: waiting_response
+  name: Action Requested
+
+new_info:
+  id: new_info
+  name: New Information
+
+void:
+  id: void
+  name: Void

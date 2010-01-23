@@ -1,0 +1,27 @@
+<p><%= link_to "Back to Admin Home Page",  :controller => session[:admin_type], :action => 'index' %></p>
+<H3> Edit workgroup Information for  <%= @workgroup.name %> </H3>
+
+<% form_for :workgroup,
+            :url => { :controller => session[:admin_type], :action => 'update_workgroup', :id => @workgroup } ,
+            :html => { :method => :put } do |f| -%>
+
+  <p>Workgroup name:<br /><%= f.text_field :name, :size => 60, :value => @workgroup.name %></p>
+  <p><%= f.hidden_field :subdomain, :size => 60, :value => @workgroup.subdomain  %></p>  
+  <p>Office phone:<br /><%= f.text_field :office_number, :size => 60, :value => @workgroup.office_number  %></p>
+  <p>Office fax:<br /><%= f.text_field :fax_number, :size => 60, :value => @workgroup.fax_number  %></p>
+  <p><%= f.hidden_field :workgroup_subtype_id, :size => 60, :value => @workgroup.workgroup_subtype_id  %></p>
+  <p><%= f.hidden_field :workgroup_state_id, :size => 60, :value => @workgroup.workgroup_state_id  %></p>
+  <p><%= f.hidden_field :workgroup_type_id, :size => 60, :value => @workgroup.workgroup_type_id  %></p>    
+  <p><%= f.hidden_field :description, :rows => 4, :cols => 60, :value => @workgroup.description  %></p>
+  <p><%= f.hidden_field :anyone_can_sign_referral_flag, :size => 1, :value => @workgroup.anyone_can_sign_referral_flag  %></p>  
+<% unless @prfle.nil? %>
+  <% fields_for :profile do |p| %>
+  <p>Display name:<br /><%= p.text_field :display_name, :size => 60, :value => @prfle.display_name %></p>
+  <p>Notification email:<br /><%= p.text_field :notify_email, :size => 60, :value => @prfle.notify_email %></p>
+  <p>Description of our health care group<br /><%= p.text_area :description, :rows => 5, :cols => 60, :value => @prfle.description %></p>
+  <% end %>
+<% end %>
+
+
+  <%= submit_tag 'Save' %>
+<% end -%>

@@ -1,0 +1,33 @@
+<%- if @total_pages > 0 -%>
+    <div class="pagination">
+
+      <div class="prev">
+        <%- if @page_number > 1 -%>
+          <%- if params[:context] == "referral" -%>
+          <%=link_to "< Prev", hash_for_start_referral_search_path.merge({:page_number=>(@page_number-1), :context=> params[:context]}).merge(search_filters_to_hash) %>
+          <%- else -%>
+          <%=link_to "< Prev", hash_for_network_search_path.merge({:page_number=>(@page_number-1), :context=> params[:context]}).merge(search_filters_to_hash) %>
+          <%- end -%>
+        <%- else -%>
+        &nbsp;
+        <%- end -%>
+      </div>
+
+      <div class="count"> Showing Page <%=@page_number%> of <%=@total_pages%> </div>
+
+      <div class="next">
+        <%- if @page_number < @total_pages -%>
+          <%- if params[:context] == "referral" -%>
+          <%=link_to "Next >", hash_for_start_referral_search_path.merge({:page_number=>(@page_number+1), :context=> params[:context]}).merge(search_filters_to_hash) %>
+          <%- else -%>
+          <%=link_to "Next >", hash_for_network_search_path.merge({:page_number=>(@page_number+1), :context=> params[:context]}).merge(search_filters_to_hash) %>
+          <%- end -%>
+        <%- else -%>
+        &nbsp;
+        <%- end -%>
+      </div>
+
+    </div>
+<%- else -%>
+<div>No profiles found</div>
+<%- end -%>

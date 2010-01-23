@@ -1,0 +1,13 @@
+test_referral_fax_one:
+    id: test_referral_fax_one
+    referral_id: kildare_to_mccoy_new_referral
+    referral_fax_state_id: waiting
+    page_count: 11
+    comments: test fax
+
+test_referral_fax_two:
+    id: test_referral_fax_two
+    referral_id: kildare_to_mccoy_new_referral
+    referral_fax_state_id: waiting
+    page_count: 9
+    comments: test fax too

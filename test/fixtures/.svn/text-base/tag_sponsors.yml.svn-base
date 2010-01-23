@@ -1,0 +1,23 @@
+tag_sponser_osteopath:
+    id: tag_sponser_osteopath
+    tag_id: tag_certification_cert_osteopath
+    name: Austin Osteopath Group
+    image_path: /images/network.jpg
+    link_url: /sponsors/docs/fake.pdf
+    detail_text: Suspendisse justo. Nullam quis orci in risus fringilla scelerisque. Nunc adipiscing. Aliquam tempus. In et nulla varius arcu dignissim viverra. Praesent eu pede. Nam vestibulum ornare sapien. Ut placerat. Suspendisse interdum nibh a lectus. Donec eget sem id lectus malesuada blandit. Ut nonummy mi pharetra justo. Morbi in elit sed justo faucibus pellentesque. Sed ac turpis.
+
+tag_sponser_osteopath_too:
+    id: tag_sponser_osteopath_too
+    tag_id: tag_certification_cert_osteopath
+    name: North Austin Osteopath Partnership
+    image_path: path_tbd
+    link_url: link_tbd
+    detail_text: Duis interdum. Mauris fringilla ante non lorem. Maecenas laoreet pretium nibh. Donec fermentum. Suspendisse facilisis. Etiam varius accumsan justo. Fusce eget turpis. Quisque lectus. Ut diam felis, tempus id, lacinia tincidunt, dignissim id, lacus. Mauris pretium ante. Morbi sem. Aenean dui turpis, convallis eu, semper non, hendrerit sed, metus. Mauris fermentum orci et eros. Morbi rhoncus mauris et libero. Fusce sit amet nulla. Nulla at mauris. Integer vitae lacus. Vivamus faucibus ullamcorper dolor.
+
+tag_sponsor_humana_one:
+    id: tag_sponsor_humana_one
+    tag_id: tag_insurance_accepted_humana_one
+    name: Human One
+    image_path: path_tbd
+    link_url: link_tbd
+    detail_text: Morbi commodo odio et lorem. Praesent odio. Pellentesque blandit, leo sit amet porta suscipit, ligula tellus aliquet neque, sit amet interdum massa augue at purus. Sed mauris ante, viverra vel, facilisis in, dignissim id, lectus. Praesent aliquet dolor nec sem. Curabitur imperdiet purus ut leo. Maecenas faucibus pretium libero. Integer molestie. Mauris fringilla adipiscing libero. Praesent et orci nec diam viverra adipiscing. Nullam vehicula vehicula purus.

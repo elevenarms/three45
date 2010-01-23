@@ -1,0 +1,6 @@
+welby_to_stretch_plan:
+  id: welby_to_stretch_plan
+  referral_id: welby_to_stretch_in_progress
+  insurance_carrier_tag_id: tag_carrier_blue_cross
+  insurance_carrier_plan_tag_id: tag_carrier_blue_cross_1
+  policy_details: Policy Details Here

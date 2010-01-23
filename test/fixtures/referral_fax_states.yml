@@ -1,0 +1,11 @@
+waiting:
+  id: waiting
+  name: Waiting to receive fax
+
+received_successfully:
+  id: received_successfully
+  name: Successfully received fax
+
+received_error:
+  id: received_error
+  name: Error receiving fax

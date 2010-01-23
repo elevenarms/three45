@@ -1,0 +1,22 @@
+<%- @page_title = "New Messages" -%>
+<%- @page_header = "New Messages" -%>
+
+<%- @new_messages.each do |message| -%>
+<div class="message">
+  <%=render :partial=>"/messages/message", :object => message, :locals => { :skip_close_button => true }%>
+
+  <%- if message.is_reply? -%>
+  <hr/>
+  <%=render :partial=>"/messages/message", :object => message.reply_to_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+  <%- if message.has_reply? -%>
+  <hr/>
+  <%=render :partial=>"/messages/message", :object => message.reply_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+</div>
+<%- end -%>
+<%- if @new_messages.empty? -%>
+No new messages
+<%- end -%>

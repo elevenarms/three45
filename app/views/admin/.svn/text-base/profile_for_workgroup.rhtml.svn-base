@@ -1,0 +1,16 @@
+<%- @page_title = "Choose workgroup" -%>
+<h3> Go directly to the chosen workgroup's profile page.</h3>
+
+<p><%= link_to "New tag for workgroup", :action => 'new_tag_for_workgroup' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :workgroup, :url => { :action => 'render_workgroup_profile', :id => @workgroup } do |f| -%>
+  
+  <p>Select a workgroup: </p>
+  <p><%= f.select(:id, @workgroups) %> </p>
+
+    
+<p><%= submit_tag 'Get workgroup profile' %></p>
+
+<% end -%>  
+

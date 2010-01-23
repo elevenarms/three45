@@ -1,0 +1,10 @@
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :workgroup_user, :url => { :action => 'create_workgroup_user', :id => @workgroup_users } do |f| %>
+  <p>Workgroup to put the user in: </p>
+  <p><%= f.select(:workgroup_id, @wkgrps) %> </p>
+  <p>User to put in the workgroup: </p>
+  <p><%= f.select(:user_id, @users) %> </p>
+  <p><%= submit_tag %></p>
+<% end %>
+<p><%= link_to "List all workgroup user combinations", :action => 'list_workgroup_users' %></p>

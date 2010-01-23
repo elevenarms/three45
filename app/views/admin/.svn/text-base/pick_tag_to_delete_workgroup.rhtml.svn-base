@@ -1,0 +1,17 @@
+<%- @page_title = "Pick tag to delete" -%>
+<h3> Pick a tag to delete for workgroup: </h3><%= @workgroup.name -%>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :workgroup, :url => { :action => 'remove_tag_from_workgroup', :id => @workgroup } do |u| -%>
+  <% u.text_field :id, :value => @workgroup.id -%>  
+  <% fields_for :tag do |t| %>
+    <p>Select a tag: </p>
+    <p><%= t.select(:id, @tags_plus) %> </p>  
+  <% end %>
+
+<p><%= submit_tag 'Delete tag from workgroup' %></p>
+
+<% end %>  
+

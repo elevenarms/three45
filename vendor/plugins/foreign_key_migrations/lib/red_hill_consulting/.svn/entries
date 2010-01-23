@@ -1,0 +1,31 @@
+9
+
+dir
+334
+svn+ssh://67.207.139.58/usr/local/svn/repos/trunk/webapp/vendor/plugins/foreign_key_migrations/lib/red_hill_consulting
+svn+ssh://67.207.139.58/usr/local/svn/repos
+
+
+
+2008-01-02T20:20:43.239101Z
+19
+jh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b3cc8395-7613-4221-9100-3ee0cd30621b
+
+foreign_key_migrations
+dir
+

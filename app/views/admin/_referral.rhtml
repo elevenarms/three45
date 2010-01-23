@@ -1,0 +1,13 @@
+
+<tr>
+  <td><%= link_to referral.from_name,  :action => 'referral_history', :ref_id=> referral.id, :sort=>@sort, :show_what=>@show_what %></td>
+  <td><%= referral.to_name -%></td>
+  <td><% patient = ReferralPatient.find_by_referral_id(referral.id) %>
+      <%= patient[:last_name] unless patient == nil %></td> 
+  <td><%= referral.updated_at.strftime("%m/%d %I:%M%p") -%></td>
+  <td><%= referral.referral_state_id -%></td>
+  <% if @show_what == 'show all' then %>
+    <td><%= referral.wizard_step -%></td>
+  <% end %>  
+  <td><%= referral.created_at.strftime("%m/%d %I:%M%p") -%></td>
+</tr>

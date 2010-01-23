@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activemodel/lib/active_model
+END
+validations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activemodel/lib/active_model/validations.rb
+END
+observing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activemodel/lib/active_model/observing.rb
+END
+callbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activemodel/lib/active_model/callbacks.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activemodel/lib/active_model/base.rb
+END

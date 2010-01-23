@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activerecord/test/fixtures/all
+END
+tasks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activerecord/test/fixtures/all/tasks.yml
+END
+developers.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activerecord/test/fixtures/all/developers.yml
+END
+people.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activerecord/test/fixtures/all/people.csv
+END

@@ -1,0 +1,15 @@
+<h3> "All User and Workgroup Profiles in the system"
+</h3>
+<p><%= link_to "Add a new profile", :action => 'new_profile' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<table id="profiles">
+  <tr>
+    <th>Profile Display Name</th>
+    <th>Profile Type</th>
+    <th>User or Workgroup ID</th>
+    <th>Workgroup</th>
+  </tr>
+  <%= render :partial => 'profile', :collection => @prfles %>
+</table>
+

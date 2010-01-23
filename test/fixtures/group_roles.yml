@@ -1,0 +1,115 @@
+--- 
+apw_admin_manage_physician_profiles: 
+  updated_at: 
+  role_id: manage_physician_profiles
+  group_id: apw_admin
+  id: apw_admin_manage_physician_profiles
+  created_at: 
+ppw_physician_user_manage_wg_status: 
+  updated_at: 
+  role_id: manage_workgroup_status
+  group_id: ppw_physician_user
+  id: ppw_physician_user_manage_wg_status
+  created_at: 
+apw_admin_manage_billing: 
+  updated_at: 
+  role_id: manage_billing
+  group_id: apw_admin
+  id: apw_admin_manage_billing
+  created_at: 
+ppw_physician_user_manage_billing: 
+  updated_at: 
+  role_id: manage_billing
+  group_id: ppw_physician_user
+  id: ppw_physician_user_manage_billing
+  created_at: 
+ppw_physician_user_network_feature: 
+  updated_at: 
+  role_id: network_feature
+  group_id: ppw_physician_user
+  id: ppw_physician_user_network_feature
+  created_at: 
+apw_admin_manage_users: 
+  updated_at: 
+  role_id: manage_users
+  group_id: apw_admin
+  id: apw_admin_manage_users
+  created_at: 
+apw_admin_manage_workgroup_status: 
+  updated_at: 
+  role_id: manage_workgroup_status
+  group_id: apw_admin
+  id: apw_admin_manage_workgroup_status
+  created_at: 
+ppw_physician_user_network_profile: 
+  updated_at: 
+  role_id: network_profile
+  group_id: ppw_physician_user
+  id: ppw_physician_user_network_profile
+  created_at: 
+ppw_admin_manage_physician_profiles: 
+  updated_at: 
+  role_id: manage_physician_profiles
+  group_id: ppw_admin
+  id: ppw_admin_manage_physician_profiles
+  created_at: 
+ppw_admin_manage_users: 
+  updated_at: 
+  role_id: manage_users
+  group_id: ppw_admin
+  id: ppw_admin_manage_users
+  created_at: 
+ppw_physician_user_manage_analytics: 
+  updated_at: 
+  role_id: manage_analytics
+  group_id: ppw_physician_user
+  id: ppw_physician_user_manage_analytics
+  created_at: 
+ppw_admin_manage_billing: 
+  updated_at: 
+  role_id: manage_billing
+  group_id: ppw_admin
+  id: ppw_admin_manage_billing
+  created_at: 
+ppw_physician_proxy_manage_phys_prof: 
+  updated_at: 
+  role_id: manage_physician_profiles
+  group_id: ppw_physician_proxy
+  id: ppw_physician_proxy_manage_phys_prof
+  created_at: 
+ppw_admin_manage_analytics: 
+  updated_at: 
+  role_id: manage_analytics
+  group_id: ppw_admin
+  id: ppw_admin_manage_analytics
+  created_at: 
+apw_admin_manage_analytics: 
+  updated_at: 
+  role_id: manage_analytics
+  group_id: apw_admin
+  id: apw_admin_manage_analytics
+  created_at: 
+ppw_physician_user_manage_users: 
+  updated_at: 
+  role_id: manage_users
+  group_id: ppw_physician_user
+  id: ppw_physician_user_manage_users
+  created_at: 
+ppw_admin_manage_workgroup_status: 
+  updated_at: 
+  role_id: manage_workgroup_status
+  group_id: ppw_admin
+  id: ppw_admin_manage_workgroup_status
+  created_at: 
+ppw_physician_user_network_can_add: 
+  updated_at: 
+  role_id: network_can_be_added
+  group_id: ppw_physician_user
+  id: ppw_physician_user_network_can_add
+  created_at: 
+apw_admin_network_manage_wg_prof: 
+  updated_at: 
+  role_id: network_manage_workgroup_profile
+  group_id: apw_admin
+  id: apw_admin_network_manage_wg_prof
+  created_at: 

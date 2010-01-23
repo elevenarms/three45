@@ -1,0 +1,41 @@
+workgroup_address_one:
+    id: workgroup_address_one
+    workgroup_id: workgroup_kildare
+    address_id: address_one
+    address_type_id: address_type_billing
+
+workgroup_address_two:
+    id: workgroup_address_two
+    workgroup_id: workgroup_kildare
+    address_id: address_two
+    address_type_id: address_type_office
+
+workgroup_address_three:
+    id: workgroup_address_three
+    workgroup_id: workgroup_mccoy
+    address_id: address_two
+    address_type_id: address_type_office
+
+workgroup_address_four:
+    id: workgroup_address_four
+    workgroup_id: workgroup_welby
+    address_id: address_two
+    address_type_id: address_type_office
+
+capital_cardio_address_one:
+    id: capital_cardio_address_one
+    workgroup_id: capital_cardio
+    address_id: address_three
+    address_type_id: address_type_office
+
+capital_cardio_address_two:
+    id: capital_cardio_address_two
+    workgroup_id: capital_cardio
+    address_id: address_four
+    address_type_id: address_type_office
+
+capital_cardio_address_billing:
+    id: capital_cardio_address_billing
+    workgroup_id: capital_cardio
+    address_id: address_four
+    address_type_id: address_type_billing

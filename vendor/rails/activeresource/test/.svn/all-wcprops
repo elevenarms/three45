@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test
+END
+connection_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/connection_test.rb
+END
+authorization_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/authorization_test.rb
+END
+abstract_unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/abstract_unit.rb
+END
+base_errors_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base_errors_test.rb
+END
+format_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/format_test.rb
+END
+base_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base_test.rb
+END
+setter_trap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/setter_trap.rb
+END

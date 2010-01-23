@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+user:
+  id: user
+  name: User
+workgroup:
+  id: workgroup
+  name: Workgroup

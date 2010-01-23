@@ -1,0 +1,3 @@
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p><br/>
+<%= debug(@wkgrp) -%>
+<%= debug(@usr) -%>

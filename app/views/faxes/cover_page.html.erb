@@ -1,0 +1,67 @@
+<%- @page_title = "Fax Cover Page" -%>
+<h1><%="Patient Referral - " + Date.today.to_s -%></h1>
+<% patient = @target_referral.referral_patients.first unless @target_referral.referral_patients == nil %>
+<div class="fax_header">
+Patient: <%=patient.first_name%> <%=patient.middle_name%> <%=patient.last_name%>
+  <div class="from">
+ 
+    <div class="from_label">From:</div><div class="from"><%=@active_source.workgroup.name%></div>
+
+    <%- if !@active_source.user.nil? -%>
+    <div class="from_physician">Dr. <%=@active_source.display_name%></div>
+    <%- end -%>
+
+  </div>
+
+  <div class="to">
+
+    <div class="to_label">To:</div><div><%=@active_target.workgroup.name%>
+
+    <%- if !@active_target.user.nil? -%>
+    <div class="to_physician">Dr. <%=@active_target.display_name%></div>
+    <%- end -%>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+
+<div class="fax_notice">
+
+  <div class="important">IMPORTANT NOTICE</div>
+
+  <div class="notice">
+
+    <p>The contents of this fax are intended for
+      <%- if !@active_target.user.nil? -%>
+      Dr. <%=@active_target.user.first_name + " " + @active_target.user.last_name%>'s office.
+      <%- else -%>
+      <%=@active_target.workgroup.name%>.
+      <%- end -%>
+    </p>
+
+    <p>The information contained in this fax is confidential. It has been sent for the sole use
+of the intended recipient(s). If you are not an intended recipient, you are hereby
+notified that any unauthorized review, use, disclosure, dissemination, distribution, or
+copying of this communication, or any of its contents, is strictly prohibited. <br/>If you
+have received this fax in error, please destroy it.</p>
+
+    <p>If you have any questions about this fax, please send an email to
+support@three45.com or call 1-877-345-3553 ext. 205.</p>
+
+  </div>
+
+</div>
+
+<div class="fax_barcode">
+
+  <%=image_tag "#{FaxesController::BARCODE_GENERATOR_BASE_URL}/#{@target_fax.id}", :alt=>"barcode"%>
+<div> <%=@target_fax.id%></div>
+</div>
+
+<div class="fax_footer">
+
+  <div class="call">Fax this page to: 1-866-277-9717</div>
+  
+</div>

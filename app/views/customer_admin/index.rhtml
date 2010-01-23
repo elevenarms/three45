@@ -1,0 +1,85 @@
+
+<%- @page_title = "Subscriber Admin" -%>
+<p><h1>Subscriber Administration Interface</h1></p>
+<p>Use this page to maintain information about your health care group and your users.</p>
+
+<h3>Your Information</h3>
+<p>Change your personal information or reset your password here.</p><br />
+<div id="user_subset">
+<% if @mode == "display" then %>
+  <%= render :partial => "display_user_subset" %>
+<% else %>
+   <%= render :partial => "edit_user_subset" %>
+<% end %>
+</div>
+<br /><p><strong>To reset your password, push this button.</strong></p>
+<% form_for :user, :url => { :controller=>'users', :action=>'reset_password' } do |f| -%>
+   <p><%= submit_tag 'Change my password' %> </p>
+<% end %>
+
+<HR>
+<H3><a name='workgroup'>Workgroups </a></H3>
+<p>This section allows you to change information about health care group, including phone numbers and addresses.</p>
+<p>You also can provide a description of your group for other providers to read.</p>
+<br/><p><%= link_to "Edit ", :controller => session[:admin_type], :action => 'edit_workgroup' %>&nbsp;information about our health care group</p> 
+<p><%= link_to "Add or remove ", :controller => session[:admin_type], :action => 'new_address_for_workgroup' %>&nbsp;addresses for our health care group</p>
+<HR>
+<H3><a name='user'>Users </a></H3>
+<p>This section allows you to add new users to your group.  Each user has his or her own login and password.</p>
+<p>When you create a user or reset a user's password you provide an initial password that is used only one time.</p>
+<p>Next time the user logs in they are asked to change the password to something they will remember.</p>
+<p>You can edit a user's information such as their email address, medical license number (if a physician),</p>
+<p>type of user (physician or non-physician), and description.</p>
+<br/><p><%= link_to "Add ", :controller => session[:admin_type], :action => 'new_user' %>&nbsp;a new Physician or non-physician to our health care group</p> <br/>
+
+<% form_for :user, :url => { :controller=>'users', :action=>'reset_password_on_behalf' } do |f| -%>
+  <p>Reset this user's password and force new password next login: </p>
+  <p><%= f.select(:id, @users) %> <%= submit_tag 'Reset password' %> </p>
+<% end %><br/>
+ 
+<% form_for :user, :url => { :controller=>'users', :action=>'edit' } do |f| -%>
+  <p>Edit information about this Physician or non-physician:</p><p> <%= f.select(:id, @users) %> 
+  <%= submit_tag 'Edit User' %></p>
+<% end %><br/>
+
+<% form_for :user, :url => { :action=>'different_user_group', :id => @user } do |f| -%>
+    <p>Change the type of this user (physician or non-physician):</p><p> <%= f.select(:id, @users) %> 
+<%= submit_tag 'Change user type' %></p>
+<% end %>
+<br/>
+<HR>
+<H3><a name='photos'>Photographs and Logo Images </a></H3>
+<p>Add an image or photograph for a physician or your health care group</p><br/>
+<% form_for(:profile_image, 
+            :url => { :action => 'create_photo' },
+            :html => { :multipart => true } ) do |f| %>    
+
+  <p>Add an image or logo to this profile: 
+  <%=select_tag "target_profile_id", options_for_select([["-- Select a Profile --", ""]] + @profiles.collect {|p| [p.display_name, p.id]}) %> 
+  </p>       
+  <p>Photo file:<%= f.file_field 'uploaded_data' %>
+    <%= submit_tag "Upload image" %>
+  </p>
+<% end %>   
+<HR>
+<H3>Profile Tags for Physicians and Your Health Care Group</H3>
+<p>Each physician and health care group has a "profile".  This is a set of "tags" or attributes</p>
+<p>that describe the physician or group.  You can add tags to one or more physicians or to your group</p>
+<p>by selecting a profile to manage and then selecting tags to add to or remove from that profile.  </p><br/>
+<p><%= link_to "Click here ", :controller => 'profile_tags', :action => 'index' %>to add tags to individual physicians or the workgroup as a whole</p><br/><br/><br/>
+<HR>
+<h3>Request to add physician or other provider</h3>
+<p>The three45 directory should contain all the of physicians and other providers you refer patients to</p>
+<p>If you search for a provider in the "Make a Referral" or "Request a Referral" and do not find them,</p>
+<p>just provide their name, phone, and fax number here and we will add them.  (NOTE: You can only request</p>
+<p>a referral from a physician - not from a non-physician provider, so your searches in that tab will only</p>
+<p>provide physician results.)</p>
+<% form_tag '/customer_admin/request_provider' do  -%>
+  <p>First name:</p><%=  text_field_tag :first_name %>
+  <p>Middle name:</p><%=  text_field_tag :middle_name %>
+  <p>Last name:</p><%=  text_field_tag :last_name %>
+  <p>Phone number:</p><%=  text_field_tag :phone %>
+  <p>Fax number:</p><%=  text_field_tag :fax %>
+  <p>Additional info:</p><%=  text_area_tag :additional_info, nil, :size=>"20x6" %>
+  <div><%= submit_tag 'Make request' %></div>
+<% end %>

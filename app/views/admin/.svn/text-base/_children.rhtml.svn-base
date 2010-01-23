@@ -1,0 +1,9 @@
+
+
+<tr class="<%= cycle('odd', 'even') -%>">
+  <td><%= children.name -%></td> 
+  <td><%= link_to "delete", :action => "delete_tag_value", :id => "#{children.id}" -%>  </td>
+  <td><%= link_to "edit", :action => "edit_tag_value", :id => "#{children.id}", :tag_type_id => children.tag_type_id -%>  </td>
+
+ 
+</tr>

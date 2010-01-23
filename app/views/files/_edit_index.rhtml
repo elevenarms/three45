@@ -1,0 +1,22 @@
+<% files = @target_referral.referral_files %>
+
+<div class="bevel"> <strong>Edit Documents &amp; Diagnostic Images:</strong></div>
+
+<div class="files">
+        <% unless files == nil || files.count == 0 %>
+                <% files.each do |file| %>
+                        <div id="<%= 'file_detail_' + file.id %>">
+                                <%= render :partial => 'file_detail', :locals => { :file => file, :editing_controls => true } %>
+                        </div>
+                <% end %>
+        <% end %>
+        <div id="file_detail_new"></div>
+</div>
+
+<%=link_to_remote 'Add a Document or Diagnostic Image', :update => 'file_detail_new', :url => new_create_referral_file_url( @target_referral ), :method => :get, :html => { :class => 'section_add_file' }-%>
+
+<%#=link_to_remote 'Done', :update => 'referral_files', :url => create_referral_files_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+
+<%=link_to_remote 'Done', :url => create_referral_files_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+
+<div class="clear">&nbsp;</div>

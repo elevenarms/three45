@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures
+END
+raises_name_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/raises_name_error.rb
+END
+class_folder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/class_folder.rb
+END
+conflict.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/conflict.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/application.rb
+END
+multiple_constant_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/multiple_constant_file.rb
+END
+e.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/e.rb
+END
+cross_site_dependency.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/cross_site_dependency.rb
+END
+raises_no_method_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/raises_no_method_error.rb
+END
+counting_loader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/test/autoloading_fixtures/counting_loader.rb
+END

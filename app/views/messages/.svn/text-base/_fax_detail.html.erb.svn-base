@@ -1,0 +1,6 @@
+<div id="<%= 'fax_detail_' + fax.id %>">
+	<b><small>Pages:&nbsp;&nbsp;</small></b><%= fax.page_count %>&nbsp;&nbsp;
+	<b><small>Comment:&nbsp;&nbsp;</small></b><%= fax.comments %>&nbsp;&nbsp;
+	<b><small>Contains:&nbsp;&nbsp;</small></b><%= fax_content_list( fax.referral_fax_content_selections ) %>
+         <b><small><%= " " + link_to("Print Cover Page", cover_page_fax_path(fax), {:target=>"_new"}) %></small></b>
+<div>

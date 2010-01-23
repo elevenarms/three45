@@ -1,0 +1,42 @@
+SessionExpiration
+=================
+
+::: Overview
+
+SessionExpiration is plugin that allows you to expire sessions after X seconds of 
+inactivity.
+
+::: Usage
+
+Install the plugin:
+
+script/plugin install http://svn.intridea.com/svn/public/session_expiration
+
+OR
+
+cd vendor/plugins
+svn co http://svn.intridea.com/svn/public/session_expiration
+
+Specify when to expire session in your ApplicationController to do it site wide or in a specific controller.
+
+class ApplicationController
+  expire_session_in 5.minutes
+end
+
+If you want to run a method when the session expires use this:
+
+class ApplicationController
+  expire_session_in 5.minutes, :after_expiration => :some_method
+	
+  def some_method
+    flash[:notice] = "You have been logged out due to inactivity"
+  end
+end
+
+::: Contact
+
+Dave Naffis <dave@intridea.com>
+
+Intridea: http://www.intridea.com
+Intridea Open Source Projects: http://trac.intridea.com/trac/public
+

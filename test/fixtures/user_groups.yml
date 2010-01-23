@@ -1,0 +1,99 @@
+admin345_three45_data_entry:
+  id: admin345_three45_data_entry
+  user_id: admin345
+  group_id: three45_data_entry
+
+hqmann_ppw_physician:
+  id: hqmann_ppw_physician
+  user_id: horace_quinn_mann
+  group_id: ppw_physician_user
+
+mllamb_three45_data_entry:
+  id: mllamb_three45_data_entry
+  user_id: mllamb
+  group_id: ppw_admin
+
+mpcurie_three45_data_entry:
+  id: mpcurie_three45_data_entry
+  user_id: marie_paris_curie
+  group_id: ppw_physician_user
+
+quentin_the_ppw_physician:
+  id: quentin_the_ppw_physician
+  user_id: 1
+  group_id: ppw_physician_user
+
+aaron_phys:
+  id: aaron_phys
+  user_id: 2
+  group_id: ppw_physician_user
+
+mike_apw_admin:
+  id: mike_apw_admin
+  user_id: 3
+  group_id: apw_admin
+
+stretch_brewster_apw_admin:
+  id: stretch_brewster_apw_admin
+  user_id: stretch_brewster
+  group_id: apw_admin
+
+joyce_kildare_ppw_admin:
+  id: joyce_kildare_ppw_admin
+  user_id: joyce_kildare_admin
+  group_id: ppw_admin
+
+dr_gillespie_phys:
+  id: dr_gillespie_phys
+  user_id: dr_gillespie
+  group_id: ppw_physician_user
+
+quentin_jr_the_ppw_physician:
+  id: quentin_jr_the_ppw_physician
+  user_id: quentin_jr
+  group_id: ppw_physician_user
+
+quentin_admin_the_ppw_admin:
+  id: quentin_admin_the_ppw_admin
+  user_id: quentin_admin
+  group_id: ppw_admin
+
+baldacchino_phys:
+  id: baldacchino_phys
+  user_id: thomas_c_baldacchino
+  group_id: ppw_physician_user
+
+james_b_williams_ppw_phy:
+  id: james_b_williams_ppw_phy
+  user_id: james_b_williams
+  group_id: ppw_physician_user
+
+eric_j_frischhertz_ppw_phy:
+  id: eric_j_frischhertz_ppw_phy
+  user_id: eric_j_frischhertz
+  group_id: ppw_physician_user
+
+samuel_j_dimaio_ppw_phy:
+  id: samuel_j_dimaio_ppw_phy
+  user_id: samuel_j_dimaio
+  group_id: ppw_physician_user
+
+osvaldo_s_gigliotti_ppw_phy:
+  id: osvaldo_s_gigliotti_ppw_phy
+  user_id: osvaldo_s_gigliotti
+  group_id: ppw_physician_user
+
+j_faroni_ppw_admin:
+  id: j_faroni_ppw_admin
+  user_id: j_faroni
+  group_id: ppw_admin
+
+k_machuga_ppw_admin:
+  id: k_machuga_ppw_admin
+  user_id: k_machuga
+  group_id: ppw_admin
+
+m_smith_ppw_admin:
+  id: m_smith_ppw_admin
+  user_id: m_smith
+  group_id: ppw_admin

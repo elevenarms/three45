@@ -1,0 +1,17 @@
+<H3>three45 Registration Complete</H3>
+
+<p>You can begin sending and receiving referrals immediately.</p><br/>
+<p>To do so, follow these steps:</p>
+<ol>
+  <li>Get on the Internet using the Microsoft Internet Explorer or Mozilla Firefox browser.</li>
+  <li>Go to this Web address ("URL"): <a href="https://<%= @registration[:subdomain] %>.three45.net"><strong><%= @registration[:subdomain] %>.three45.net</a></strong>  (you do not need the "www")</li>
+  <li>Follow the instructions at that page. You will be asked for a <strong>Login</strong> and <strong>Password</strong>. Use these: </li>
+</ol>
+<p>Your login is <strong><%= @registration[:login] %></strong></p>
+<p>Your initial password is <strong><%= @registration[:password] %></strong></p><br/>
+
+<p>The first time you login you will be asked to change your password.</p>
+<p>Please change it to something you will remember, but make it as long as possible</p>
+<p>(at least six characters) and use letters and numbers.</p><br/>
+<p>If you have any questions, please go to <a href="http://www.three45.com/support">www.three45.com/support</a></p>
+

@@ -1,0 +1,10 @@
+
+
+<tr class="<%= cycle('odd', 'even') -%>">
+    <td><%= user_group.user_id -%></td>
+    <td><%= user_group.group_id -%></td>
+
+ 
+  </td>
+
+</tr>

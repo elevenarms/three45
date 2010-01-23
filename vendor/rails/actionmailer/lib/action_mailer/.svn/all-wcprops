@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer
+END
+vendor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/vendor.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/test_helper.rb
+END
+utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/utils.rb
+END
+mail_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/mail_helper.rb
+END
+helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/helpers.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/version.rb
+END
+adv_attr_accessor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/adv_attr_accessor.rb
+END
+part.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/part.rb
+END
+quoting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/quoting.rb
+END
+part_container.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/part_container.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/base.rb
+END
+test_case.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionmailer/lib/action_mailer/test_case.rb
+END

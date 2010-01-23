@@ -1,0 +1,15 @@
+<% form_remote_tag :update => 'fax_detail_' + fax.id, :url => create_referral_fax_url(:create_referral_id => @target_referral.id, :id => fax.id), :method => :put do %>
+<fieldset style="margin-right:20px; margin-top:10px; margin-bottom:10px;">
+
+<div class="el_problemo" <%= flash[:partial] ? "style='border:none'" : "style='display:none'" %> ><%= flash[:partial] %></div>
+<table><tr>
+        <td><span style="color:gray">Number of Pages:</span>&nbsp;&nbsp;<%= text_field_tag 'page_count', fax.page_count.to_s, :size => 3 %></td>
+        <td><span style="color:gray">&nbsp;&nbsp;Comments:</span>&nbsp;&nbsp;<%= text_field_tag 'comments', fax.comments, :size => 29 %></td>
+        </tr><tr>
+        <td style="padding-top: 10px;" colspan="2"><%= fax_content_buttons(fax.referral_fax_content_selections) %></td>
+</tr></table>
+
+<%= submit_tag 'Save', :class => 'section_save_control' %>
+
+</fieldset>
+<% end %>

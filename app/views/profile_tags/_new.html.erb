@@ -1,0 +1,42 @@
+
+<div>
+
+<%- form_remote_tag(:update=>"scratch", :url=>{:controller=>"profile_tags", :action=>"create"}, :method =>:post, :html=>{}) do -%>
+
+<strong>Tag type: </strong> <%=select "profile_tag", "tag_type_id", [["-- Select a Tag Type --", ""]] + @tag_types.collect {|t| [t.name, t.id]}, {}, {:onChange=> "tag_type_selected(this)" } %>
+
+<%- if !params[:parent_tag_id].nil? -%>
+<strong>Tag: </strong> <%=select_tag "parent_tag_id",  options_for_select([["-- Select a Tag --", ""]] + @tags_for_types.collect {|t| [t.display_name, t.id]}, params[:parent_tag_id]), {:onChange=>"tag_selected(this)"} %>
+<strong>Sub-Tag: </strong> <%=select "profile_tag", "tag_id", [["-- Select a Tag --", ""]] + @child_tags.collect {|t| [t.display_name, t.id]}, {}, {:onChange=>"child_tag_selected(this)"} %>
+
+<%- elsif @tags_for_types and @child_tags and !@child_tags.empty? -%>
+<strong>Tag: </strong> <%=select_tag "parent_tag_id",  options_for_select([["-- Select a Tag --", ""]] + @tags_for_types.collect {|t| [t.display_name, t.id]}, @profile_tag.tag_id), {:onChange=>"tag_selected(this)"} %>
+<strong>Sub-Tag: </strong> <%=select "profile_tag", "tag_id", [["-- Select a Tag --", ""]] + @child_tags.collect {|t| [t.display_name, t.id]}, {}, {:onChange=>"child_tag_selected(this)"} %>
+
+<%- elsif @tags_for_types -%>
+<strong>Tag: </strong> <%=select "profile_tag", "tag_id", [["-- Select a Tag --", ""]] + @tags_for_types.collect {|t| [t.display_name, t.id]}, {}, {:onChange=>"tag_selected(this)"} %>
+<%- end -%>
+
+<div id="submit_button" style="display:none">
+  <div style="padding-top: 5px; padding-bottom: 5px;">
+  <strong>Also tag: </strong><%=check_box_tag 'check_all_profiles', "1", false, {:onClick=>"all_checkbox_clicked(this)"}%> All
+  <span id="profile_checkboxes">
+  <%- @profiles.each do |profile| -%>
+    <%- if profile.id != @target_profile.id -%>
+    <%=check_box_tag 'additional_profile_ids[]', profile.id, false, {:class=>"profile_checkbox", :onClick=>"profile_checkbox_clicked(this)"}%> <%=profile.display_name%>
+    <%- end -%>
+  <%- end -%>
+  </span>
+  </div>
+
+  <%=submit_tag "Attach Tag"%>
+  <br/>
+</div>
+
+<%=hidden_field "profile_tag", "profile_id"%>
+<%- end -%>
+
+
+<%= link_to_function 'Cancel', "$('add_profile_tag_partial').hide(); $('add_profile_link').show();"%>
+
+</div>

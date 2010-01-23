@@ -1,0 +1,23 @@
+lab_report:
+  id: lab_report
+  name: Lab Report
+
+radiology_report:
+  id: radiology_report
+  name: Radiology Report
+
+mri:
+  id: mri
+  name: MRI
+
+xray:
+  id: xray
+  name: X-Ray
+
+ct:
+  id: ct
+  name: CT
+
+other:
+  id: other
+  name: Other

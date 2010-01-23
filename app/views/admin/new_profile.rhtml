@@ -1,0 +1,14 @@
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :prfle, :url => { :action => 'create_profile', :id => @prfle } do |f| %>
+  <p>Profile display name (user OR workgroup): </p>
+  <p><%= f.text_field :display_name %> </p>
+  <p>Profile type: </p>
+  <p><%= f.select(:profile_type_id, @prfle_types) %> </p>
+  <p>User (if you select a user, leave workgroup alone): </p>
+  <p><%= f.select(:user_id, @users) %> </p>
+  <p>Workgroup (if you select a workgroup, leave user alone): </p>
+  <p><%= f.select(:workgroup_id, @wkgrps) %> </p>
+  <p><%= submit_tag %></p>
+<% end %>
+<p><%= link_to "List all profiles", :action => 'list_profiles' %></p>

@@ -1,0 +1,50 @@
+<div class="referral_summary">
+
+  <div class="summary_padder">
+    <div class="close_summary"><%=link_to_function image_tag("close.jpg"), "return false;"%></div>
+    <div class="detail_title">
+      <span class="detail_type"><%=summary.display_referral_type%>
+        <%- if summary.source_or_target_for(@workgroup.id).status_waiting_response? -%>
+        - <span class="action_required_color">Action Required</span>
+        <%- end -%>
+         </span>&nbsp;
+      <span class="detail_new"><!--<a href="#">(1 new item updated)</a>--></span>
+        <%- if summary.status_new? -%>
+                ( <%=link_to "Delete Referral?", cancel_referral_path(@target_referral), :confirm => "Are you sure you want to delete this referral?
+
+NOTE: Clicking OK will permanently delete this referral. You can resume working on this referral by clicking Cancel and opening it from the dashboard.
+
+Press OK to Delete this referral, or Cancel to return to the Dashboard. "%> )
+                <%- end -%>
+ </div>
+  </div>
+
+  <div class="clearfix summary_padder" style="border:0;">
+    <div class="patient_details">
+      <h3>PATIENT INFORMATION:</h3>
+      <div class="details"><strong>Patient: </strong><%=summary.display_patient_name%>
+        <%=" - "+summary.display_patient_gender if !summary.display_patient_gender.empty?%>
+      </div>
+      <div class="details">SSN: <%=summary.display_patient_ssn%></div>
+      <div class="details">DOB: <%=summary.display_patient_dob%></div>
+      <div class="details">Phone: <%=summary.display_patient_phone%></div>
+    </div>
+    <div class="primary_insurance_details">
+      <h3>INSURANCE:</h3>
+      <div class="details"><strong>Primary Insurance: </strong></div>
+      <div class="details">Carrier: <%=summary.display_primary_insurance_carrier%></div>
+      <div class="details">Plan: <%=summary.display_primary_insurance_plan%></div>
+      <div class="details">Details: <%=summary.display_primary_insurance_details%></div>
+    </div>
+    <div class="referral_details">
+      <h3>REFERRAL DETAILS:</h3>
+      <div class="details"><strong>To: </strong><%=summary.display_to_name%></div>
+      <div class="details"><strong>From: </strong><%=summary.display_from_name%></div>
+      <div class="details"><strong>Last Action: </strong><%=summary.display_last_action%></div>
+    </div>
+    <div class="summary_footer" style="vertical-align:top;"><div><%=image_tag "printer.jpg", :style=>"padding-top:3px;"%></div><div><%=link_to("Print Entire Record", hash_for_all_info_referral_path({:id=>summary.id}), {:target=>"_new"})%> | <%=link_to("Print New Items", hash_for_new_info_referral_path({:id=>summary.id}), {:target=>"_new"})%></div><div style="float:right"><%=link_to "Open Referral", create_referral_path(summary.id) if summary.status_new?%><%=link_to "Open Referral", referral_path(summary.id) unless summary.status_new?%></div><div style="float:right"><%=image_tag "folder.jpg", :style=>"padding-top:3px;"%></div></div>
+  </div>
+
+  <div class="footer"></div>
+
+</div>

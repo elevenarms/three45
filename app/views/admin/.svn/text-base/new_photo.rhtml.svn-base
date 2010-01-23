@@ -1,0 +1,22 @@
+<%- @page_title = "Add photo to user" -%>
+
+<h2>Upload a photo for an existing user</h2>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+
+<% form_for(:profile_image, 
+            :url => { :action => 'create_photo' },
+            :html => { :multipart => true } ) do |f| %>
+            
+
+  <p>Select a user: </p>
+  <p><%= f.select(:profile_id, @users) %> </p>
+
+
+  <p>Select a photo to upload</p>  
+  <p>Photo:<br /><%= f.file_field 'uploaded_data' %></p>  
+  <p>
+    <%= submit_tag 'Upload photo' %>
+
+  </p>
+<% end %>

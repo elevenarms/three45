@@ -1,0 +1,17 @@
+<% files = @target_referral.referral_files %>
+
+<div class="bevel"> <%=link_to_remote 'Edit', :update => 'referral_files', :url => create_referral_files_url( @target_referral ), :method => :get, :with => "'edit_mode=true'", :html => { :class => 'section_control' } unless edit_disabled -%> <strong>Documents &amp; Diagnostic Images:</strong></div>
+
+<div class="files">
+        <% unless files == nil || files.count == 0 %>
+                <% files.each do |file| %>
+                        <div id="file_detail">
+                                <%= render :partial => 'files/file_detail', :locals => { :file => file, :editing_controls => false } %>
+                        </div>
+                <% end %>
+        <% else %>
+          <%- if !edit_disabled -%>
+                (click 'Edit' to add a document or diagnostic image)
+          <% end %>
+        <% end %>
+</div>

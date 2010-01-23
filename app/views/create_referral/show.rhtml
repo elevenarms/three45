@@ -1,0 +1,142 @@
+<%- @page_title = "Create Referral" -%>
+
+<%- content_for :header do -%>
+<%= stylesheet_link_tag 'calendar-system.css' %>
+<%= javascript_include_tag 'calendar', 'calendar-en', 'calendar-setup' %>
+<%- end -%>
+
+<%- content_for :page_scripts do -%>
+
+function handleSendReferralButtonPress() {
+  // remove the onbeforeunload trigger
+  window.onbeforeunload = null;
+  return true;
+}
+
+window.onbeforeunload = function () {
+   return "NOTE: You can resume working on this referral by opening it from the dashboard."
+}
+
+function handleProviderSelectionBecauseIENeverWorksRight(e) {
+    carrier_id = e.options[e.selectedIndex].value
+    referral_id = '<%=@target_referral.id%>';
+    new Ajax.Updater('select_plan', '/create_referral/'+referral_id+'/insurance/carrier_plan_options?carrier_tag_id='+carrier_id, {method: 'get',asynchronous:true, evalScripts:true, onSuccess:function(request){ } });
+}
+
+function validateNumberOfVisits(e) {
+    if(e.value == null || e.value == "") { return true; }
+    var isInteger = /^-?\d+$/.test(e.value)
+    if(!isInteger) {
+      alert("Please enter a number between 0 and 99");
+      e.focus();
+      e.select();
+    }
+}
+
+<%- end -%>
+
+<div class="edit_referral">
+
+        <%- if @target_referral.request_referral? -%>
+        <div class="section clearfix" id="referral_referring">
+                <%= render :partial => 'create_referral/referring_provider', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <%- else -%>
+        <div class="section clearfix" id="referral_provider">
+                <%= render :partial => 'provider', :locals=>{ :edit_disabled => true } %>
+        </div>
+        <%- end -%>
+                <% if display_referral_request %>
+                <div class="section clearfix" id="referral_request">
+                                <%= render :partial => 'request/show', :locals=>{ :edit_disabled => false } %>
+                </div>
+                <% elsif edit_referral_request %>
+                <div class="section clearfix" id="referral_request">
+                                <%= render :partial => 'request/edit' %>
+                </div>
+                <% else %>
+                <div class="section clearfix" id="referral_request" style="display:none">
+                </div>
+                <% end %>
+                <% if display_referral_patient %>
+                <div class="section clearfix" id="referral_patient">
+                <%= render :partial => 'patient/show', :locals=>{ :edit_disabled => false} %>
+                </div>
+                <% elsif edit_referral_patient %>
+                <div class="section clearfix" id="referral_patient">
+                                <%= render :partial => 'patient/edit' %>
+                </div>
+                <% else %>
+                <div class="section clearfix" id="referral_patient" style="display:none">
+                </div>
+                <% end %>
+                <% if display_referral_insurance %>
+                <div class="section clearfix" id="referral_insurance">
+                <%= render :partial => 'insurance/index', :locals=>{ :edit_disabled => false } %>
+                </div>
+                <% elsif edit_referral_insurance %>
+                <div class="section clearfix" id="referral_insurance">
+                                <%= render :partial => 'insurance/edit_index' %>
+                </div>
+                <% else %>
+                <div class="section clearfix" id="referral_insurance" style="display:none">
+                </div>
+                <% end %>
+        <% unless @target_referral.created_by_user.is_physician? %>
+                        <% if display_referral_referrer %>
+                        <div class="section clearfix" id="referral_referrer">
+                        <%= render :partial => 'select_physician/show', :locals=>{ :edit_disabled => false } %>
+                        </div>
+                        <% elsif edit_referral_referrer %>
+                        <div class="section clearfix" id="referral_referrer">
+                        <%= render :partial => 'select_physician/edit', :locals=>{ :edit_disabled => false } %>
+                        </div>
+                        <% else %>
+                        <div class="section clearfix" id="referral_referrer" style="display:none">
+                        </div>
+                        <% end %>
+        <% end %>
+                <% if display_referral_files %>
+                <div class="section clearfix" id="referral_files">
+                <%= render :partial => 'files/index', :locals=>{ :edit_disabled => false } %>
+                </div>
+                <% elsif edit_referral_files %>
+                <div class="section clearfix" id="referral_files">
+                                <%= render :partial => 'files/edit_index' %>
+                </div>
+                <% else %>
+                <div class="section clearfix" id="referral_files" style="display:none">
+                </div>
+                <% end %>
+                <% if display_referral_faxes %>
+                <div class="section clearfix" id="referral_faxes">
+                <%= render :partial => 'faxes/index', :locals=>{ :edit_disabled => false } %>
+                </div>
+                <% elsif edit_referral_faxes %>
+                <div class="section clearfix" id="referral_faxes">
+                                <%= render :partial => 'faxes/edit_index' %>
+                </div>
+                <% else %>
+                <div class="section clearfix" id="referral_faxes" style="display:none">
+                </div>
+                <% end %>
+
+                <% if display_referral_submit %>
+        <div style="margin-top: 20px; width: 100%; text-align:right" id="referral_submit">
+                <% else %>
+        <div style="margin-top: 20px; width: 100%; text-align:right; display:none" id="referral_submit">
+                <% end %>
+                <%- form_tag finish_create_referral_path(@target_referral) do -%>
+                <%- if @target_referral.request_referral? -%>
+                        <%= submit_tag 'Request Referral', :onClick=>"return handleSendReferralButtonPress()" %>
+                <%- else -%>
+                        <%= submit_tag 'Send Referral', :onClick=>"return handleSendReferralButtonPress()" %>
+                <%- end -%>
+                <%- end -%>
+                </div>
+</div>
+
+
+<div class="ad">
+  <%=render_ad%>
+</div>

@@ -1,0 +1,7 @@
+<% if editing_controls %>
+        <%=link_to_remote 'edit', :update => 'file_detail_' + file.id, :url => edit_create_referral_file_url(:create_referral_id => @target_referral.id, :id => file.id), :method => :get, :html => { :class => 'section_edit_control' }-%>
+        <%=link_to_remote 'delete', :update => 'referral_files', :url => create_referral_file_url(:create_referral_id => @target_referral.id, :id => file.id), :method => :delete, :html => { :class => 'section_edit_control' }-%>
+<% end %>
+<b><i><small>Type:&nbsp;&nbsp;</small></i></b><%= file.referral_file_type.name %>&nbsp;&nbsp;
+<b><i><small>Comment:&nbsp;&nbsp;</small></i></b><%= file.description %>&nbsp;&nbsp;
+<b><i><small>Filename:&nbsp;&nbsp;</small></i></b><%= link_to file.filename, download_file_path(file) %>&nbsp;&nbsp;

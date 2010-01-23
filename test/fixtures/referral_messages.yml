@@ -1,0 +1,60 @@
+welby_to_stretch_closed_message_1:
+  id: welby_to_stretch_closed_message_1
+  referral_id: welby_to_stretch_closed_referral
+  referral_message_type_id: request
+  message_text: What is the current status of this patient?
+  response_required_by: <%= 10.days.ago.to_s :db %>
+  responded_at: <%= 7.days.ago.to_s :db %>
+  referral_source_or_target_id: welby_to_stretch_closed_source
+  referral_message_state_id: complete
+  viewed_at: <%= 7.days.ago.to_s :db %>
+  created_by_user_id: 2
+
+mccoy_to_kildare_3_general_1:
+  id: mccoy_to_kildare_3_general_1
+  referral_id: mccoy_to_kildare_3
+  referral_message_type_id: general_note
+  subject: General note
+  message_text: A general note
+  referral_source_or_target_id: mccoy_to_kildare_3_source
+  referral_message_state_id: complete
+  created_at: <%= 10.days.ago.to_s :db %>
+  viewed_at: <%= 7.days.ago.to_s :db %>
+  created_by_user_id: 1
+
+mccoy_to_kildare_3_request_2:
+  id: mccoy_to_kildare_3_request_2
+  referral_id: mccoy_to_kildare_3
+  referral_message_type_id: request
+  subject: A request
+  message_text: A request with a due date
+  response_required_by: <%= 10.days.from_now.to_s :db %>
+  referral_source_or_target_id: mccoy_to_kildare_3_source
+  referral_message_state_id: waiting_response
+  created_at: <%= 13.days.ago.to_s :db %>
+  viewed_at: <%= 7.days.ago.to_s :db %>
+  created_by_user_id: 1
+
+mccoy_to_kildare_3_progress_note_3:
+  id: mccoy_to_kildare_3_progress_note_3
+  referral_id: mccoy_to_kildare_3
+  referral_message_type_id: progress_note
+  subject: A Progress Note
+  message_text: A new progress note
+  referral_source_or_target_id: mccoy_to_kildare_3_target
+  referral_message_state_id: complete
+  created_at: <%= 2.days.ago.to_s :db %>
+  viewed_at: <%= 7.days.ago.to_s :db %>
+  created_by_user_id: 1
+
+mccoy_to_kildare_3_request_2_reply:
+  id: mccoy_to_kildare_3_request_2_reply
+  referral_id: mccoy_to_kildare_3
+  referral_message_type_id: general_note
+  reply_to_message_id: mccoy_to_kildare_3_request_2
+  subject: "Re: A request"
+  message_text: A request reply
+  referral_source_or_target_id: mccoy_to_kildare_3_target
+  referral_message_state_id: new_info
+  created_at: <%= 5.days.ago.to_s :db %>
+  created_by_user_id: dr_gillespie

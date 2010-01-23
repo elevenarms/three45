@@ -1,0 +1,20 @@
+<%- @page_title = "Admin Console (internal)" -%>
+<p><h1>three45 Administration Interface</h1></p>
+<p><h3>For three45 staff only.</h3></p>
+<p>Choose something to do:</p>
+
+<p>Workgroups: <%= link_to "New", :action => 'new_workgroup' -%>, <%= link_to "List", :action => 'list_workgroups' -%> - Creates workgroup and profile</p>
+<p>Users: <%= link_to "New", :action => 'new_user' %>, <%= link_to "List", :action => 'list_users' %> - Creates user, workgroup association, group (type) association, and profile</p>
+<p><%= link_to "Add", :action => 'select_user_for_workgroup' %> and existing USER to an existing WORKGROUP </p>
+<p><%= link_to "List", :action => 'select_workgroup2' %> USERs in a WORKGROUP </p>
+<p><%= link_to "Add", :action => 'new_tag_for_user' %> an existing tag to an existing USER. </p>
+<p><%= link_to "Add", :action => 'new_tag_for_workgroup' %> an existing tag to an existing WORKGROUP.</p>
+<p><%= link_to "Remove", :action => 'delete_user_tag' %> a tag from a USER.</p>
+<p><%= link_to "Remove", :action => 'delete_workgroup_tag' %> a tag from a WORKGROUP.</p>
+<p>Create a <%= link_to "New", :action => 'new_tag' %> tag value and assign it to an existing USER.</p>
+<p>Create a <%= link_to "New", :action => 'new_tag_workgroup' %> tag value and assign it to an existing WORKGROUP.</p>
+<p><%= link_to "List", :action => 'list_tags' -%> all the existing tag values in the system.</p>
+<p><%= link_to "New", :action => 'new_address_for_workgroup' %> address for a workgroup:  - Select a workkgroup and  add an address to it.</p>
+<p><%= link_to "Profile for a specific user", :action => 'profile_for_user' %> - Select a user and see his or her profile.</p>
+<p><%= link_to "Profile for a specific workgroup", :action => 'profile_for_workgroup' %> - Select a workkgroup and  see its profile.</p>
+<p><%= link_to "View (and delete) sddresses for a specific workgroup", :action => 'addresses_for_workgroup' %> - Select a workkgroup to see its addresses.</p>

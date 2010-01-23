@@ -1,0 +1,47 @@
+<%- @page_title = "Create user" -%>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<H3> Current users at <%= @workgroup.name %></H3>
+<% @workgroup_users.each do |wu| %>  <p>
+    <%= wu.user[:first_name]%> <%= wu.user[:middle_name] %> <%= wu.user[:last_name] %> --- 
+    <%= wu.user[:login] %> ---  
+    <% ug = UserGroup.find_by_user_id(wu.user[:id]).group_id %>
+    <% group_name = Group.find(ug)[:name] %>
+    <%= group_name %>  
+  </p>
+<% end %>
+<HR>
+<H3>Create a new user</H3>
+<%= error_messages_for "user" %>
+
+<% form_for :user, :url => { :action => 'create_user' } do |f| -%>
+  
+      <% fields_for :group do |g| %>
+        <p>What type of user is this: </p>
+        <p><%= g.select(:id, @groups) %> </p>
+      <% end %>
+  
+  <p><label for="login">Login</label><br/>
+  <%= f.text_field :login %></p>
+
+  <p><label for="email">Email</label><br/>
+  <%= f.text_field :email %></p>
+
+  <p><label for="password">Password</label><br/>
+  <%= f.password_field :password %></p>
+
+  <p><label for="password_confirmation">Confirm Password</label><br/>
+  <%= f.password_field :password_confirmation %></p>
+  
+  <p><label for="fax number">User's fax number (if different from workgroup's)</label><br/>
+  <%= f.text_field :fax_number %></p>
+  
+
+  <p>Last name:</p>  
+  <p><%= f.text_field :last_name %> </p>
+  <p>First name:</p>  
+  <p><%= f.text_field :first_name %> </p>
+  <p>Middle name:</p>  
+  <p><%= f.text_field :middle_name %> </p>
+
+  <p><%= submit_tag 'Create user' %></p>
+<% end -%>

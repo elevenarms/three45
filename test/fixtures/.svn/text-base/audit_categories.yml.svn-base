@@ -1,0 +1,51 @@
+user_login:
+  id: user_login
+  name: User Login
+user_logout:
+  id: user_logout
+  name: User Logout
+referral_sent:
+  id: referral_sent
+  name: Referral Sent
+referral_accepted:
+  id: referral_accepted
+  name: Referral Accepted
+referral_declined:
+  id: referral_declined
+  name: Referral Declined
+referral_cancelled:
+  id: referral_cancelled
+  name: Referral Cancelled
+referral_edited_patient:
+  id: referral_edited_patient
+  name: Referral Patient Edited
+referral_edited_insurance:
+  id: referral_edited_insurance
+  name: Referral Insurance Edited
+file_uploaded:
+  id: file_uploaded
+  name: File Uploaded
+file_upload_failed:
+  id: file_upload_failed
+  name: File Upload Failed
+fax_created:
+  id: fax_created
+  name: Fax Created
+message_created:
+  id: message_created
+  name: Message Created
+message_replied:
+  id: message_replied
+  name: Message Replied
+admin_new_user:
+  id: admin_new_user
+  name: New User Created in Admin Panel
+admin_edit_workgroup:
+  id: admin_edit_workgroup
+  name: Workgroup Edited in Admin Panel
+admin_edit_user:
+  id: admin_edit_user
+  name: User Edited in Admin Panel
+admin_edit_tags_entered:
+  id: admin_edit_tags_entered
+  name: Tags Edit in Admin Panel Entered

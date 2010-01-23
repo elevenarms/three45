@@ -1,0 +1,31 @@
+<%- @page_title = "Login" -%>
+
+<% form_tag session_path do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><label for="password">Password</label><br/>
+<%= password_field_tag 'password' %></p>
+
+<!-- Uncomment this if you want this functionality
+<p><label for="remember_me">Remember me:</label>
+<%= check_box_tag 'remember_me' %></p>
+-->
+
+<p><%= submit_tag 'Log in' %></p>
+
+<%- if development? -%>
+<fieldset>
+<h3>Developer's Notes</h3>
+<p>&nbsp;</p>
+<strong>Development users available (if test fixtures are loaded):</strong>
+<p>quentin/test</p>
+<p>aaron/test</p>
+<p>mike_the_chiro/test</p>
+<p>&nbsp;</p>
+<p>To load fixtures: rake db:fixtures:load</p>
+<p><strong>NOTE: This will delete all data in your environment's database!!</strong></p>
+</fieldset>
+<%- end -%>
+
+<% end -%>

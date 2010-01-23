@@ -1,0 +1,101 @@
+<%- content_for :page_scripts do -%>
+window.onbeforeunload = function () {
+   return "You cannot change the data in the previous form by going back.  Please complete this form and contact three45 at 1-877-345-3553 ext. 205 to complete the registration."
+}
+<% end %>
+  <H1 title="30-day free trial">Sign up for three45 for free - part 2</H1>
+  <h3>Information about one of your physicians</h3>
+  <% form_for :registration, :url => { :action => 'create', :id => @registration } do |u| %>
+    <p><strong>Number of physicians:</strong></p>
+    <p>(Total number of physicians in your group. Do NOT count nurses,</p>
+    <p>medical assistants, nurse practicianers or physicians assistants)</p>  
+    <p><%= u.text_field :num_physicians%></p>
+
+    <% if @physician_reg == false then %>
+      <p>(When you register you MUST provide information about at least one of your physicians.</p>
+      <p>three45 verifies the physician information to verify that only licensed physicians use the system)</p>  
+      <p><strong>Physician's first nam</strong>e</p>  
+      <p><%= u.text_field :physician_first_name%></p>
+      <p><strong>Physician's middle name</strong></p>  
+      <p><%= u.text_field :physician_middle_name%></p>
+      <p><strong>Physician's last name:</strong></p>
+      <p><%= u.text_field :physician_last_name%></p>
+   <% end %>
+
+    <% if @npi_error != nil %> 
+      <div class=error>  
+        <p><%=  @npi_error %></p>
+      </div>  
+    <% end %> 
+ 
+    <%- if @physician_reg == false then -%>      
+      <p><strong>Physician's National Provider Identifier (NPI):</strong> This physician's national ID</p>
+      <p>as contained in the National Plan and Provider Enumeration System (NPPES) </p> <br/>
+      <p><%= u.text_field :physician_npi%></p>
+    <%- else -%>  
+      <p><strong>Your National Provider Identifier (NPI):</strong> Your national ID</p>
+      <p>as contained in the National Plan and Provider Enumeration System (NPPES)  <br/>
+      <%= u.text_field :physician_npi%></p>
+    <%- end -%> 
+    
+    <% if @med_license_error != nil %> 
+      <div class=error>
+        <p><%=  @med_license_error %></p>
+      </div>  
+    <% end %>  
+
+    <% if @physician_reg == false then %>    
+      <p><strong>Physician's medical license:</strong> This physician's medical license under which he or she operates</p> <br/>
+      <p><%= u.text_field :physician_med_license %></p>
+    <% else %>
+      <p><strong>Your medical license:</strong> The medical license under which you operate</p> <br/>
+      <p><%= u.text_field :physician_med_license %></p> 
+    <% end %>  
+<% unless session[:plan] == "Free" %> 
+    <H3>Billing information</H3>
+    <p>You have chosen the <strong><%= session[:plan] %></strong> plan with a subscription fee of <strong>$<%= session[:fee] %> per month</strong>.</p>
+    <p>Your 30-day free trial begins today if you have not already received referrals from three45.</p>
+    <p>If you have been receiving referrals, your free trial began when you accepted your first referral.</p>
+    <p>You may cancel your subscription at any time.  When your free trial is over you will be billed</p>
+    <p>the amount above in advance for the following month.  If you have any questions, please go to</p>
+    <p>www.three45.com to the Support area, or call customer service 1-877-345-3553 ext. 205</p><br/>
+
+    <% if @ccard_error != nil %> 
+      <div class=error>  
+        <p><%=  @ccard_error %></p>
+      </div>  
+    <% end %>      
+    <%= image_tag 'ccdecals.gif', :alt => "Visa, Mastercard, and American Express are accepted by three45" %><br/>   
+    <p><strong>Credit Card Type:</strong> (Only numbers with no spaces or dashes.  Visa, MasterCard, or American Express</p>
+    <p>three45 does not take Discover.  If you would like to set up payment by eCheck, please contact us.</p>
+    <p><%= u.select :card_type, @ccards, { :include_blank => true }  %></p>
+
+    <p><label for="card_number"><strong>Card Number:</strong> (The credit card number, with no spaces or dashes.)</label><br/>
+    <%= u.text_field :card_number %></p>
+
+    <p><label for="billing_ZIP_code"><strong>Billing zip code:</strong> (The 5-digit ZIP code in the billing address where statements for this credit card are sent)</label><br/>
+    <%= u.text_field :billing_zip_code  %></p>
+
+    <p><label for="expiration_month"></label><strong>Expiration month:</strong> (The month in which this credit card expires)<br/>
+    <%= u.select :expiration_month , @months, { :include_blank => true }  %></p>
+
+    <p><label for="expiration_year"></label><strong>Expiration year:</strong> (The year in which this credit card expires)<br/>
+    <%= u.select :expiration_year, @years, { :include_blank => true }   %></p>
+<% end %>      
+    <h3>Review and accept agreements to complete the signup</h3>  
+
+  <p><strong>NOTE:</strong> Because you will be sharing patient information with three45</p>
+  <p>you must review and agree to the terms of the three45 HIPAA Business Associate agreement.</p><br/>
+
+    <% if @agree_error != nil %> 
+      <div class=error>
+        <p><%=  @agree_error %></p>
+      </div>
+    <% end %>    
+    <p>Please review the <%=link_to "three45 HIPAA Business Associate Agreement", "http://hipaa.three45.com", :target=>"_new"%>. 
+    <p><%=check_box_tag "hipaa_agree" %> I agree to the terms of the three45 HIPAA Business Associate Agreement.</p><br/>
+
+    <p>Please review the <%=link_to "three45 Service Agreement", "http://serviceagreement.three45.com", :target=>"_new"%>. </p>   
+    <p><%=check_box_tag "service_agree" %> I agree to the terms of the three45 Service Agreement.</p><br/>
+    <p><%= submit_tag 'Submit registration' %></p>
+<% end %>

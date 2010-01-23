@@ -1,0 +1,18 @@
+<h3>This referral has not been accepted</h3>
+
+<p>You must accept or decline this referral first.</p>
+
+<p><%=link_to "Decline referral", decline_referral_path(@target_referral)%></p>
+
+<%- if @target_referral.active_target.workgroup.ppw? -%>
+
+  <%- form_tag accept_referral_path(@target_referral), :method => :get, :id=>'accept_form' do -%>
+  <p> Select the physician that will accept this referral: <%= select_target_physician(@target_referral,'physician_user', true) %>
+  <%=link_to_function "Accept referral", "check_accept_and_submit();"%>
+  </p>
+  <%- end -%>
+
+<%- else -%>
+<p><%=link_to "Accept referral", accept_referral_path(@target_referral)%></p>
+<%- end -%>
+

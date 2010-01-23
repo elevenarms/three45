@@ -1,0 +1,11 @@
+<% patient = @target_referral.referral_patients.first unless @target_referral.referral_patients == nil %>
+
+<div class="bevel"><%=link_to_remote 'Edit', :update => 'referral_patient', :url => edit_create_referral_patient_path( @target_referral ), :method => :get, :html => { :class => 'section_control' } unless edit_disabled -%> <strong>Patient:</strong></div>
+
+<div class="patient">
+        <% unless patient == nil %>
+                <b><%=patient.first_name%> <%=patient.middle_name%> <%=patient.last_name%></b> - <%=patient.display_gender%> &nbsp;&nbsp; DOB: <%=patient.dob%> &nbsp;&nbsp; SSN: <%=patient.ssn%> &nbsp;&nbsp; Email: <%=patient.email%> &nbsp;&nbsp; Phone#: <%=patient.phone%>
+        <% else %>
+                (click 'Edit' to enter patient information)
+        <% end %>
+</div>

@@ -1,0 +1,32 @@
+general_note:
+  id: general_note
+  name: General Note
+
+progress_note:
+  id: progress_note
+  name: Progress Note
+
+diagnosis:
+  id: diagnosis
+  name: Diagnosis
+
+request:
+  id: request
+  name: Request for Information
+
+reply_request:
+  id: reply_request
+  name: Reply Requested
+
+info_provided:
+  id: info_provided
+  name: Information Provided
+
+reply_provided:
+  id: reply_provided
+  name: Reply Provided
+
+referral_request:
+  id: referral_request
+  name: Referral Request
+

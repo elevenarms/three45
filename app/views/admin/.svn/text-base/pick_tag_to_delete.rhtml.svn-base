@@ -1,0 +1,17 @@
+<%- @page_title = "Pick tag to delete" -%>
+<h3> Pick a tag to delete for user: </h3><%= @user.full_name -%>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user, :url => { :action => 'remove_tag_from_user', :id => @user } do |u| -%>
+  <% u.text_field :id, :value => @user.id -%>  
+  <% fields_for :tag do |t| %>
+    <p>Select a tag: </p>
+    <p><%= t.select(:id, @tags_plus) %> </p>  
+  <% end %>
+
+<p><%= submit_tag 'Delete tag from user' %></p>
+
+<% end %>  
+

@@ -1,0 +1,94 @@
+<%- @page_title = "Dashboard" -%>
+
+<%- content_for :page_scripts do -%>
+Event.addBehavior({
+  'table.referral_list tr.data:mouseover' : function(e) {
+    this.addClassName('hover');
+  },
+  'table.referral_list tr.data:mouseout' : function(e) {
+    this.removeClassName('hover');
+  },
+  'table.referral_list tr.data:click' : function(e) {
+    referral_id = this.nextElement().getAttribute('referral_id');
+    the_id = referral_id+"_summary_content";
+    $(the_id).update("<div class='loading'>Loading...</div>");
+    this.nextElement().toggle();
+    this.toggle();
+
+    new Ajax.Updater(the_id, '/referrals/summary/'+referral_id, {method: 'get',asynchronous:true, evalScripts:true, onSuccess:function(request){ } });
+
+  },
+  'table.referral_list tr.summary div.close_summary a:click' : function(e) {
+    this.up('tr').toggle();
+    this.up('tr').previous().toggle();
+  }
+});
+
+function reset_filter() {
+  document.location = '<%=url_for quicklink_dashboard_path({:id=>'reset'})%>';
+}
+<%- end -%>
+
+<%- content_for :page_styles do -%>
+<%- end -%>
+
+    <div id="top_buttons" class="clearfix">
+
+      <div class="button_link"><%=link_to(render_awaiting_referrals_count,quicklink_dashboard_path({:id=>'awaiting'}),{:class=>"new_ref"})%></div>
+      <div class="button_link"><%=link_to(render_new_info_count,quicklink_dashboard_path({:id=>'new_info'}),{:class=>"update_ref"})%></div>
+      <div class="button_link"><%=link_to(render_action_requested_count,quicklink_dashboard_path({:id=>'action_requested'}),{:class=>"awaiting_action"})%></div>
+
+      <div class="search_link">
+        <% form_remote_tag(:update=>"grid", :url=>hash_for_dashboard_index_url, :method =>:get, :html=>{}) do %>
+        <%=text_field_tag "search", @filter.search, :size=>30, :style=>"width:150px;padding-right:5px;"%> <%=image_submit_tag "search_go.jpg"%>
+        <%- end -%>
+      </div>
+
+    </div>
+
+    <div id="filter_box">
+
+      <div id="filter_top">
+        <div style="float:left"><strong>Filter My Results</strong></div>
+        <div style="float:right"><!--Hide--></div>
+      </div>
+
+      <% form_remote_tag(:update=>"grid", :url=>hash_for_dashboard_index_url, :method =>:get, :html=>{}) do %>
+
+      <fieldset class="form_fields">
+
+        <div class="formitem"><strong class="formlabel">Direction</strong>
+          <%=select_tag "filter_direction", options_for_select([["All",""], ["In","in"], ["Out","out"]], @filter.filter_direction)%>
+        </div>
+
+        <div class="formitem"><strong class="formlabel">Our Dr.</strong>
+          <%=select_tag "filter_owner", options_for_select([["All",""], ["Unassigned","unassigned"]] + @physicians.collect {|p| [p.last_first, p.id]}, @filter.filter_owner)%>
+        </div>
+
+        <div class="formitem"><strong class="formlabel">Type</strong>
+          <%=select_tag "filter_type", options_for_select([["All", ""]] + @types.collect {|t| [t.name, t.id]}+[["Other","other"]], @filter.filter_type)%>
+        </div>
+
+        <div class="formitem"><strong class="formlabel">Status</strong>
+          <%=select_tag "filter_status", options_for_select(@status_array, @filter.filter_status)%>
+        </div>
+
+        <div class="formitem" style="float:right;padding:20px 0 0 0;">
+          <%=image_submit_tag "filter.jpg", {:style=>"display:block; float:left"}%>
+          <div class="formlabel" style="float:left; padding:5px 0px 0px 0px;margin:0px;">&nbsp;&nbsp;&nbsp;<%=link_to_function "Reset", "reset_filter()"%></div>
+        </div>
+
+      <%- end -%>
+
+      </fieldset>
+
+    </div>
+
+    <div class="bevel"><strong><%=@workgroup.name if @workgroup%> </strong> (<%=pluralize(@total_count, "Record")%>) </div>
+    <div class="spacer"></div>
+
+    <div id="grid">
+      <%=render :partial=>"results"%>
+    </div>
+
+

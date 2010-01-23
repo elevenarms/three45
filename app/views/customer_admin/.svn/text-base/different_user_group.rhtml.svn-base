@@ -1,0 +1,9 @@
+<p><%= link_to "Back to Admin Home Page", :controller => session[:admin_type], :action => 'index' %></p>
+<H3> Change user type for  <%= @usr.full_name %> </H3>
+Current type is <%= @current_group[:name] -%><br/><br/>
+<% form_tag url_for(:action => 'change_user_group') do -%>
+  <%= select_tag "new_group", options_for_select(@groups) %>
+  <%= hidden_field_tag "usr_id", "#{@usr[:id]}" %>
+  <%= submit_tag 'Change user type' %>
+
+<% end %>

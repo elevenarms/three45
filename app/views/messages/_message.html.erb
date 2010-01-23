@@ -1,0 +1,63 @@
+  <div class="header">
+
+    <div class="title">
+      <div class="type"><strong><%="Reply to: " if message.is_reply?%><%=message.display_type%></strong> - <%=message.display_created_at_with_time%></div>
+    </div>
+
+    <div class="reply_by">
+      <%- if message.request? -%>
+      <div class="deadline"><strong>Reply By: </strong><%=message.display_response_required_by%></div>
+      <%- end -%>
+    </div>
+
+    <%- if !skip_close_button -%>
+    <div class="close_window">
+      <%=link_to_function "X", "return false;"%>
+    </div>
+    <%- end -%>
+
+    <div class="subject">
+      <strong>Subject: </strong> <%=message.display_subject%>
+    </div>
+
+  </div>
+
+
+  <div class="content">
+
+    <div class="message_text">
+      <%=message.display_message_text%>
+    </div>
+
+    <%- if message.has_documents_or_faxes? -%>
+    <div class="documents_and_faxes">
+
+	<% files = @target_message.referral_files unless @target_message == nil %>
+
+	<div class="message_files">
+		<% unless files == nil || files.count == 0 %>
+      		<h3 style="padding-top:10px">Associated Documents</h3>
+
+			<% files.each do |file| %>
+				<%= render :partial => 'file_detail', :locals => { :file => file } %>
+			<% end %>
+		<% end %>
+	</div>
+
+	<% faxes = @target_message.referral_faxes unless @target_message == nil %>
+
+	<div class="message_faxes">
+	    <% unless faxes == nil || faxes.count == 0 %>
+			<h3 style="padding-top:10px">Associated Faxes</h3>
+
+	        <% faxes.each do |fax| %>
+				<%= render :partial => 'fax_detail', :locals => { :fax => fax } %>
+	        <% end %>
+	    <% end %>
+	</div>
+
+
+    </div>
+    <%- end -%>
+
+  </div>

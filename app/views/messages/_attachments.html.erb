@@ -1,0 +1,39 @@
+<div class="clear">&nbsp;</div>
+
+<strong>Associated Documents</strong>
+
+<% files = @target_message.referral_files unless @target_message == nil %>
+
+<div class="message_files">
+	<% unless files == nil || files.count == 0 %>
+		<% files.each do |file| %>
+			<%= render :partial => 'file_detail', :locals => { :file => file } %>
+		<% end %>
+	<% end %>
+</div>
+
+<div id="new_message_file">	
+	<%=link_to_remote 'Add a Document', :update => 'new_message_file', :url => new_file_attachment_referral_messages_url( @target_referral ), :method => :get, :html => { :class => 'section_add_file' }-%>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<strong>Associated Faxes</strong>
+
+<% faxes = @target_message.referral_faxes unless @target_message == nil %>
+
+<div class="message_faxes">
+    <% unless faxes == nil || faxes.count == 0 %>
+        <% faxes.each do |fax| %>
+			<%= render :partial => 'fax_detail', :locals => { :fax => fax } %>
+        <% end %>
+    <% end %>
+</div>
+
+<div id="new_message_fax">	
+	<%=link_to_remote 'Add a Fax', :update => 'new_message_fax', :url => new_fax_attachment_referral_messages_url( @target_referral ), :method => :get, :html => { :class => 'section_add_file' }-%>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+

@@ -1,0 +1,127 @@
+kildare_to_mccoy_patient:
+  id: kildare_to_mccoy_patient
+  referral_id: kildare_to_mccoy_new_referral
+  first_name: John
+  middle_name: B.
+  last_name: White
+  ssn: 111-11-1111
+  dob: <%= 47.years.ago.to_s :db %>
+  gender: M
+
+welby_to_stretch_patient:
+  id: welby_to_stretch_patient
+  referral_id: welby_to_stretch_in_progress
+  first_name: Joe
+  middle_name: W.
+  last_name: Smith
+  ssn: 111-11-1111
+  dob: <%= 45.years.ago.to_s :db %>
+  gender: M
+
+welby_to_stretch_closed_patient:
+  id: welby_to_stretch_closed_patient
+  referral_id: welby_to_stretch_closed_referral
+  first_name: Jane
+  middle_name: W.
+  last_name: Doe
+  ssn: 222-22-2222
+  dob: <%= 28.years.ago.to_s :db %>
+  gender: F
+
+#
+# patients for the quentin/mccoy referrals
+#
+
+mccoy_to_kildare_1_patient:
+  id: mccoy_to_kildare_1_patient
+  referral_id: mccoy_to_kildare_1
+  first_name: Mary
+  middle_name: T.
+  last_name: Carrot
+  ssn: 111-11-1121
+  dob: <%= 23.years.ago.to_s :db %>
+  gender: F
+
+mccoy_to_kildare_2_patient:
+  id: mccoy_to_kildare_2_patient
+  referral_id: mccoy_to_kildare_2
+  first_name: Bob
+  middle_name: W.
+  last_name: Black
+  ssn: 111-11-1122
+  dob: <%= 42.years.ago.to_s :db %>
+  gender: M
+
+mccoy_to_kildare_3_patient:
+  id: mccoy_to_kildare_3_patient
+  referral_id: mccoy_to_kildare_3
+  first_name: Laura
+  middle_name: E.
+  last_name: Sanchez
+  ssn: 111-11-1123
+  dob: <%= 19.years.ago.to_s :db %>
+  gender: F
+
+kildare_to_mccoy_4_patient:
+  id: kildare_to_mccoy_4_patient
+  referral_id: kildare_to_mccoy_4
+  first_name: Noah
+  middle_name: W.
+  last_name: Goodspeed
+  ssn: 111-11-1124
+  dob: <%= 55.years.ago.to_s :db %>
+  gender: M
+
+kildare_to_mccoy_5_patient:
+  id: kildare_to_mccoy_5_patient
+  referral_id: kildare_to_mccoy_5
+  first_name: Lonnie
+  last_name: Middleton
+  ssn: 111-11-1125
+  dob: <%= 32.years.ago.to_s :db %>
+  gender: M
+
+mccoy_to_stretch_6_patient:
+  id: mccoy_to_stretch_6_patient
+  referral_id: mccoy_to_stretch_6
+  first_name: Jillian
+  last_name: Jones
+  ssn: 111-11-1126
+  dob: <%= 35.years.ago.to_s :db %>
+  gender: F
+
+mccoy_to_stretch_7_patient:
+  id: mccoy_to_stretch_7_patient
+  referral_id: mccoy_to_stretch_7
+  first_name: Linda
+  last_name: Cartwright
+  ssn: 111-11-1127
+  dob: <%= 44.years.ago.to_s :db %>
+  gender: F
+
+stretch_to_mccoy_8_patient:
+  id: stretch_to_mccoy_8_patient
+  referral_id: stretch_to_mccoy_8
+  first_name: Carrie
+  last_name: Lemon
+  ssn: 111-11-1128
+  dob: <%= 62.years.ago.to_s :db %>
+  gender: F
+
+stretch_to_mccoy_9_patient:
+  id: stretch_to_mccoy_9_patient
+  referral_id: stretch_to_mccoy_9
+  first_name: Bob
+  last_name: Lemon
+  ssn: 111-11-1129
+  dob: <%= 65.years.ago.to_s :db %>
+  gender: M
+
+stretch_to_mccoy_10_patient:
+  id: stretch_to_mccoy_10_patient
+  referral_id: stretch_to_mccoy_10
+  first_name: Ray
+  last_name: Higgins
+  ssn: 111-11-1130
+  dob: <%= 18.years.ago.to_s :db %>
+  gender: M

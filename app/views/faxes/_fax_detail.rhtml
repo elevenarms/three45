@@ -1,0 +1,13 @@
+<% if editing_controls %>
+        <%=link_to_remote 'edit', :update => 'fax_detail_' + fax.id, :url => edit_create_referral_fax_url(:create_referral_id => @target_referral.id, :id => fax.id), :method => :get, :html => { :class => 'section_edit_control' }-%>
+        <%=link_to_remote 'delete', :update => 'referral_faxes', :url => create_referral_fax_url(:create_referral_id => @target_referral.id, :id => fax.id), :method => :delete, :html => { :class => 'section_edit_control' }-%>
+<% end %>
+<b><i><small>Pages:&nbsp;&nbsp;</small></i></b><%= fax.page_count %>&nbsp;&nbsp;
+<b><i><small>Comment:&nbsp;&nbsp;</small></i></b><%= fax.comments %>&nbsp;&nbsp;
+<b><i><small>Contains:&nbsp;&nbsp;</small></i></b><%= fax_content_list( fax.referral_fax_content_selections ) %>
+<%- if fax.referral_fax_files.empty? -%>
+<small><%= " " + link_to("Print Cover Page", cover_page_fax_path(fax), {:target=>"_new"}) %></small>
+<%- end -%>
+<%- fax.referral_fax_files.each do |fax_file| -%>
+<small><%= " " + link_to("download", download_fax_fax_file_path(fax, fax_file)) %></small>
+<%- end -%>

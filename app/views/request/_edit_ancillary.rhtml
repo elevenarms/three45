@@ -1,0 +1,35 @@
+<% referral_type = @target_referral.referral_type_selections.first unless @target_referral.referral_type_selections == nil %>
+
+<div class="bevel"> <strong>Edit Services Requested:</strong></div>
+
+<% form_tag do %>
+
+<div class="edit_request">
+        <fieldset>
+                <table><tr>
+                <% unless referral_type == nil %>
+                        <td><label>Referral Type</label><%= select_tag 'type', request_type_options( @referral_tag_type_id ) %></td>
+                        <td><label>Referral Diagnosis</label><%= text_field_tag 'diagnosis', referral_type.diagnosis_text, :size => 50 %></td>
+                <% else %>
+                        <td><label>Referral Type</label><%= select_tag 'type', request_type_options( @referral_tag_type_id ) %></td>
+                        <td><label>Referral Diagnosis</label><%= text_field_tag 'diagnosis', '', :size => 50 %></td>
+                <% end %>
+                </tr></table>
+</fieldset>
+
+<div id="ancillary_studies">
+        <%= render :partial => 'studies/index' %>
+</div>
+</div>
+
+<%=link_to_remote 'Add an Ancillary Study Request', :update => 'ancillary_study_new', :url => new_create_referral_study_url( @target_referral ), :method => :get, :html => { :class => 'section_add_study' }-%>
+
+<%#= submit_to_remote 'done', 'Done', :url => create_referral_request_url(@target_referral), :update => 'referral_request', :html => { :class => 'section_save' } %>
+
+<%= submit_to_remote 'done', 'Done', :url => create_referral_request_url(@target_referral), :html => { :class => 'section_save' } %>
+
+<% end %>
+
+<div class="clear">&nbsp;</div>
+
+<%= observe_field( 'type', :update => 'referral_request', :url => edit_create_referral_request_url( @target_referral ), :method => :get ) %>

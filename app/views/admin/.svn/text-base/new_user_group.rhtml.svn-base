@@ -1,0 +1,10 @@
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user_group, :url => { :action => 'create_user_group', :id => @user_group } do |f| %>
+  <p>Select user: </p>
+  <p><%= f.select(:user_id, @users) %> </p>
+  <p>Select group (i.e. type of user):</p>
+  <p><%= f.select(:group_id, @groups) %> </p>
+  <p><%= submit_tag %></p>
+<% end %>
+<p><%= link_to "List all users and their associated type", :action => 'list_user_groups' %></p>

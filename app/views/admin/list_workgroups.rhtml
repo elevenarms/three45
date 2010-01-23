@@ -1,0 +1,14 @@
+<h3> "All workgroups in the system"
+</h3>
+<p><%= link_to "Add a new workgroup", :action => 'new_workgroup' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<table id="workgroups">
+  <tr>
+    <th>Workgroup Name</th>
+    <th>Workgroup Sub-type</th>
+    <th>Workgroup Subdomain</th>
+    <th>Workgroup Fax</th>
+  </tr>
+  <%= render :partial => 'workgroup', :collection => @wkgrps %>
+</table>

@@ -1,0 +1,19 @@
+workgroup_subtype_solo_practice:
+    id: workgroup_subtype_solo_practice
+    workgroup_type_id: ppw
+    name: Solo Practice
+
+workgroup_subtype_chiropractic:
+    id: workgroup_subtype_chiropractic
+    workgroup_type_id: apw
+    name: Chiropractic Practice
+
+workgroup_subtype_physical_therapy:
+    id: workgroup_subtype_physical_therapy
+    workgroup_type_id: apw
+    name: Physical Therapy
+
+workgroup_subtype_phy_practice:
+    id: workgroup_subtype_phy_practice
+    workgroup_type_id: PPW
+    name: Multi-Physician Practice

@@ -1,0 +1,27 @@
+<div class="bevel"> <strong>Referring Provider:</strong> </div>
+
+<%- if @source_profile -%>
+<div class="thumbnail"><%=display_thumbnail_or_default(@source_profile)%></div>
+
+<div class="details">
+
+  <div class="name"><b><%=@source_profile.display_name%></b></div>
+
+  <div class="specialty"><%=tag_list(@source_profile.tags_for_type(:specialties))%> - <%=tag_list(@source_profile.tags_for_type(:sub_specialties))%></div>
+
+  <% @target_workgroup = @source_profile.load_member_workgroup %>
+
+  <div class="address">
+  <%- if !@target_workgroup.workgroup_addresses.empty? -%>
+          <%- address = @target_workgroup.workgroup_addresses.first.address -%>
+          <%=address.street1%> - <%=address.street2%> - <%=address.city%>, <%=address.state%> <%=address.zip_plus_4%>
+  <%- else -%>
+          (No address on file)
+  <%- end -%>
+  </div>
+
+</div>
+
+<%- else -%>
+<div class="name">Profile not found</div>
+<%- end -%>

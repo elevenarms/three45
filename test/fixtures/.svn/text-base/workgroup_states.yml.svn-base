@@ -1,0 +1,7 @@
+active: 
+    id: active
+    name: Active
+    
+deactivated: 
+    id: deactivated
+    name: Deactivated

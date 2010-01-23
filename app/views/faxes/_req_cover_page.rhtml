@@ -1,0 +1,563 @@
+
+
+ 
+<style type="text/css">
+body {
+        background-color:#ffffff;
+        padding:0px;
+        margin:0px;
+        margin-left: 10px;
+        font-size:70%;
+        font-family:Arial, Helvetica, sans-serif;
+}
+
+a img {
+  border: none;
+}
+
+#top_header {
+}
+
+#top_header h2 {
+  float: left;
+  width: 50%;
+}
+
+#top_bar {
+}
+
+div.container2 {
+  clear: both;
+}
+
+div.logo {
+  float: left;
+  width: 200px;
+}
+
+div.page_title {
+  float: left;
+  width: 38%;
+  margin-top: 45px;
+  margin-left: 60px;
+  font-size: 2.8em;
+}
+
+div.print_buttons {
+  float: right;
+  width: 28%;
+}
+
+div.referral_summary {
+  margin-bottom: 20px;
+}
+
+div.message {
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.bevel
+{
+        height:18px;
+        color: #000000;
+        padding: 3px 0px 0px 8px;
+        overflow:hidden;
+
+}
+
+/* edit_referral
+   --------------- */
+
+#referral_patient
+{
+        margin:0px;
+}
+
+.edit_referral {
+        padding-top:10px;
+}
+
+
+.edit_referral a:visited,.edit_referral a:link,.edit_referral a:hover
+{
+        color:gray;
+        text-decoration:none;
+}
+.edit_referral a:hover
+{
+        text-decoration:underline;
+}
+
+
+.edit_referral div.section {
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+
+}
+
+.edit_referral div.section h3 {
+  font-size: 0.9em;
+  font-style: italic;
+  color: gray;
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.edit_referral div.section a.section_control {
+        float: right;
+        padding-right: 10px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_control:hover {
+/*        color: blue;
+        background-color: white;*/
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_edit_control {
+        padding-right: 5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_edit_control:hover {
+        color: blue;
+        background-color: white;
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_close_control {
+        float: right;
+        margin-bottom: -5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_close_control:hover {
+        color: blue;
+        background-color: none;
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_add {
+        margin-left: 40%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_file {
+        margin-left: 35%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_file:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_fax {
+        margin-left: 47%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_fax:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_study {
+        margin-left: 38%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_study:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section input.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+        border: none;
+}
+
+.edit_referral div.section input.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section input.section_save_control {
+        float: right;
+        margin-bottom: -5px;
+        margin-right: -10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: none;
+        text-decoration: none;
+        border: none;
+}
+
+.edit_referral div.section input.section_save_control:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section label {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        color: gray;
+}
+
+.edit_referral div.section div.placeholder {
+  clear: both;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.edit_referral div.section div.thumbnail {
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  float: left;
+  width: 80;
+}
+
+.edit_referral div.section div.details {
+  float: left;
+  width: 540px;
+}
+
+.edit_referral div.section div.name {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.edit_referral div.section div.specialty {
+  padding: 10px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.edit_referral div.section div.address {
+  padding: 10px;
+  padding-top: 0;
+}
+
+.edit_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_request {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.edit_request textarea {
+  margin: 0px;
+}
+
+
+.edit_referral div.section div.provider {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.patient {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.edit_patient fieldset {
+  margin: 0px;
+}
+
+.edit_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_patient {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.insurance {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+
+.edit_referral div.section div.files {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.faxes {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.referrer {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_referrer {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.el_problemo {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  color: #008800;
+  background: #ccffcc;
+  border-bottom: 1px solid #008800;
+  font-size: 0.85em;
+}
+
+.edit_referral div.section div.clear {
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.edit_referral div.section div.referral_messages {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.message {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+  width: 80%;
+}
+
+
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:inline-block;}
+* html .clearfix, * html .container {height:1%;}
+.clearfix, .container {display:block;}
+
+div.fax_header {
+  font-size: 1.5em;
+  font-weight: bold;
+  clear: both;
+  padding-top: 40px;
+}
+
+/* fax_header
+   --------------- */
+
+div.fax_header div.from_label {
+  float: left;
+  width: 80px;
+}
+
+div.fax_header div.from_physician {
+  float: left;
+  margin-left: 80px;
+}
+
+div.fax_header div.to {
+  clear: both;
+}
+
+div.fax_header div.to_label {
+  float: left;
+  width: 80px;
+}
+
+div.fax_header div.to {
+  float: left;
+  margin-top: 20px;
+}
+
+div.fax_header div.to_physician {
+  float: left;
+  margin-left: 80px;
+}
+
+div.fax_header div.clear {
+  clear: both;
+}
+
+div.fax_notice {
+  border: 2px dashed black;
+  margin-top: 40px;
+  padding: 10px;
+  width: 95%;
+}
+
+div.fax_notice div.important {
+  text-align: center;
+  font-size: 2.5em;
+  text-weight: bold;
+}
+
+div.fax_notice div.notice {
+  text-align: center;
+  font-size: 1.25em;
+}
+div.instructions {
+  font-size: 2.0em;
+}
+div.fax_barcode {
+  margin-top: 40px;
+  text-align: center;
+}
+
+div.fax_footer {
+  margin-top: 40px;
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+div.fax_footer div.call {
+  text-align: left;
+}
+</style>
+
+
+
+<h1><%="Request for Patient Referral - " + Date.today.to_s -%></h1>
+
+
+<div class="fax_header">
+
+  <div class="from">
+ 
+    <div class="from_label">From:</div><div class="from"><%=@active_source.workgroup.name%></div>
+
+    <%- if !@active_source.user.nil? -%>
+    <div class="from_physician">Dr. <%=@active_source.display_name%></div>
+    <%- end -%>
+
+  </div>
+
+  <div class="to">
+
+    <div class="to_label">To:</div><div><%=@active_target.workgroup.name%>
+
+    <%- if !@active_target.user.nil? -%>
+    <div class="to_physician">Dr. <%=@active_target.display_name%></div>
+    <%- end -%>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+<div class="instructions">
+  <h3>The referral form is already complete.  All you need todo is authorize it.  Follow the instructions below.</h3>
+    <ol>
+        <li> Get on the Internet, using the Microsoft Internet Explorer or Mozilla Firefox browser. </li>
+        <li> Go to this Web address ("URL"): http://<%=@uns_workgroup.subdomain%>.three45.net </li>
+        <li> Follow the instructions at that page. You will be asked for a Login and Password. Provided below: </li>
+    </ol>
+    <strong> Login:</strong> <%=@uns_workgroup.subdomain%> <br>
+    <strong>Password:</strong> Please use the password you provided. If you have forgoten your password please call support to have it reset.
+  	<div class="call"><h2>Support 1-877-345-355</h2></div>
+	
+</div>
+<div class="fax_notice">
+
+  <div class="important">IMPORTANT NOTICE</div>
+  
+  <div class="notice">
+
+    <p>The contents of this fax are intended for
+      <%- if !@active_target.user.nil? -%>
+      Dr. <%=@active_target.user.first_name + " " + @active_target.user.last_name%>'s office.
+      <%- else -%>
+      <%=@active_target.workgroup.name%>.
+      <%- end -%>
+    </p>
+
+    <p>The information contained in this fax is confidential. It has been sent for the sole use
+of the intended recipient(s). If you are not an intended recipient, you are hereby
+notified that any unauthorized review, use, disclosure, dissemination, distribution, or
+copying of this communication, or any of its contents, is strictly prohibited. <br/>If you
+have received this fax in error, please destroy it.</p>
+
+    <p>If you have any questions about this fax, please send an email to
+support@three45.com or call 1-877-345-3553 ext. 205.</p>
+
+  </div>
+
+</div>
+
+
+
+<div class="fax_footer">
+
+</div>

@@ -1,0 +1,15 @@
+
+tag_view_one:
+    id: tag_view_one
+    tag_id: tag_location_downtown_austin
+    user_id: 1
+
+tag_view_two:
+    id: tag_view_two
+    tag_id: tag_location_downtown_austin
+    user_id: 2
+
+tag_view_three:
+    id: tag_view_three
+    tag_id: tag_certification_cert_osteopath
+    user_id: 3

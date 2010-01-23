@@ -1,0 +1,17 @@
+<fieldset style="margin-top: -1px;">
+	<table><tr>
+		<td><label>Study Type</label><%= select_tag 'study_type', study_type_options( study_type ) %></td>
+		<td><label>Modality</label><%= select_tag 'modality', modality_options( study_type ) %></td>
+	</tr><tr>
+	<% unless study_type == 'diag_tests' %>
+		<td colspan="2"><label>Body Part To Be Imaged</label><%= text_field_tag 'body_part', '', :size => 40 %></td>
+	</tr><tr>
+	<% end %>
+	<td colspan="2"><label>Additional Instructions / Patient Factors</label><%= text_area_tag 'instructions', '', :size => '76x10' %></td>
+	</tr></table>
+
+	<%= submit_to_remote 'add', 'Add', :url => create_referral_studies_url( @target_referral ), :update => 'ancillary_studies', :html => { :class => 'section_save_control' } %>
+</fieldset>
+
+<%= observe_field( 'study_type', :update => 'ancillary_study_new', :url => new_create_referral_study_url( @target_referral ), :method => :get ) %>
+

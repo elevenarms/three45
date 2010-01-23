@@ -1,0 +1,17 @@
+<%- @page_title = "Message" -%>
+<%- @page_header = "Message" -%>
+
+<div class="message">
+  <%=render :partial=>"/messages/message", :object => @target_message, :locals => { :skip_close_button => true }%>
+
+  <%- if @target_message.is_reply? -%>
+  <hr/>
+  <%=render :partial=>"/messages/message", :object => @target_message.reply_to_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+  <%- if @target_message.has_reply? -%>
+  <hr/>
+  <%=render :partial=>"/messages/message", :object => @target_message.reply_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+</div>

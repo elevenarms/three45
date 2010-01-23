@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/lib/active_support/core_ext/object
+END
+extending.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/lib/active_support/core_ext/object/extending.rb
+END
+conversions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/lib/active_support/core_ext/object/conversions.rb
+END
+misc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/lib/active_support/core_ext/object/misc.rb
+END
+instance_variables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activesupport/lib/active_support/core_ext/object/instance_variables.rb
+END

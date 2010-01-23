@@ -1,0 +1,15 @@
+<%- @page_title = "Delete user tag" -%>
+<h3> Select a user from whom you want to delete a tag.</h3>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user, :url => { :action => 'pick_tag_to_delete', :id => @user } do |f| -%>
+  
+  <p>Select a user: </p>
+  <p><%= f.select(:id, @users) %> </p>
+
+<p><%= submit_tag 'Select user' %></p>
+
+<% end %>  
+

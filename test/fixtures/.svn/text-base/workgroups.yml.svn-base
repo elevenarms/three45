@@ -1,0 +1,95 @@
+workgroup_fictitious:
+    id: workgroup_fictitious
+    workgroup_subtype_id: workgroup_subtype_phy_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: Fictitious Family Practice
+    description: Family Practice
+    subdomain: fictitious
+    office_number: 512-464-1105
+    fax_number: 512-464-1104
+    subscriber_flag: true
+
+workgroup_mccoy:
+    id: workgroup_mccoy
+    workgroup_subtype_id: workgroup_subtype_solo_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: Medical Offices of Dr. Leonard McCoy
+    description: Internal Medicine
+    subdomain: mccoy
+    office_number: 800-555-1212
+    fax_number: 866-555-1212
+    subscriber_flag: true
+
+workgroup_kildare:
+    id: workgroup_kildare
+    workgroup_subtype_id: workgroup_subtype_solo_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: Dr. Kildare
+    description: General Practice
+    subdomain: kildare
+    office_number: 800-555-1212
+    fax_number: 866-555-1212
+    subscriber_flag: true
+
+workgroup_welby:
+    id: workgroup_welby
+    workgroup_subtype_id: workgroup_subtype_solo_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: Dr. Welby
+    description: General Practice
+    subdomain: welby
+    office_number: 800-555-1212
+    fax_number: 866-555-1212
+    subscriber_flag: true
+
+workgroup_chiro:
+    id: workgroup_chiro
+    workgroup_subtype_id: workgroup_subtype_chiropractic
+    workgroup_state_id: active
+    workgroup_type_id: apw
+    name: Austin Chiropractic
+    description: Chiropractic Practice
+    subdomain: austin_chiropractic
+    office_number: 800-555-1212
+    fax_number: 866-555-1212
+    subscriber_flag: true
+
+workgroup_phys_therapy:
+    id: workgroup_phys_therapy
+    workgroup_subtype_id: workgroup_subtype_physical_therapy
+    workgroup_state_id: active
+    workgroup_type_id: apw
+    name: Dr. Stretch
+    description: Outpatient Physical Therapy
+    subdomain: austin_phys_therapy
+    office_number: 800-555-1212
+    fax_number: 866-555-1212
+    subscriber_flag: true
+
+workgroup_capital_cardio:
+    id: capital_cardio
+    workgroup_subtype_id: workgroup_subtype_phy_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: Capital Cardiovascular
+    description: Capital Cardiovascular
+    subdomain: capitalcardio
+    office_number: (512) 477-6341
+    fax_number: (512) 443-4388
+    subscriber_flag: true
+
+workgroup_nonsub:
+    id: workgroup_nonsub
+    workgroup_subtype_id: workgroup_subtype_solo_practice
+    workgroup_state_id: active
+    workgroup_type_id: ppw
+    name: A Non-Subscriber Practice
+    description: A non-subscriber workgroup and user
+    subdomain: nonsub
+    office_number: 800-555-9999
+    fax_number: 866-555-9999
+    subscriber_flag: false

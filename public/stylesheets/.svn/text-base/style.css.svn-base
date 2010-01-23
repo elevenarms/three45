@@ -1,0 +1,2359 @@
+/* Clutch Styles */
+
+/* Main content frame */
+.container {
+  width: 801px;
+  margin:0 auto;
+}
+.container2
+{
+        margin:0px;
+        background-color:white;
+       border-left: 1px solid #f7931e;
+       border-right: 1px solid #f7931e;
+        margin:0px;
+        padding: 0px 8px 0px 6px;
+}
+
+#top_header
+{
+        background-image:url(../images/three45.jpg);
+        background-repeat:no-repeat;
+}
+
+#top_bar
+{
+        height:55px;
+}
+/* css for top right user information */
+.login-box
+{
+        padding-top:6px;
+        float:right;
+        color:#056482;
+}
+.login-box a:link, .login-box a:visited, .login-box a:hover
+{
+        color:#056482;
+        text-decoration:none;
+}
+.login-box a:hover
+{
+        text-decoration:underline;
+}
+
+#top_buttons a:link, #top_buttons a:visited, #top_buttons a:hover
+{
+        color:white;
+        text-decoration:none;
+        text-align:center;
+}
+
+#feature_tabs
+{
+        height:40px;
+}
+
+.navigation_tab { float:left; }
+.navigation_tab img { border: 0px; }
+
+
+.navigation_space
+{
+        background-image:url(../images/tab_space.jpg);
+        width:6px;
+        height:40px;
+        float:left;
+}
+
+#user_subset
+{
+        background-color: #DFE4E7;
+}
+
+#filter_box
+{
+        margin-top: 6px;
+        background-image:url(../images/grey_top.jpg);
+        width: 765px;
+        padding: 10px 13px 0px 13px;
+        background-repeat:no-repeat;
+       background-color:#dfe4e7;
+           border:0px;
+        height:60px;
+}
+#filter_box fieldset
+{
+        border:0px;
+}
+
+#grid table
+{
+        width:100%;
+}
+#filter_top
+{
+        color: #4D4D4D;
+        clear:both;
+        height:20px;
+}
+
+.formlabel
+{
+        padding: 0px 5px 5px 0px;;
+        display:block;
+
+}
+.formitem
+{
+        padding-right:20px;
+        color: #4D4D4D;
+        float:left;
+}
+fieldset.form_fields
+{
+        background:none;
+        margin:0px;
+        padding:0px;
+}
+.formitem a:link,.formitem a:visited,.formitem a:hover
+{
+        color:#666;
+}
+
+
+.bevel
+{
+        height:18px;
+        background-image: url(../images/bevel.jpg);
+        border-left: 1px solid #d8d8d8;
+        border-right: 1px solid #d8d8d8;
+        color: #808080;
+        padding: 3px 0px 0px 8px;
+        overflow:hidden;
+
+}
+
+/* css for the referral lists */
+table.referral_list
+{
+        margin:0px;
+        border: 1px solid #d8d8d8;
+        width: 755px;
+}
+
+
+ .referral_list th, .referral_list td
+{
+        vertical-align:baseline;
+        line-height:1.5;
+        text-align:left;
+}
+
+
+.referral_list th a:link,.referral_list th a:visited,th a:hover
+{
+        color:black;
+        text-decoration:none;
+        font-weight:normal;
+}
+
+.referral_list th a:hover
+{
+        text-decoration:underline;
+}
+
+.referral_list tbody tr.hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.row-padding
+{
+        padding-left:10px;
+}
+tr.odd_row, tr.odd
+{
+        background-color:#f2f2f2;
+}
+tr.even_row, tr.even
+{
+        background-color:#fff;
+}
+
+
+tr.action td
+{
+        color:#046380;
+        font-weight:bold;
+}
+
+/* css for expanded refferal */
+td.referral_summary
+{
+        background-color:white;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-right: 0;
+        margin-right:0;
+}
+
+.referral_summary h3
+{
+        font-weight:bold;
+        font-size:100%;
+}
+
+div.referral_summary
+{
+        background-color: #f2f2f2;
+        padding: 7px 5px 7px 5px;
+        width: 750px;
+
+}
+.detail_type
+{
+        font-size:180%;
+}
+.detail_new, .detail_new a:link, .detail_new a:visited, .detail_new a:hover
+{
+        color: #990000;
+        font-weight:bold;
+}
+
+/* action required color */
+.action_required_color
+{
+        color:#046380;
+}
+
+.referral_details, .primary_insurance_details, .patient_details
+{
+        float:left;
+        padding-top:7px;
+        padding-bottom: 10px;
+}
+.referral_details, .primary_insurance_details
+{
+        padding-left:23px;
+        width:215px;
+}
+.patient_details
+{
+        width:237px;
+}
+.primary_insurance_details, .patient_details
+{
+        border-right: 1px solid #c2c2c2;
+}
+
+
+/* Main content frame */
+
+.button_link
+{
+        height: 56px;
+        border: 1px solid #d8d8d8;
+        float:left;
+}
+.search_link
+{
+        height: 28px;
+        padding-top:28px;
+        padding-left:5px;
+        width:193px;
+        background-image:url(/images/search.jpg);
+        background-repeat:no-repeat;
+        border: 1px solid #d8d8d8;
+        float:right;
+}
+
+a.awaiting_action
+{
+        padding:11px 146px 0px 27px;
+        width: 18px;
+        height: 45px;
+        display:block;
+        background-image: url(../images/awaiting_action.jpg);
+        font-weight:bold;
+}
+a.update_ref
+{
+        padding: 11px 138px 0px 36px;
+        width: 18px;
+        height: 45px;
+        display:block;
+        background-image: url(../images/updated_referrals.jpg);
+        font-weight:bold;
+}
+a.new_ref
+{
+        padding:12px 139px 0px 34px;
+        width: 18px;
+        height: 44px;
+        display:block;
+        background-image: url(../images/new_referrals.jpg);
+        font-weight:bold;
+}
+
+.close_summary
+{
+        float:right;
+}
+.close_summary img
+{
+        border:0px;
+}
+
+.detail_title
+{
+        margin:0px;
+        padding:0px;
+}
+.summary_padder
+{
+        margin:0px;
+        padding: 0px 5px 0px 5px;
+        border-bottom: 1px solid #c2c2c2;
+}
+.summary_padder h3
+{
+        margin:0px;
+        padding:0px;
+}
+
+.summary_footer
+{
+        maring-top;
+        padding: 5px 6px 0px 3px;
+        border: 1px solid #d5d5d5;
+        width:750px;
+        clear: both;
+        background-color:white;
+        height: 23px;
+
+}
+.summary_footer div
+{
+        float:left;
+        padding-left:3px;
+}
+
+.summary_footer a:link, .summary_footer a:visited, .summary_footer a:hover
+{
+        color: #666;
+        text-decoration:none;
+}
+.summary_footer a:hover
+{
+        text-decoration:underline;
+}
+
+
+
+.table-footer, .table-footer a:link, .table-footer a:visited, .table-footer a:hover
+{
+        color: #B2B2B2;
+        text-align:center;
+}
+
+.page_footer
+{
+        background-image:url(../images/footer.jpg);
+        width:801px;
+        height:5px;
+        overflow: hidden;
+}
+
+/* spacer for spacing the table from bottom and top */
+.spacer
+{
+        height: 5px;
+        overflow:hidden;
+}
+.clearfix:after, .container:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix, .container {display:inline-block;}
+* html .clearfix, * html .container {height:1%;}
+.clearfix, .container {display:block;}
+
+
+/* end clutch */
+/* default styles
+   -------------- */
+
+body {
+        background-image:url(../images/background-slice.jpg);
+        background-repeat:repeat-x;
+       background-color:#dfe4e7;
+        padding:0px;
+        margin:0px;
+        font-size:90%;
+        font-family:Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 0 0 5px 0;
+}
+
+form {
+  margin: 0;
+}
+
+div.formError {
+  color: #CC0000;
+}
+
+table th {
+  text-align: left;
+}
+
+/* general purpose
+   ------ */
+
+.clear {
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.smallest {
+  font-size: 0.8em;
+}
+
+.smaller {
+  font-size: 0.9em;
+}
+
+.medium {
+  font-size: 1.0em;
+}
+
+.large {
+   font-size: 1.1em;
+}
+
+.larger {
+   font-size: 1.2em;
+}
+
+.underline {
+   text-decoration: underline;
+}
+
+.align_right {
+  text-align: right;
+}
+
+/* layout
+   ------ */
+
+.content {
+  clear: both;
+}
+
+/* Page Container
+   ------ */
+
+#container {
+  /*
+  width: 90%;
+  */
+
+  margin: 0 auto;
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Header
+   ------ */
+#user {
+  margin: 0px;
+  padding: 0px;
+  color: #76ba00;
+  height: 19px;
+  text-align: right;
+  position: relative;
+  top: 4px;
+  font-size: 12px;
+  }
+
+#profile_bar {
+  margin: 0;
+  padding: 0;
+}
+
+#feature_tabs, #feature_tabs .left, #feature_tabs .right {
+  margin: 0;
+  padding: 0;
+}
+
+#context_bar {
+  float: left;
+  width: 950px;
+  margin: 0;
+  padding: 5px;
+  background: #EEEEEE;
+  border: 1px solid black;
+}
+
+/* Tabs
+   ------ */
+
+div.tab {
+  float: left;
+  width: 100px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 2px;
+  margin: 0;
+  margin-right: 10px;
+  text-align: center;
+}
+
+div.tab.blank {
+  color: #FFFFFF;
+  border: none;
+}
+
+div.tab.active {
+  background: #777777;
+}
+
+div.tab.active a {
+  color: #FFFFFF;
+}
+
+div.right div.tab {
+  width: 70px;
+}
+
+/* Widecontent
+   ----------- */
+
+.widecontent {
+  margin-top: 10px;
+  padding-top: 10px;
+  clear: both;
+}
+
+/* Flash alerts
+   ----------- */
+
+div.notice {
+ margin-bottom: 5px;
+  margin-top: 0;
+  padding: 5px;
+  text-align: center;
+ color: #fff;
+ background: #056481;
+ border: 1px solid #DFE4E7;
+  font-size: 1.2em;
+}
+
+div.warning {
+  color: #000000;
+  background: #ffffcc;
+ border: 1px solid #ffcc00;
+ margin-bottom:5px;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+div.error {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 5px;
+/* margin-top: 15px;*/
+  padding: 5px;
+  text-align: center;
+ color: white;
+ background: #F6921E;
+ border: 1px solid #666;
+  font-size: 1.2em;
+}
+
+
+/* Full width
+   --------- */
+
+.full {
+  float: left;
+  width: 100%;
+  margin: 0 0 0px 0;
+}
+
+.full h2 {
+  clear: both;
+  padding: 7px 0 0px 0px;
+  font: bold 1.4em Tahoma, Arial, Sans-Serif;
+  margin: 0 0 1em 0;
+}
+
+/*
+.full h3 {
+  clear: both;
+  padding: 7px 0 7px 0px;
+  font: bold 1.0em Tahoma, Arial, Sans-Serif;
+  margin: 0 0 0px 0;
+}
+*/
+
+/* left side
+   --------- */
+
+.left {
+  float: left;
+  width: 66%;
+  margin: 0 10px 10px 0;
+}
+
+/*
+.left h3 {
+  padding-top: 0;
+  padding-bottom: 0;
+  font: bold 1.2em Tahoma, Arial, Sans-Serif;
+  margin-top: 5px;
+}
+*/
+
+.left .section h3 {
+  background: #777777;
+  color: #FFF;
+  padding: 3px 0 3px 5px;
+}
+
+  .left_side {
+    float: left;
+    width: 180px;
+    padding: 0 0 0 10px;
+    margin: 10px 0;
+  }
+
+  .left_side a, .right_side a { color: #414141; background: #FFF; }
+
+  .right_side {
+    float: right;
+    width: 220px;
+    background: #FFF url(/images/dotted.gif) repeat-y;
+    color: #414141;
+    padding: 0 0 0 40px;
+    margin: 10px 0;
+  }
+
+  .left_box { margin: 0 0 10px 0; color: #000; background: #FFF; padding: 3px 0; }
+
+
+/* right side
+   ---------- */
+
+.right {
+  float: right;
+  width: 30.6%;
+  margin: 0 0 10px 0;
+}
+
+.right h3 {
+  background: #777777;
+  color: #FFF;
+  padding: 3px 0 3px 5px;
+  margin: 0;
+}
+
+.right h4 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  border: 0;
+  font-size: 1.0em;
+}
+
+.image {
+  float: left;
+  margin: 0 9px 3px 0;
+}
+
+/* Split
+   ------ */
+
+.split_left {
+  float: left;
+  width: 45%;
+  margin: 0 10px 10px 0;
+}
+
+.split_right {
+  float: right;
+  width: 45%;
+  margin: 0 0 10px 0;
+}
+
+.split_right2 {
+  float: right;
+  width: 45%;
+  margin: 0 0 10px 0;
+}
+
+/*
+.split_right h3 {
+  padding-left: 0;
+  margin-left:0;
+  padding-bottom: 10px;
+}
+*/
+
+/* footer
+   ------ */
+
+#footer {
+  clear: both;
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  line-height: 1.8em;
+}
+
+.footer a { color: #808080; background: #fff; }
+
+/* fieldset
+   ------ */
+
+fieldset {
+  clear: both;
+  padding: 1em 1em 1em 1em;
+  margin: 0;
+  border: 1px solid #ccc;
+  background: #F5F5F5;
+  margin-top: 0em;
+}
+
+fieldset.half {
+  width: 50%;
+}
+
+fieldset.flush {
+  padding: 0;
+  margin: 0;
+}
+fieldset legend, fieldset h3 {
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  color: #222;
+  background: #F5F5F5;
+}
+fieldset fieldset {
+  /*
+  background-color: #ddd;
+  border-color: #bbb;
+  */
+  border: none;
+  margin: 0;
+  padding: 2px;
+}
+
+fieldset h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+fieldset label {
+  font-weight: bold;
+  display: block;
+}
+
+fieldset label small,fieldset legend small {
+  font-weight: normal;
+}
+
+fieldset.nolegend {
+  padding-top: 1em;
+}
+
+fieldset table {
+  width: 100%;
+}
+
+fieldset #optional table {
+  width: 80%;
+}
+
+fieldset table tr {
+}
+
+fieldset table th {
+  text-align: left;
+  vertical-align: top;
+  padding-bottom: 5px;
+}
+
+fieldset table th.label_required {
+  width: 30%;
+  background: transparent url(/images/required.gif) no-repeat;
+  padding-left: 18px;
+}
+
+fieldset table th.label {
+  width: 30%;
+  padding-left: 18px;
+}
+
+fieldset table td.label {
+  padding-left: 18px;
+}
+
+fieldset table th.no_indent {
+  width: 30%;
+  padding-left: 0;
+}
+
+fieldset table td.no_indent {
+  padding-left: 0;
+}
+
+fieldset table td {
+  padding-bottom: 5px;
+  padding-left: 0px;
+}
+
+fieldset table td.description {
+  font-style: italic;
+  padding-left: 18px;
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+
+fieldset table td.note {
+  font-weight: bold;
+}
+
+fieldset table td .example {
+  font-style: italic;
+  margin-left: 18px;
+}
+
+fieldset table td textarea {
+  margin-left: 18px;
+}
+
+fieldset h4 {
+  font-size: 1.0em;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  padding: 0;
+}
+
+fieldset a {
+  text-decoration: none;
+}
+
+fieldset div.title {
+  clear: both;
+  padding: 7px 0 7px 0px;
+  font: bold 1.0em Tahoma, Arial, Sans-Serif;
+  margin: 0 0 0px 0;
+  background: inherit;
+  color: #000;
+}
+
+fieldset ul { margin: 0 0 0 20px; padding : 0; list-style : disc outside none; }
+
+/* pagination
+   ---------- */
+
+.pagination {
+  width: 100%;
+}
+
+.pagination div.prev {
+  float: left;
+  width: 24%;
+  text-align: left;
+}
+
+.pagination div.count {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.pagination div.next {
+  float: left;
+  width: 24%;
+  text-align: right;
+}
+
+.search_results {
+  clear: both;
+  padding-top: 10px;
+}
+
+.search_results img
+{
+        border:0;
+}
+
+/* profile_snippets
+   ---------------- */
+
+.profile_snippet {
+  padding: 5px 5px 2px 5px;
+  /*padding-bottom: 0px;*/
+  border-bottom: 1px solid #d8d8d8;
+/*  background: #FFFFFF;*/
+  margin-bottom: 5px;
+}
+
+.profile_snippet_first
+{
+        border:0;
+}
+
+.profile_snippet div.thumbnail {
+  float: left;
+  width: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile_snippet div.details {
+  float: left;
+  width: 200px;
+  padding-left: 10px;
+}
+
+.profile_snippet div.details div.name {
+  font-weight: bold;
+  float: left;
+  width: 270px;
+}
+
+.profile_snippet div.details div.belongs_to {
+  font-weight: bold;
+  float: left;
+  width: 270px;
+  font-size: 0.9em;
+}
+
+.profile_snippet div.details div.stats {
+  float: left;
+  width: 100px;
+}
+
+.profile_snippet div.details div.specialty {
+  float: left;
+  width: 200px;
+}
+
+.profile_snippet div.options {
+  clear: both;
+  float: left;
+  width: 100px;
+  text-align: right;
+}
+
+.profile_snippet div.options img
+{
+        border: 0px;
+}
+
+.profile_snippet div.options div.link {
+  float: right;
+  text-align: right;
+  margin-left: 20px;
+  width: 140px;
+}
+
+.profile_snippet div.options div.link_spacer {
+  float: left;
+  width: 150px;
+}
+
+.profile_snippet div.end {
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile_snippet a:link, .profile_snippet a:visited, .profile_snippet a:hover
+{
+        color: gray;
+        text-decoration:none;
+}
+.profile_snippet a:hover
+{
+        text-decoration:underline;
+}
+
+
+/* profile_view
+   ---------------- */
+
+.profile_view {
+}
+
+.profile_view div.thumbnail {
+  float: left;
+  width: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile_view div.details {
+  float: left;
+  width: 500px;
+  padding-left: 10px;
+}
+
+.profile_view div.details div.name {
+  font-weight: bold;
+  float: left;
+  width: 400px;
+  font-size: 1.2em;
+}
+
+.profile_view div.details div.belongs_to {
+  font-weight: bold;
+  float: left;
+  width: 400px;
+  font-size: 0.9em;
+}
+
+.profile_view div.details div.stats {
+  float: left;
+  width: 100px;
+}
+
+.profile_view div.details div.specialty, .profile_view div.details div.sub_specialty {
+  float: left;
+  margin-right: 20px;
+}
+
+.profile_view div.details div.email {
+  clear: both;
+  padding-top: 10px;
+}
+
+.profile_view div.details div.phone {
+  clear: both;
+  padding-top: 10px;
+}
+
+.profile_view div.details div.address {
+  clear: both;
+  padding-top: 10px;
+}
+
+/*
+.profile_view div.details div.description {
+  clear: both;
+  padding-top: 10px;
+}
+*/
+
+.right div.section div.tags div.tag_name {
+  float: left;
+  width: 45%;
+  font-weight: bold;
+}
+
+.right div.section div.tags div.tag_list {
+  float: left;
+  width: 52%;
+}
+
+.profile_view div.end, .right div.end {
+  clear: both;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* sections
+   -------- */
+
+.section {
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 0.9em;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: 1px solid black;
+}
+
+
+/* tag_details
+   ----------- */
+
+.tag_details {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.tag_details div.thumbnail {
+  float: left;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.tag_details div.details {
+  float: left;
+  width: 700px;
+  padding-left: 10px;
+}
+
+.tag_details div.more_info {
+  clear: both;
+  text-align: right;
+}
+
+.tag_details div.end {
+  clear: both;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* tag_sponsor
+   ----------- */
+
+.tag_sponsor {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.tag_sponsor div.thumbnail {
+  float: left;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.tag_sponsor div.details {
+  float: left;
+  width: 500px;
+  padding-left: 10px;
+}
+
+.tag_sponsor div.more_info {
+  clear: both;
+  text-align: right;
+}
+
+.tag_sponsor div.end {
+  clear: both;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* basic_search
+   ------------ */
+
+.basic_search {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.basic_search .tabs {
+  font-size: 0.8em;
+}
+
+.basic_search fieldset {
+ margin-top: 0px;
+ margin-bottom: 10px;
+}
+
+.basic_search h4 {
+  margin-top: 5px;
+  margin-bottom: -5px;
+  font-size: 0.8em;
+}
+
+.basic_search h5 {
+  font-size: 0.85em;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.basic_search p {
+  font-size: 0.95em;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.submit_as_link {
+        font-family: Tahoma, Helvetica, Arial, sans-serif;
+        font-size: 1.0em;
+        border-width: 0;
+        padding: 0;
+        color: #0000F0;
+        background: #F5F5F5;
+        cursor: pointer;
+        float: left;
+}
+
+/* advanced_search
+   --------------- */
+
+.advanced_search {
+        padding-left: 5px;
+        padding-right: 5px;
+}
+
+.advanced_search .tabs {
+  font-size: 0.8em;
+}
+
+.advanced_search fieldset {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.advanced_search h4 {
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+.advanced_search h5 {
+  font-size: 0.85em;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.advanced_search input {
+        margin-bottom: 10px;
+}
+
+.advanced_search p {
+  font-size: 0.95em;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.search_hide_show {
+  font-size: 0.9em;
+  color: gray;
+  text-decoration: none;
+  clear: both;
+  float: right;
+}
+
+/* create_referral
+   --------------- */
+
+.create_referral {
+  padding-left: 125px;
+  padding-right: 125px;
+}
+
+.create_referral div.section {
+  border: 1px solid black;
+}
+
+.create_referral div.section h3 {
+  font-size: 0.9em;
+  font-style: italic;
+  color: gray;
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.create_referral div.section a.section_control {
+        float: right;
+        padding-right: 10px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_control:hover {
+        color: blue;
+        background-color: white;
+        text-decoration: underline;
+}
+
+.create_referral div.section a.section_edit_control {
+        padding-right: 5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_edit_control:hover {
+        color: blue;
+        background-color: white;
+        text-decoration: underline;
+}
+
+.create_referral div.section a.section_close_control {
+        float: right;
+        margin-bottom: -5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_close_control:hover {
+        color: blue;
+        background-color: none;
+        text-decoration: underline;
+}
+
+.create_referral div.section a.section_add {
+        margin-left: 40%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_add:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section a.section_add_file {
+        margin-left: 35%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_add_file:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section a.section_add_fax {
+        margin-left: 47%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_add_fax:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section a.section_add_study {
+        margin-left: 38%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_add_study:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section a.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.create_referral div.section a.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section input.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+        border: none;
+}
+
+.create_referral div.section input.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section input.section_save_control {
+        float: right;
+        margin-bottom: -5px;
+        margin-right: -10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: none;
+        text-decoration: none;
+        border: none;
+}
+
+.create_referral div.section input.section_save_control:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.create_referral div.section label {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        color: gray;
+}
+
+.create_referral div.section div.placeholder {
+  clear: both;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.thumbnail {
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.create_referral div.section div.name_specialty {
+  float: right;
+  width: 580px;
+  clear: both;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.create_referral div.section div.address {
+  float: right;
+  width: 580px;
+  clear: both;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.create_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.edit_request {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.create_referral div.section div.edit_request textarea {
+  margin: 0px;
+}
+
+.create_referral div.section div.patient {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.edit_patient {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.create_referral div.section div.insurance {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.files {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.faxes {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.referrer {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.create_referral div.section div.edit_referrer {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.create_referral div.section div.el_problemo {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  color: #008800;
+  background: #ccffcc;
+  border-bottom: 1px solid #008800;
+  font-size: 0.85em;
+}
+
+.create_referral div.section div.clear {
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#ancillary_study_list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* autocomplete
+   ------------ */
+
+div.auto_complete {
+  width: 150px;
+  background: #fff;
+}
+
+div.auto_complete ul {
+  border:1px solid #888;
+  margin:0;
+  padding:0;
+  width:100%;
+  list-style-type:none;
+}
+
+div.auto_complete ul li {
+  margin:0;
+  padding:3px;
+}
+
+div.auto_complete ul li.selected {
+  background-color: #ffb;
+}
+
+div.auto_complete ul strong.highlight {
+  color: #800;
+  margin:0;
+  padding:0;
+}
+
+div.auto_complete li {
+  font-size: 0.90em;
+}
+
+div.search_field {
+  padding-left: 300px;
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+/*
+table.referral_list tbody tr.hover {
+  cursor: pointer;
+}
+*/
+
+/* message_results grid on the referral view/details
+   ------------------------------------------------- */
+
+#grid thead tr th {
+  text-align: left;
+  font-weight: bold;
+}
+
+#grid thead tr th a {
+  display: block;
+}
+
+#grid thead tr th.current_sort {
+  color: #000000;
+  font-weight: bold;
+}
+
+#grid thead tr th.current_sort.asc a,
+#grid thead tr th.current_sort.asc a:hover {
+  background: transparent url(/images/sort_asc.gif) right 50% no-repeat;
+}
+
+#grid thead tr th.current_sort.desc a,
+#grid thead tr th.current_sort.desc a:hover {
+  background: transparent url(/images/sort_desc.gif) right 50% no-repeat;
+}
+
+#grid thead tr th {
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  color: #000000;
+  font-weight: bold;
+}
+
+#grid thead tr th a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+#grid tbody tr td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+
+/* grid
+   ---- */
+
+#grid
+
+/*
+#grid {
+  width: 100%;
+  font-size: 12px;
+}
+
+#grid thead tr {
+  background: #777777;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: left;
+}
+
+#grid thead tr th {
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+}
+
+#grid thead tr th a {
+  display: block;
+}
+
+#grid thead tr th.current_sort.asc a,
+#grid thead tr th.current_sort.asc a:hover {
+  background: transparent url(/images/sort_asc.gif) right 50% no-repeat;
+}
+
+#grid thead tr th.current_sort.desc a,
+#grid thead tr th.current_sort.desc a:hover {
+  background: transparent url(/images/sort_desc.gif) right 50% no-repeat;
+}
+
+#grid thead tr th a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#grid tfoot tr {
+  background: #777777;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: left;
+}
+
+#grid tfoot tr th {
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+#grid tfoot tr th a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#grid tfoot tr th a:hover {
+  text-decoration: underline;
+}
+
+#grid tbody tr {
+  background: #FFFFFF;
+}
+
+#grid tbody tr.odd {
+  background: #DDDDDD;
+}
+
+#grid tbody tr.data {
+  cursor: default;
+}
+
+#grid tbody tr.hover {
+  cursor: pointer;
+}
+
+#grid {
+  border-right: solid 1px #777777;
+}
+
+#grid tbody tr td {
+  padding-top: 2px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+  border-bottom: solid 1px #777777;
+  border-left: solid 1px #777777;
+}
+
+#grid a.page_link {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#grid a.current_page_link {
+  border: 1px solid white;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+*/
+
+/* referral summary (inline with dashboard grid)
+   --------------------------------------------- */
+
+div.referral_summary {
+  padding-left: 10px;
+}
+
+div.referral_summary div.header {
+}
+
+div.referral_summary div.header div.title {
+  float: left;
+  width: 300px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+div.referral_summary div.header div.title div.type {
+  float: left;
+}
+
+div.referral_summary div.header div.title div.action_required {
+  float: left;
+  color: #FF0000;
+}
+
+div.referral_summary div.header div.statistics {
+  float: left;
+  width: 200px;
+}
+
+div.referral_summary div.header div.statistics div.stat {
+  float: left;
+  width: 50px;
+}
+
+div.referral_summary div.header div.close_window {
+  float: right;
+  width: 30px;
+}
+
+div.referral_summary div.content {
+  clear: both;
+  padding-left: 10px;
+}
+
+div.referral_summary div.content div.patient_summary {
+  padding-top: 20px;
+}
+
+div.referral_summary div.content div.primary_insurance_summary {
+  padding-top: 10px;
+  clear: both;
+}
+
+div.referral_summary div.content div.request_summary {
+  padding-top: 10px;
+  clear: both;
+}
+
+div.referral_summary div.links {
+  padding-top: 20px;
+  clear: both;
+}
+
+div.referral_summary div.links div.link {
+  float: left;
+  width: 150px;
+}
+
+div.referral_summary div.content div.details {
+  float: left;
+  padding-right: 15px;
+}
+
+div.referral_summary div.content div.footer {
+  clear: both;
+}
+
+/* message summary (inline with message grid)
+   ------------------------------------------ */
+
+div.message_summary {
+  padding-left: 10px;
+}
+
+div.message_summary div.header {
+}
+
+div.message_summary div.header div.title {
+  float: left;
+  width: 350px;
+}
+
+div.message_summary div.header div.title div.type {
+  float: left;
+}
+
+div.message_summary div.header div.title div.action_required {
+  float: left;
+  color: #FF0000;
+}
+
+div.message_summary div.header div.reply_by {
+  float: left;
+  width: 200px;
+}
+
+div.message_summary div.header div.close_window {
+  float: right;
+  width: 30px;
+}
+
+div.message_summary div.header div.subject {
+  clear: both;
+  padding-top: 10px;
+}
+
+div.message_summary div.content {
+  clear: both;
+  padding-left: 10px;
+}
+
+div.message_summary div.content div.patient_summary {
+  padding-top: 20px;
+}
+
+div.message_summary div.content div.primary_insurance_summary {
+  padding-top: 10px;
+  clear: both;
+}
+
+div.message_summary div.content div.request_summary {
+  padding-top: 10px;
+  clear: both;
+}
+
+div.message_summary div.content div.message_text {
+  padding-top: 10px;
+  padding-left: 10px;
+  clear: both;
+}
+
+div.message_summary div.links {
+  padding-top: 20px;
+  clear: both;
+}
+
+div.message_summary div.links div.link {
+  float: left;
+  width: 150px;
+}
+
+div.message_summary div.content div.details {
+  float: left;
+  padding-right: 15px;
+}
+
+div.message_summary div.content div.footer {
+  clear: both;
+}
+
+div.message_results tr.summary {
+  background: #f2f2f2;
+}
+
+div.message_results table tr.waiting_response {
+  color: #AA0000;
+}
+
+div.message_results table tr.complete {
+
+}
+
+div.message_results table tbody tr.hover {
+  cursor: pointer;
+  color: blue;
+}
+
+div.message_results table tr.new_info {
+  color: #0000AA;
+}
+
+
+/* message form
+   ------------ */
+
+div.message_form div.type {
+  float: left;
+  width: 35%;
+}
+
+div.message_form div.type label {
+}
+
+div.message_form div.response_required_by {
+  float: left;
+  width: 45%;
+}
+
+div.message_form div.response_required_by label {
+  float: left;
+}
+
+div.message_form div.subject {
+  clear:both;
+  padding-top: 10px;
+}
+
+div.message_form div.message_text {
+  clear:both;
+  padding-top: 10px;
+}
+
+div.message_form div.documents {
+  clear:both;
+  padding-top: 10px;
+}
+
+div.message_form div.faxes {
+  clear:both;
+  padding-top: 10px;
+}
+
+div.message_form div.button_bar {
+  clear:both;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+/* accept_decline_withdraw
+   ----------------------- */
+
+.accept_decline_withdraw {
+}
+
+.accept_decline_withdraw div.section {
+  border: 1px solid black;
+}
+
+.accept_decline_withdraw div.section h3 {
+  font-size: 0.9em;
+  font-style: italic;
+  color: gray;
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.accept_decline_withdraw div.section div {
+  padding: 5px;
+}
+
+/* edit_referral
+   --------------- */
+
+#referral_patient
+{
+        margin:0px;
+}
+
+.edit_referral {
+        padding-top:10px;
+}
+
+
+.edit_referral a:visited,.edit_referral a:link,.edit_referral a:hover
+{
+        color:gray;
+        text-decoration:none;
+}
+.edit_referral a:hover
+{
+        text-decoration:underline;
+}
+
+
+.edit_referral div.section {
+  border: 1px solid #d9d9d9;
+
+}
+
+.edit_referral div.section h3 {
+  font-size: 0.9em;
+  font-style: italic;
+  color: gray;
+  margin: 0;
+  padding: 0;
+  padding-left: 3px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.edit_referral div.section a.section_control {
+        float: right;
+        padding-right: 10px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_control:hover {
+/*        color: blue;
+        background-color: white;*/
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_edit_control {
+        padding-right: 5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_edit_control:hover {
+        color: blue;
+        background-color: white;
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_close_control {
+        float: right;
+        margin-bottom: -5px;
+        font-size: 0.9em;
+        color: gray;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_close_control:hover {
+        color: blue;
+        background-color: none;
+        text-decoration: underline;
+}
+
+.edit_referral div.section a.section_add {
+        margin-left: 40%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_file {
+        margin-left: 35%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_file:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_fax {
+        margin-left: 47%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_fax:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_add_study {
+        margin-left: 38%;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_add_study:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section a.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+}
+
+.edit_referral div.section a.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section input.section_save {
+        float: right;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: white;
+        text-decoration: none;
+        border: none;
+}
+
+.edit_referral div.section input.section_save:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section input.section_save_control {
+        float: right;
+        margin-bottom: -5px;
+        margin-right: -10px;
+        font-size: 0.9em;
+        color: gray;
+        background-color: none;
+        text-decoration: none;
+        border: none;
+}
+
+.edit_referral div.section input.section_save_control:hover {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+}
+
+.edit_referral div.section label {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 0.9em;
+        color: gray;
+}
+
+.edit_referral div.section div.placeholder {
+  clear: both;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.edit_referral div.section div.thumbnail {
+  padding: 10px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  float: left;
+  width: 80;
+}
+
+.edit_referral div.section div.details {
+  float: left;
+  width: 540px;
+}
+
+.edit_referral div.section div.name {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.edit_referral div.section div.specialty {
+  padding: 10px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.edit_referral div.section div.address {
+  padding: 10px;
+  padding-top: 0;
+}
+
+.edit_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_request {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.edit_request textarea {
+  margin: 0px;
+}
+
+
+.edit_referral div.section div.provider {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.patient {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.edit_patient fieldset {
+  margin: 0px;
+}
+
+.edit_referral div.section div.request {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_patient {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.insurance {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+
+.edit_referral div.section div.files {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.faxes {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.referrer {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.edit_referrer {
+  font-size: 0.95em;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.edit_referral div.section div.change_consultant {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.edit_referral div.section div.el_problemo {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  color: #008800;
+  background: #ccffcc;
+  border-bottom: 1px solid #008800;
+  font-size: 0.85em;
+}
+
+.edit_referral div.section div.clear {
+  clear: both;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+.edit_referral div.section div.referral_messages {
+  font-size: 0.95em;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+/* ad support
+   ----------- */
+
+.ad {
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}

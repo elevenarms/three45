@@ -1,0 +1,22 @@
+<% faxes = @target_referral.referral_faxes %>
+
+<div class="bevel"> <strong>Faxes:</strong></div>
+
+<div class="faxes">
+<% unless faxes == nil || faxes.count == 0 %>
+        <% faxes.each do |fax| %>
+                <div id="<%= 'fax_detail_' + fax.id %>">
+                        <%= render :partial => 'faxes/fax_detail', :locals => { :fax => fax, :editing_controls => true } %>
+                </div>
+        <% end %>
+<% end %>
+<div id="fax_detail_new"></div>
+</div>
+
+<%=link_to_remote 'Add Fax', :update => 'fax_detail_new', :url => new_create_referral_fax_url( @target_referral ), :method => :get, :html => { :class => 'section_add_fax' }-%>
+
+<%#=link_to_remote 'Done', :update => 'referral_faxes', :url => create_referral_faxes_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+
+<%=link_to_remote 'Done', :url => create_referral_faxes_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+
+<div class="clear">&nbsp;</div>

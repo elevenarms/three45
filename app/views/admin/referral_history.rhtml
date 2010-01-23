@@ -1,0 +1,14 @@
+
+<H3>Referral content and history</H3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p><br/>
+<p><%= link_to "Back to Referrals list" , :action=>'referrals_index', :show_what=>@show_what, :sort => @sort %></p>
+<p><%= link_to "Delete this referral" , :action=>'delete_referral', :referral_id => @referral.id, :show_what=>@show_what, :sort => @sort %></p>
+<p>NOTE: deleting a referral actually deletes the rows from all the tables and cannot be undone.  This should only be used for getting rid of test referrals and not any with actual patient data.</p>
+<H3>Referral object</H3>
+<%= debug(@referral) -%>
+<H3>Referral source</H3>
+<%= debug(@active_source) -%>
+<H3>Referral target</H3>
+<%= debug(@active_target) -%>
+<H3>Audit log entries for this referral</H3>
+<%= debug(@log_entries) -%>

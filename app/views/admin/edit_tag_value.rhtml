@@ -1,0 +1,26 @@
+<H3>Edit a tag of type: <%= @tag_type.name %>   </H3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<br/>
+<% form_for :tag, :url => { :action => 'update_tag_value', :id => @tag, :parent => @parent[:id], :child => @child_tag_type } do |t| -%>
+  <p>Edit the tag name:  </p>  <%= t.text_field :name %> 
+  <%= submit_tag 'Update the name' %>
+<% end %>
+
+<% if !@children.empty? then %>
+    <HR>
+    <p><strong>Current <%= @child_tag_type[:name] %>  values for this <%= @tag_type.name %>   </strong></p>
+    <table id="tags">
+      <%= render :partial => 'children', :collection => @children %>
+    </table>
+    <% end %>
+
+<% if  @tag_type.id == "insurance_carriers" || @tag_type.id == "specialties" then %>
+    <HR>
+    <% form_for :tag, :url => { :action => 'create_tag_value', :id => @tag, :parent => @parent[:id] } do |t| -%>
+      <p>Add  a new value for Tag Type: <%= @child_tag_type[:name] %> (not <%= @tag_type.name %>) </p>
+      <p> <%= t.text_field :name, :value => ' ' %> 
+      <%= t.hidden_field :id, :value => @child_tag_type[:id] %>
+    <%= submit_tag "#{'Add ' + String(@child_tag_type[:name])}" %></p>
+    <% end %>   
+<p><%= link_to "#{'Back to ' + String(@tag_type.name)}", :action => 'display_switch',  :tag_type_id => @tag_type.id %></p>
+<% end %>

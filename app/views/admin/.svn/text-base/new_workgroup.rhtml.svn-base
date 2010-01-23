@@ -1,0 +1,103 @@
+<%- @page_title = "Create workgroup & user" -%>
+<H3>Create a New Workgroup and Initial User</H3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<% form_for :workgroup, :url => { :action => 'create_workgroup', :id => @wkgrp } do |f| %>
+<h3>Information for the Workgroup:</h3>
+
+<% if  !@wkgrp.errors.empty? then %>
+  <div class=error>   
+     <%= error_messages_for "wkgrp" %>
+    <H3>Nothing else below on this form was processed.
+    <p>Recommend you just enter all the info again on this form.</p></H3>
+  </div>
+<% end %>
+
+    <p>New workgroup name: </p>
+  <p><%= f.text_field :name, :value=>'' %> </p>
+
+  <p>Workgroup (existing) sub-type: </p>
+  <p><%= f.select(:workgroup_subtype_id, @wkgrp_subtypes)  %> </p>
+  <p>subdomain: </p>
+  <p><%= f.text_field :subdomain, :value=>''  %> </p>
+  <p>Subscriber Status: </p>
+  <p><%= f.select(:subscriber_flag, @subscriber_types)  %> </p>
+  <p>New workgroup description: </p>
+  <p><%= f.text_field :description, :value=>''  %> </p>
+  <p>New workgroup office phone: </p>
+  <p><%= f.text_field :office_number, :value=>''  %> </p>
+  <p>New workgroup fax: </p>
+  <p><%= f.text_field :fax_number, :value=>''  %> </p>
+
+  <h3>Information for the first user in this workgroup</h3>
+
+  <% if  !@user.errors.empty? then %>
+      <div class=error>
+        <%= error_messages_for "user" %>
+        <H3>Workgroup processed successfully, but problems (see below) with user.
+        <p>You must add this user with the "Add user to workgroup" function on the admin home page.</p></H3>
+      </div>
+  <% end %>
+
+
+
+  <% fields_for :group do |g| %>
+    <p>What type of user is this: </p>
+    <p><%= g.select(:id, @groups) %> </p>
+  <% end %>
+
+  <% fields_for :user do |u| %>
+      <p><label for="login">Login</label><br/>
+      <%= u.text_field :login %></p>
+
+      <p><label for="email">Email</label><br/>
+      <%= u.text_field :email %></p>
+
+      <p><label for="password">Password</label><br/>
+      <%= u.password_field :password %></p>
+
+      <p><label for="password_confirmation">Confirm Password</label><br/>
+      <%= u.password_field :password_confirmation %></p>
+
+      <p>Last name:</p>
+      <p><%= u.text_field :last_name %> </p>
+      <p>First name:</p>
+      <p><%= u.text_field :first_name %> </p>
+      <p>Middle name:</p>
+      <p><%= u.text_field :middle_name %> </p>
+
+  <% end %>
+  <h3>Information for the first address for this workgroup</h3>
+  <p>NOTE: The address can be added later.</p><br/>
+  <% if  !@address.errors.empty? then %>
+      <div class=error>
+        <p>Workgroup and User processed successfully, but problems (see below) with address.</p>
+        <p>You must add this user with the "Manage workgroup addresses" function.</p>
+        <%= error_messages_for "address" %>
+      </div>
+  <% end  %>
+
+      <% fields_for :address_type do |a| %>
+      <p>Type of address: </p>
+      <p><%= a.select(:id, @address_types) %> </p>
+      <% end %>
+
+      <% fields_for :address do |b| %>
+          <p><label for="street1">Street (first line): </label><br/>
+          <%= b.text_field :street1 %></p>
+
+          <p><label for="street2">Street (second line): </label><br/>
+          <%= b.text_field :street2 %></p>
+
+          <p><label for="city">City: </label><br/>
+          <%= b.text_field :city %></p>
+
+          <p><label for="state">State: </label><br/>
+          <%= b.text_field :state %></p>
+
+          <p>Zip:</p>
+          <p><%= b.text_field :zip_code%> </p>
+      <% end %>
+
+  <p><%= submit_tag 'Create both the workgroup and the user' %></p>
+<% end %>
+

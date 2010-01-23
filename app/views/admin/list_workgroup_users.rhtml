@@ -1,0 +1,12 @@
+<h3> "All Workgroup-user combinations in the system"
+</h3>
+<p><%= link_to "Add a new workgroup-user combination", :action => 'new_workgroup_user' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<table id="workgroup_user">
+  <tr>
+    <th>Workgroup ID</th>
+    <th>User ID</th>
+  </tr>
+  <%= render :partial => 'workgroup_user', :collection => @workgroup_users %>
+</table>

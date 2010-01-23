@@ -1,0 +1,14 @@
+# page.replace_html 'referral_insurance', :partial => 'insurance/index', :locals=>{ :edit_disabled => false }
+# page.replace_html 'referral_files', :partial => 'files/edit_index'
+# page.replace_html 'file_detail_new', :partial=>"files/edit_new_file_detail"
+# page.show 'referral_files'
+
+page.replace_html 'referral_insurance', :partial => 'insurance/index', :locals=>{ :edit_disabled => false }
+unless @target_referral.created_by_user.is_physician?
+  page.replace_html 'referral_referrer', :partial => 'select_physician/edit', :locals=>{ :edit_disabled => false }
+  page.show 'referral_referrer'
+else
+  page.replace_html 'referral_files', :partial => 'files/edit_index'
+  page.replace_html 'file_detail_new', :partial=>"files/edit_new_file_detail"
+  page.show 'referral_files'
+end

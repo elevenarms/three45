@@ -1,0 +1,246 @@
+admin345:
+  id: admin345
+  login: admin345
+  email: admin345@chalstrom.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: three45
+  middle_name:
+  last_name: Administrator
+
+mllamb:
+  id: mllamb
+  login: mllamb
+  email: mllamb@chalstrom.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Mary
+  middle_name: Little
+  last_name: Lamb
+
+HoraceQuinnMann:
+  id: horace_quinn_mann
+  login: hqmann
+  email: hqmann@chalstrom.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Horace
+  middle_name: Quinn
+  last_name: Mann
+
+MarieParisCurie:
+  id: marie_paris_curie
+  login: mpcurie
+  email: mpcurie@chalstrom.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Marie
+  middle_name: Paris
+  last_name: Curie
+
+quentin:
+  id: 1
+  login: quentin
+  email: quentin@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Quentin
+  middle_name: A.
+  last_name: Smith
+
+
+aaron:
+  id: 2
+  login: aaron
+  email: aaron@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 1.days.ago.to_s :db %>
+  first_name: Aaron
+  middle_name: B.
+  last_name: Jones
+
+
+mike_the_chiro:
+  id: 3
+  login: mike_the_chiro
+  email: mike@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 1.days.ago.to_s :db %>
+  first_name: Mike
+  middle_name: the
+  last_name: Chiropractor
+
+
+dr_gillespie:
+  id: dr_gillespie
+  login: dr_kildare
+  email: dr_kildare@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 1.days.ago.to_s :db %>
+  first_name: Leonard
+  middle_name:
+  last_name: Gillespie
+
+
+stretch_brewster:
+  id: stretch_brewster
+  login: stretch_brewster
+  email: stretch_brewster@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 1.days.ago.to_s :db %>
+  first_name: Stretch
+  middle_name:
+  last_name: Brewster
+
+joyce_kildare_admin:
+  id: joyce_kildare_admin
+  login: kildare_admin
+  email: kildare_admin@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 1.days.ago.to_s :db %>
+  first_name: Joyce
+  middle_name:
+  last_name: Admin
+
+quentin_jr:
+    id: quentin_jr
+    login: quentin_jr
+    email: quentin_jr@example.com
+    salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+    crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+    created_at: <%= 2.days.ago.to_s :db %>
+    first_name: Quentin
+    middle_name: A.
+    last_name: Smith, Jr.
+
+quentin_admin:
+  id: quentin_admin
+  login: quentin_admin
+  email: quentin_admin@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 3.days.ago.to_s :db %>
+  first_name: Mabel
+  middle_name: C.
+  last_name: Lamb
+
+mccoy:
+    id: mccoy
+    login: mccoy
+    email: mccoy@mccoymedical.com
+    salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+    crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+    created_at: <%= 3.days.ago.to_s :db %>
+    first_name: Leonard
+    middle_name: C.
+    last_name: McCoy
+
+thomas_c_baldacchino:
+  id: thomas_c_baldacchino
+  login: tbaldacchino
+  email: thomas_c_baldacchino@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Thomas
+  middle_name: C.
+  last_name: Baldacchino
+
+james_b_williams:
+  id: james_b_williams
+  login: jbwilliams
+  email: jwilliams@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: James
+  middle_name: B.
+  last_name: Williams
+
+eric_j_frischhertz:
+  id: eric_j_frischhertz
+  login: ejfrischhertz
+  email: efrischhertz@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Eric
+  middle_name: J.
+  last_name: Frischhertz
+
+samuel_j_dimaio:
+  id: samuel_j_dimaio
+  login: sjdimaio
+  email: sjdimaio@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Samuel
+  middle_name: J.
+  last_name: DiMaio
+
+osvaldo_s_gigliotti:
+  id: osvaldo_s_gigliotti
+  login: osgigliotti
+  email: osgigliotti@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Osvaldo
+  middle_name: Steven
+  last_name: Gigliotti
+
+j_faroni:
+  id: j_faroni
+  login: jfaroni
+  email: jfaroni@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Jennifer
+  middle_name:
+  last_name: Faroni
+
+k_machuga:
+  id: k_machuga
+  login: kmachuga
+  email: kmachuga@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Kathryn
+  middle_name:
+  last_name: Machuga
+
+m_smith:
+  id: m_smith
+  login: msmith
+  email: msmith@a.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 5.days.ago.to_s :db %>
+  first_name: Marcy
+  middle_name:
+  last_name: Smith
+
+uns:
+  id: uns
+  login: uns
+  email: uns@example.com
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
+  created_at: <%= 0.days.ago.to_s :db %>
+  first_name: Non
+  middle_name:
+  last_name: Subscriber
+

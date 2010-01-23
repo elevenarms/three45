@@ -1,0 +1,26 @@
+# NOTE: To install a thumbnail for a profile, you will need to create the parent entry plus the thumbnail
+#       The files must be installed into the public/profile_images/000/000 directory, which on stage/production should
+#       be a symlink to a shared directory that is linked in for each capistrano release
+
+# Examples:
+#
+# profile_aaron_parent:
+#   id: profile_aaron_parent
+#   profile_id: profile_aaron
+#
+# profile_aaron_thumb:
+#   id: profile_aaron_thumb
+#   profile_id: profile_aaron
+#   parent_id: profile_aaron_parent
+#   filename: test1.jpg # must be located at /profile_images/0000/0000/test1.jpg
+#
+#
+# profile_workgroup_chiro_parent:
+#   id: profile_workgroup_chiro_parent
+#   profile_id: profile_workgroup_chiro
+#
+# profile_workgroup_chiro_thumb:
+#   id: profile_workgroup_chiro_thumb
+#   profile_id: profile_workgroup_chiro
+#   parent_id: profile_workgroup_chiro_parent
+#   filename: test2.jpg # must be located at /profile_images/0000/0000/test2.jpg

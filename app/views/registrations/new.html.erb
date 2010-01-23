@@ -1,0 +1,62 @@
+<H1 title="30-day free trial">Sign up for three45 for free</H1>
+<% form_for :workgroup, :url => { :action => 'capture_form1', :id => @workgroup } do |f| %>
+  <h3>Information about your practice or group</h3>
+   Every user in the system must be in a group.  The group includes physicians,
+  <p>nurses, administrators, and others who work together and have access</p>
+  <p>to the same patient information.  The group is also the billing entity.</p><br/>
+  <p><strong>Group name:</strong></p>
+  <p>(Every user in three45 is in a group)</p>
+  <p><%= f.text_field :name, :value => "" %> </p>
+  <% if @workgroup_name_error != "" %>
+    <div class=error> 
+      <p><%=  @workgroup_name_error %></p>
+    </div>  
+  <% end %>
+  <p><strong>Your group's own Internet Web address:</strong></p>
+  <p>(Enter lowercase letters in the box - no CAPITAL letter, numbers or punctuation.</p>
+  <p>Try to pick something unique: "footdoctor" is NOT a good choice, but</p>
+  <p>"tylerfootdoctor" may be unique.  If your group already has a Web address,</p>
+  <p>like "www.tylerfootdoctor.com", then use the middle part, "tylerfootdoctor")</p
+  <p><strong>http://</strong><%= f.text_field :subdomain, :value => "" %><strong>.three45.net</strong> </p>
+  <p><strong>Group office phone:</strong></p>
+  <p>(Where we can reach you if questions about your registration)</p>
+  <p><%= f.text_field :office_number, :value => ""  %></p>
+  <p><strong>Group fax:</strong></p>
+  <p>(The fax numnber where you receive patient referrals today)</p>
+  <p><%= f.text_field :fax_number, :value => "" %>  </p>
+
+  <p> <h3>Information about yourself</h3></p>
+  <p>Everyone gets their own personal login.</p><p>three45 also needs your contact information.</p><br/>
+  <% fields_for :user do |u| %>
+    <% if @user_name_error != "" then %>
+      <div class=error>
+        <p><%=  @user_name_error %></p>
+      </div>  
+    <% end %>
+
+    <p><strong>Unique user ID:</strong></p>
+    <p>(The username you will use to log into the three45 system - must be unique)</p><br/>
+    <p><%= u.text_field :login, :value => @usr[:login]  %></p>
+
+    <% if @email_error != "" %> 
+      <div class=error>
+        <p><%=  @email_error %></p>
+      </div>  
+    <% end %>
+    <p><strong>Your Email:</strong></p>
+    <p>(The email address where confirmation of this registration will be sent)</p><br/>
+    <p><%= u.text_field :email, :value => @usr[:email]  %></p>
+
+    <p><strong>First name:</strong></p>
+    <p><%= u.text_field :first_name, :value => @usr[:first_name]  %> </p>
+    <p><strong>Middle name:</strong></p>
+    <p><%= u.text_field :middle_name, :value => @usr[:middle_name]  %> </p>
+    <p><strong>Last name:</strong></p>
+    <p><%= u.text_field :last_name, :value => @usr[:last_name] %> </p>
+
+  <% end %>
+<br/><p><%=check_box_tag("physician_reg", value = '1', checked = @physician_reg) %> <strong>I am a physician in this group.</strong></p>
+    <br/><p>When you click continue, you will be taken to one more form to input more information.</p>
+      
+  <p><%= submit_tag 'Continue' %></p>
+<% end %>

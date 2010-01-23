@@ -1,0 +1,75 @@
+<%- if @results.empty? -%>
+<div>No Referrals Found</div>
+<%- else -%>
+<table class="referral_list" cellspacing="0" cellpadding="0" width="100%">
+
+    <thead>
+      <tr>
+        <th class="row-padding <%=sort_heading_style("Type","type")%>"><%=sort_referral_heading_link("Type","type") %></th>
+        <th class="<%=sort_heading_style("Status","status") %>"><%=sort_referral_heading_link("Status","status") %></th>
+        <th class="<%=sort_heading_style("Patient","patient") %>"><%=sort_referral_heading_link("Patient","patient") %></th>
+        <th class="<%=sort_heading_style("SSN","ssn") %>"><%=sort_referral_heading_link("SSN","ssn") %></th>
+        <th class="<%=sort_heading_style("From","from") %>"><%=sort_referral_heading_link("From","from") %></th>
+        <th class="<%=sort_heading_style("To","to") %>"><%=sort_referral_heading_link("To","to") %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <%- @results.each_with_index do |referral, index| -%>
+    <tr id="<%=referral['referral_id']%>_data" referral_id="<%=referral['referral_id']%>" class="data <%=render_odd_class(index+1)%>" <%="style='display: none'" if @expand_referral and @expand_referral == referral['referral_id']%>>
+      <td class="row-padding"><%=referral['referral_type_name']%>&nbsp;</td>
+      <td><%=referral['status']%>&nbsp;</td>
+      <td>
+        <%-
+           full_name = ''
+           full_name += referral['patient_last_name'] unless referral['patient_last_name'] == nil
+           full_name += ', '+referral['patient_first_name'] + ' ' unless referral['patient_first_name'] == nil
+           full_name += referral['patient_middle_name'] + ' ' unless referral['patient_middle_name'] == nil
+        -%>
+        <%=full_name%>&nbsp;
+      </td>
+      <td><%=referral['patient_ssn']%>&nbsp;</td>
+      <td><%=referral['from_name']%>&nbsp;</td>
+      <td><%=referral['to_name']%>&nbsp;</td>
+    </tr>
+    <tr id="<%=referral['referral_id']%>_summary" referral_id="<%=referral['referral_id']%>" class="summary" <%="style='display: none'" unless @expand_referral and @expand_referral == referral['referral_id']%>>
+      <td id="<%=referral['referral_id']%>_summary_content" colspan="6">
+        <%- if @expand_referral and @expand_referral == referral['referral_id'] -%>
+          <%=render :partial=>"/referrals/summary", :object=>Referral.find_eager(referral['referral_id'])%>
+        <%- else -%>
+        &nbsp;
+        <%- end -%>
+      </td>
+    </tr>
+    <%- end -%>
+    <tr><td colspan="6">&nbsp;</td></tr>
+    </tbody>
+
+    </table>
+
+    <div class="spacer"></div>
+    <table style="padding-top:10px;width:100%">
+    <tfoot>
+      <tr>
+        <th  class="table-footer" colspan="6">
+          Page:
+          <%- if @filter.page_number > 1 -%>
+          <%=link_to_remote "Prev", :update=>"grid", :url=>hash_for_dashboard_index_url.merge({:page_number=>(@filter.page_number-1)}), :method =>:get, :html=>{:class=>"page_link"} %>
+          <%- else -%>
+          &nbsp;
+          <%- end -%>
+          <%- for page in 1..@total_pages -%>
+          <%=link_to_remote "#{page}", :update=>"grid", :url=>hash_for_dashboard_index_url.merge({:page_number=>page}), :method =>:get, :html=>{:class=>(page == @filter.page_number ? "current_page_link" : "page_link")} %>
+          <%- end -%>
+          <%- if @filter.page_number < @total_pages -%>
+              |           <%=link_to_remote "Next", :update=>"grid", :url=>hash_for_dashboard_index_url.merge({:page_number=>(@filter.page_number+1)}), :method =>:get, :html=>{:class=>"page_link"} %>
+          <%- else -%>
+          &nbsp;
+          <%- end -%>
+        </th>
+      </tr>
+    </tfoot>
+
+  </table>
+<%- end -%>
+

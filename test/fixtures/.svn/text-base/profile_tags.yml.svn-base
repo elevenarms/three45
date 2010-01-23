@@ -1,0 +1,491 @@
+quentin_specialty_ontology:
+  id: quentin_specialty_ontology
+  profile_id: profile_quentin
+  tag_id: tag_specialty_ontology
+  tag_type_id: specialties
+
+aaron_specialty_ontology:
+  id: aaron_specialty_ontology
+  profile_id: profile_aaron
+  tag_id: tag_specialty_ontology
+  tag_type_id: specialties
+
+aaron_insurance_blue_cross:
+  id: aaron_insurance_blue_cross
+  profile_id: profile_aaron
+  tag_id: tag_carrier_blue_cross
+  tag_type_id: insurance_carriers
+
+aaron_insurance_blue_cross_plan_standard:
+  id: aaron_insurance_blue_cross_1
+  profile_id: profile_aaron
+  tag_id: tag_carrier_blue_cross_1
+  tag_type_id: insurance_carrier_plans
+
+aaron_insurance_blue_cross_plan_gold:
+  id: aaron_insurance_blue_cross_2
+  profile_id: profile_aaron
+  tag_id: tag_carrier_blue_cross_2
+  tag_type_id: insurance_carrier_plans
+
+aaron_undergrad_from_ut:
+  id: aaron_undergrad_from_ut
+  profile_id: profile_aaron
+  tag_id: tag_education_undergrad_ut
+  tag_type_id: education_undergrad
+
+chiro_diag_image_muga:
+    id: chiro_diag_image_muga
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_images_muga
+    tag_type_id: diag_images
+
+chiro_diag_image_tread_stress_nuc:
+    id: chiro_diag_image_tread_stress_nuc
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_images_tread_stress_nuc
+    tag_type_id: diag_images
+
+chiro_diag_image_aden_stres_nuc:
+    id: chiro_diag_image_aden_stres_nuc
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_images_aden_stres_nuc
+    tag_type_id: diag_images
+
+chiro_diag_image_dubu_stres_nuc:
+    id: chiro_diag_image_dubu_stres_nuc
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_images_dubu_stres_nuc
+    tag_type_id: diag_images
+
+chiro_diag_test_2d_dopp_echo_tt:
+    id: chiro_diag_test_2d_dopp_echo_tt
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_2d_dopp_echo_tt
+    tag_type_id: diag_tests
+
+chiro_diag_test_ecg_w_interp:
+    id: chiro_diag_test_ecg_w_interp
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_ecg_w_interp
+    tag_type_id: diag_tests
+
+chiro_diag_test_ev_mon:
+    id: chiro_diag_test_ev_mon
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_ev_mon
+    tag_type_id: diag_tests
+
+chiro_diag_test_holter_mon:
+    id: chiro_diag_test_holter_mon
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_holter_mon
+    tag_type_id: diag_tests
+
+chiro_diag_test_pacer_chk:
+    id: chiro_diag_test_pacer_chk
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_pacer_chk
+    tag_type_id: diag_tests
+
+chiro_diag_test_trans_echo:
+    id: chiro_diag_test_trans_echo
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_trans_echo
+    tag_type_id: diag_tests
+
+chiro_diag_test_tread_stress_echo:
+    id: chiro_diag_test_tread_stress_echo
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_tread_stress_echo
+    tag_type_id: diag_tests
+
+chiro_diag_test_ct_angio:
+    id: chiro_diag_test_ct_angio
+    profile_id: profile_workgroup_chiro
+    tag_id: tag_diag_tests_ct_angio
+    tag_type_id: diag_tests
+
+mccoy_blue_cross:
+    id: mccoy_blue_cross
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_blue_cross
+    tag_type_id: insurance_carriers
+
+mccoy_blue_cross_1:
+    id: mccoy_blue_cross_1
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_blue_cross_1
+    tag_type_id: insurance_carrier_plans
+
+mccoy_blue_cross_2:
+    id: mccoy_blue_cross_2
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_blue_cross_2
+    tag_type_id: insurance_carrier_plans
+
+mccoy_phcs:
+    id: mccoy_phcs
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_phcs
+    tag_type_id: insurance_carriers
+
+mccoy_phcs_1:
+    id: mccoy_phcs_1
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_phcs_1
+    tag_type_id: insurance_carrier_plans
+
+mccoy_phcs_2:
+    id: mccoy_phcs_2
+    profile_id: profile_workgroup_mccoy
+    tag_id: tag_carrier_phcs_2
+    tag_type_id: insurance_carrier_plans
+
+welby_aetna:
+    id: welby_aetna
+    profile_id: profile_workgroup_welby
+    tag_id: tag_carrier_aetna
+    tag_type_id: insurance_carriers
+
+welby_aetna_1:
+    id: welby_aetna_1
+    profile_id: profile_workgroup_welby
+    tag_id: tag_carrier_aetna_1
+    tag_type_id: insurance_carrier_plans
+
+welby_aetna_2:
+    id: welby_aetna_2
+    profile_id: profile_workgroup_welby
+    tag_id: tag_carrier_aetna_2
+    tag_type_id: insurance_carrier_plans
+
+thomas_c_baldacchino_spec:
+  id: thomas_c_baldacchino_spec
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_specialties_internal_medicine
+  tag_type_id: specialties
+
+thomas_c_baldacchino_spec2:
+  id: thomas_c_baldacchino_spec2
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_specialties_nuclear_medicine
+  tag_type_id: specialties
+
+thomas_c_baldacchino_sub_spec:
+  id: thomas_c_baldacchino_sub_spec
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_sub_spec_cardiovascular_disease
+  tag_type_id: sub_specialties
+
+thomas_c_baldacchino_under:
+  id: thomas_c_baldacchino_und
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_edu_under_brook_coll
+  tag_type_id: education_undergrad
+
+thomas_c_baldacchino_med:
+  id: thomas_c_baldacchino_med
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_edu_med_u_rome
+  tag_type_id: education_medical
+
+thomas_c_baldacchino_res:
+  id: thomas_c_baldacchino_res
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_edu_res_set_hal_st_jo
+  tag_type_id: education_residency
+
+thomas_c_baldacchino_fsp:
+  id: thomas_c_baldacchino_fsp
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_edu_fsp_set_hal_st_jo
+  tag_type_id: education_fellowships
+
+thomas_c_baldacchino_hosp:
+  id: thomas_c_baldacchino_hosp
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_hosp_priv_s_aus_s_david
+  tag_type_id: hospital_privileges
+
+thomas_c_baldacchino_clin:
+  id: thomas_c_baldacchino_clin
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_clin_int_stress_echo
+  tag_type_id: clinical_interests
+
+thomas_c_baldacchino_cert:
+  id: thomas_c_baldacchino_cert
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_cert_internal_medicine
+  tag_type_id: certifications
+
+thomas_c_baldacchino_cert2:
+  id: thomas_c_baldacchino_cert2
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_cert_cardiovascular_disease
+  tag_type_id: certifications
+
+thomas_c_baldacchino_cert3:
+  id: thomas_c_baldacchino_cert3
+  profile_id: profile_thomas_c_baldacchino
+  tag_id: tag_cert_nuclear_medicine
+  tag_type_id: certifications
+
+samuel_j_demaio_spec:
+  id: samuel_j_demaio_spec
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_specialties_internal_medicine
+  tag_type_id: specialties
+
+samuel_j_demaio_sub_spec:
+  id: samuel_j_demaio_sub_spec
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_sub_spec_cardiovascular_disease
+  tag_type_id: sub_specialties
+
+samuel_j_demaio_sub_spec2:
+  id: samuel_j_demaio_sub_spec2
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_cert_interventional_cardiology
+  tag_type_id: sub_specialties
+
+samuel_j_demaio_under:
+  id: samuel_j_demaio_under
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_edu_under_rutgers
+  tag_type_id: education_undergrad
+
+samuel_j_demaio_med:
+  id: samuel_j_demaio_med
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_edu_med_n_j_med_sch
+  tag_type_id: education_medical
+
+samuel_j_demaio_res:
+  id: samuel_j_demaio_res
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_edu_res_baylor
+  tag_type_id: education_residency
+
+samuel_j_demaio_fsp:
+  id: samuel_j_demaio_fsp
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_edu_fsp_emory_cardio
+  tag_type_id: education_fellowships
+
+samuel_j_demaio_fsp2:
+  id: samuel_j_demaio_fsp2
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_edu_fsp_munich
+  tag_type_id: education_fellowships
+
+samuel_j_demaio_cert:
+  id: samuel_j_demaio_cert
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_cert_internal_medicine
+  tag_type_id: certifications
+
+samuel_j_demaio_cert2:
+  id: samuel_j_demaio_cert2
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_cert_cardiovascular_disease
+  tag_type_id: certifications
+
+samuel_j_demaio_cert3:
+  id: samuel_j_demaio_cert3
+  profile_id: profile_samuel_j_demaio
+  tag_id: tag_cert_interventional_cardiology
+  tag_type_id: certifications
+
+james_b_williams_spec:
+  id: james_b_williams_spec
+  profile_id: profile_james_b_williams
+  tag_id: tag_specialties_internal_medicine
+  tag_type_id: specialties
+
+james_b_williams_sub_spec:
+  id: james_b_williams_sub_spec
+  profile_id: profile_james_b_williams
+  tag_id: tag_sub_spec_cardiovascular_disease
+  tag_type_id: sub_specialties
+
+james_b_williams_under:
+  id: james_b_williams_under
+  profile_id: profile_james_b_williams
+  tag_id: tag_edu_under_lsuno
+  tag_type_id: education_undergrad
+
+james_b_williams_med:
+  id: james_b_williams_med
+  profile_id: profile_james_b_williams
+  tag_id: tag_edu_med_lsu
+  tag_type_id: education_medical
+
+james_b_williams_res:
+  id: james_b_williams_res
+  profile_id: profile_james_b_williams
+  tag_id: tag_edu_res_u_c_fresno
+  tag_type_id: education_residency
+
+james_b_williams_fsp:
+  id: james_b_williams_fsp
+  profile_id: profile_james_b_williams
+  tag_id: tag_edu_fsp_baylor_st_luke
+  tag_type_id: education_fellowships
+
+james_b_williams_hosp:
+  id: james_b_williams_hosp
+  profile_id: profile_james_b_williams
+  tag_id: tag_hosp_priv_s_aus_s_david
+  tag_type_id: hospital_privileges
+
+james_b_williams_cert:
+  id: james_b_williams_cert
+  profile_id: profile_james_b_williams
+  tag_id: tag_cert_internal_medicine
+  tag_type_id: certifications
+
+james_b_williams_cert2:
+  id: james_b_williams_cert2
+  profile_id: profile_james_b_williams
+  tag_id: tag_cert_cardiovascular_disease
+  tag_type_id: certifications
+
+osvaldo_s_gigliotti_spec:
+  id: osvaldo_s_gigliotti_spec
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_specialties_internal_medicine
+  tag_type_id: specialties
+
+osvaldo_s_gigliotti_sub_spec:
+  id: osvaldo_s_gigliotti_sub_spec
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_sub_spec_cardiovascular_disease
+  tag_type_id: sub_specialties
+
+osvaldo_s_gigliotti_sub_spec2:
+  id: osvaldo_s_gigliotti_sub_spec2
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_sub_spec_nuclear_cardio
+  tag_type_id: sub_specialties
+
+osvaldo_s_gigliotti_sub_spec3:
+  id: osvaldo_s_gigliotti_sub_spec3
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_sub_spec_interventional_cardio
+  tag_type_id: sub_specialties
+
+osvaldo_s_gigliotti_under:
+  id: osvaldo_s_gigliotti_under
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_edu_under_umdcp
+  tag_type_id: education_undergrad
+
+osvaldo_s_gigliotti_med:
+  id: osvaldo_s_gigliotti_med
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_edu_med_pitt
+  tag_type_id: education_medical
+
+osvaldo_s_gigliotti_res:
+  id: osvaldo_s_gigliotti_res
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_edu_res_hopkins_bayview
+  tag_type_id: education_residency
+
+osvaldo_s_gigliotti_fsp:
+  id: osvaldo_s_gigliotti_fsp
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_edu_fsp_u_fl_jax_ic
+  tag_type_id: education_fellowships
+
+osvaldo_s_gigliotti_clin:
+  id: osvaldo_s_gigliotti_clin
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_clin_int_stress_echo
+  tag_type_id: clinical_interests
+
+osvaldo_s_gigliotti_cert:
+  id: osvaldo_s_gigliotti_cert
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_cert_internal_medicine
+  tag_type_id: certifications
+
+osvaldo_s_gigliotti_cert2:
+  id: osvaldo_s_gigliotti_cert2
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_cert_cardiovascular_disease
+  tag_type_id: certifications
+
+osvaldo_s_gigliotti_cert3:
+  id: osvaldo_s_gigliotti_cert3
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_cert_interventional_cardiology
+  tag_type_id: certifications
+
+osvaldo_s_gigliotti_cert4:
+  id: osvaldo_s_gigliotti_cert4
+  profile_id: profile_osvaldo_s_gigliotti
+  tag_id: tag_cert_nuclear_cardiology
+  tag_type_id: certifications
+
+eric_j_frischhertz_spec:
+  id: eric_j_frischhertz_spec
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_specialties_internal_medicine
+  tag_type_id: specialties
+
+eric_j_frischhertz_sub_spec:
+  id: eric_j_frischhertz_sub_spec
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_sub_spec_cardiovascular_disease
+  tag_type_id: sub_specialties
+
+eric_j_frischhertz_sub_spec2:
+  id: eric_j_frischhertz_sub_spec2
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_sub_spec_nuclear_cardio
+  tag_type_id: sub_specialties
+
+eric_j_frischhertz_under:
+  id: eric_j_frischhertz_under
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_edu_under_tulane
+  tag_type_id: education_undergrad
+
+eric_j_frischhertz_med:
+  id: eric_j_frischhertz_med
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_edu_med_tulane
+  tag_type_id: education_medical
+
+eric_j_frischhertz_res:
+  id: eric_j_frischhertz_res
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_edu_res_tulane
+  tag_type_id: education_residency
+
+eric_j_frischhertz_fsp:
+  id: eric_j_frischhertz_fsp
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_edu_fsp_tulane
+  tag_type_id: education_fellowships
+
+eric_j_frischhertz_cert:
+  id: eric_j_frischhertz_cert
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_cert_internal_medicine
+  tag_type_id: certifications
+
+eric_j_frischhertz_cert2:
+  id: eric_j_frischhertz_cert2
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_cert_cardiovascular_disease
+  tag_type_id: certifications
+
+eric_j_frischhertz_cert3:
+  id: eric_j_frischhertz_cert3
+  profile_id: profile_eric_j_frischhertz
+  tag_id: tag_cert_nuclear_cardiology
+  tag_type_id: certifications

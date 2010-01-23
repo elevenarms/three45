@@ -1,0 +1,3 @@
+page.replace_html 'referral_request', :partial => 'request/show', :locals=>{ :edit_disabled => false }
+page.replace_html 'referral_patient', :partial => 'patient/edit'
+page.show 'referral_patient'

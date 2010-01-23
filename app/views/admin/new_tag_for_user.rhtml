@@ -1,0 +1,26 @@
+<%- @page_title = "Add tag to user" -%>
+<h3> Assign a (non-Insurance) tag to user <%= @user.full_name %> </h3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<br />
+<strong>Current Tag Values:</strong>
+
+<table id="tags">
+  <tr>
+    <th>Tag Type</th>
+    <th>Tag Value</th>
+    <th></th>
+  </tr>
+  <%= render :partial => 'tag', :collection => @user_tags %>
+</table>
+<HR>
+<% form_for :user, :url => { :action => 'add_tag_to_user', :id => @user[:id] } do |f| -%>
+  <%= f.hidden_field :id, :value => @user[:id] %>
+  <% fields_for :tag do |t| %>
+  <p><strong>Tag to add (tag type - tag value, alphabetical by tag value): </strong></p>
+    <p><%= t.select(:id, @tags_plus) %> </p>
+  <% end %>
+    
+<p><%= submit_tag %></p>
+
+<% end %>  
+

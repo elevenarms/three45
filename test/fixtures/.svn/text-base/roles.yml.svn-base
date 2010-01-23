@@ -1,0 +1,46 @@
+--- 
+manage_billing: 
+  name: Can manage billing details for the workgroup
+  updated_at: 
+  id: manage_billing
+  created_at: 
+manage_analytics: 
+  name: Can access the analytics data for the workgroup
+  updated_at: 
+  id: manage_analytics
+  created_at: 
+manage_users: 
+  name: Can add and remove users for the workgroup
+  updated_at: 
+  id: manage_users
+  created_at: 
+manage_physician_profiles: 
+  name: Can edit physician profiles of the workgroup
+  updated_at: 
+  id: manage_physician_profiles
+  created_at: 
+network_profile: 
+  name: Can have a network profile
+  updated_at: 
+  id: network_profile
+  created_at: 
+manage_workgroup_status: 
+  name: Can deactivate/reactivate the workgroup account
+  updated_at: 
+  id: manage_workgroup_status
+  created_at: 
+network_manage_workgroup_profile: 
+  name: Can manage the network profile for a workgroup
+  updated_at: 
+  id: network_manage_workgroup_profile
+  created_at: 
+network_can_be_added: 
+  name: Can be added as a friend/colleague by another profile
+  updated_at: 
+  id: network_can_be_added
+  created_at: 
+network_feature: 
+  name: Can have the network feature
+  updated_at: 
+  id: network_feature
+  created_at: 

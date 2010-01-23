@@ -1,0 +1,15 @@
+<%- if !@target_referral.request_referral? -%>
+<%- physician = @target_referral.active_source.user unless @target_referral.active_source == nil -%>
+<%- else -%>
+<%- physician = @target_referral.active_target.user unless @target_referral.active_target == nil -%>
+<%- end -%>
+
+<div class="bevel"><%=link_to_remote 'Edit', :update => 'referral_referrer', :url => edit_create_referral_select_physician_url( @target_referral ), :method => :get, :html => { :class => 'section_control' }-%> <strong><%=@target_referral.request_referral? ? "Consulting Physician" : "Referring Physician"%>:</strong></div>
+
+<div class="referrer">
+        <% unless physician == nil %>
+                <%= physician.full_name %>
+        <% else %>
+                (click 'Edit' to enter <%=@target_referral.request_referral? ? "consulting" : "referring"%> physician information)
+        <% end %>
+</div>

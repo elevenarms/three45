@@ -1,0 +1,35 @@
+<%- @page_title = "Referral Summary" -%>
+
+<div class="message_summary">
+
+  <%=render :partial=>"message", :object => @target_message, :locals => { :skip_close_button => false }%>
+
+  <%- if @target_message.is_reply? -%>
+  <hr/>
+  <%=render :partial=>"message", :object => @target_message.reply_to_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+  <%- if @target_message.has_reply? -%>
+  <hr/>
+  <%=render :partial=>"message", :object => @target_message.reply_message, :locals => { :skip_close_button => true } %>
+  <%- end -%>
+
+
+  <div class="links">
+    <div class="link">&nbsp;</div>
+    <div class="link">&nbsp;</div>
+    <div class="link">
+      <%- if @target_message.can_reply? -%>
+      [] <%=link_to "Reply", new_reply_referral_message_path(@target_referral, @target_message.id)%>
+      <%- else -%>
+      &nbsp;
+      <%- end -%>
+    </div>
+    <div class="link">&nbsp;</div>
+    <div class="link"><%=image_tag "printer.jpg", :style=>"padding-top:3px;"%> <%=link_to("Print", hash_for_print_referral_message_path({:id=>@target_message.id}), {:target=>"_new"})%></div>
+  </div>
+
+  <div class="footer"></div>
+
+</div>
+

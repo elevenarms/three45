@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/helpers
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/helpers/test_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/helpers/application_helper.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/helpers/application.rb
+END

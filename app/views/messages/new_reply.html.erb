@@ -1,0 +1,56 @@
+<%- @page_title = "Reply to Message" -%>
+
+<%- content_for :header do -%>
+<%- end -%>
+
+<%- content_for :page_scripts do -%>
+<%- end -%>
+
+<%- content_for :page_styles do -%>
+<%- end -%>
+
+<div class="left">
+
+<h3>Reply to Message</h3>
+
+<fieldset>
+
+  <div class="message_form">
+
+	<%- form_for :message, @message, :url=> create_reply_referral_message_path(@target_referral, @target_message), :html => {:name => 'message_form'} do |f| -%>
+
+    <div class="message_text">
+
+      <label>Reply: </label>
+
+      <%=f.text_area('message_text', {:cols=>50, :rows=>5})%>
+
+    </div>
+
+    <hr/>
+
+    <%=render :partial=>"message", :object => @target_message, :locals => { :skip_close_button => true } %>
+
+	<div id="hidden_ids"></div>
+
+	<%- end -%>
+
+  </div>
+
+	<%= render :partial => 'attachments' %>
+
+    <div class="button_bar">
+
+	<a href="#" onclick="message_form.submit()">Send Reply</a>&nbsp;&nbsp;
+	<%=link_to "Cancel", referral_path(@target_referral)%>
+
+	</div>
+
+	</fieldset>
+
+</div>
+
+<div class="right">
+
+</div>
+

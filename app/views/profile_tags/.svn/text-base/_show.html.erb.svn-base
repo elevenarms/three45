@@ -1,0 +1,34 @@
+<h3>Profile Tags for <%=@target_profile.display_name%></h3>
+
+<div id="add_profile_link"><%=link_to_remote "Add a New Profile Tag", :update => "scratch", :url => { :action => "new", :target_profile_id=>@target_profile.id }%></div>
+
+<div id="add_profile_tag_partial">
+
+</div>
+
+<%- if @profile_tags.empty? -%>
+<div>No Profile Tags Found</div>
+<%- else -%>
+<table class="profile_tag_list" cellspacing="0" cellpadding="0" width="100%">
+
+    <thead>
+      <tr>
+        <th>Tag Type</th>
+        <th>Tag</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <%- @profile_tags.each_with_index do |profile_tag, index| -%>
+    <tr id="<%=dom_id(profile_tag)%>" class="<%=render_odd_class(index+1)%>">
+      <td><%=profile_tag.tag_type.name%></td>
+      <td><%=profile_tag.tag.display_name%></td>
+      <td><%=link_to_remote "Remove", :update=>"scratch", :url=>profile_tag_url(profile_tag), :confirm => "Are you sure?", :method =>:delete, :html=>{:class=>""} %></td>
+    </tr>
+    <%- end -%>
+    <tr><td colspan="6">&nbsp;</td></tr>
+    </tbody>
+
+    </table>
+<%- end -%>

@@ -1,0 +1,19 @@
+new:
+  id: new
+  name: New
+
+waiting_approval:
+  id: waiting_approval
+  name: Waiting Approval
+
+provisional:
+  id: provisional
+  name: Provisional
+
+in_progress:
+  id: in_progress
+  name: In Progress
+
+closed:
+  id: closed
+  name: Closed

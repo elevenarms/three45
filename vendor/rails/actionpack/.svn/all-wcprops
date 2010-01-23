@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack
+END
+RUNNING_UNIT_TESTS
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/RUNNING_UNIT_TESTS
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/Rakefile
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/CHANGELOG
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/MIT-LICENSE
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/README
+END

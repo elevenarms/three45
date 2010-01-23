@@ -1,0 +1,16 @@
+<h3> "All users in the system"
+</h3>
+<p><%= link_to "Add a new user", :action => 'new_user' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+
+
+<table id="users">
+  <tr>
+    <th>login</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Workgroup Name</th>
+  </tr>
+  <%= render :partial => 'user', :collection => @users %>
+</table>

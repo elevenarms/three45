@@ -1,0 +1,15 @@
+<%- @page_title = "Select a workgroup" -%>
+<h3> Select a workgroup for listing users.</h3>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :workgroup, :url => { :action => 'list_users_in_workgroup', :id => @workgroup } do |f| -%>
+  
+  <p>Select a workgroup: </p>
+  <p><%= f.select(:id, @wkgrps) %> </p>
+
+<p><%= submit_tag 'Show users for workgroup' %></p>
+
+<% end %>  
+

@@ -1,0 +1,4 @@
+page.replace_html 'referral_patient', :partial => 'patient/show', :locals=>{ :edit_disabled => false }
+page.replace_html 'referral_insurance', :partial => 'insurance/edit_index'
+page.replace_html 'insurance_detail_new', :partial=>"insurance/edit_new_insurance_detail"
+page.show 'referral_insurance'

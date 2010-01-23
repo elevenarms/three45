@@ -1,0 +1,27 @@
+<% patient_carrier_plans = @target_referral.referral_insurance_plans %>
+
+<div class="bevel"> <strong>Edit Insurance:</strong></div>
+
+<div class="insurance">
+        <% unless patient_carrier_plans == nil || patient_carrier_plans.count == 0 %>
+                <% patient_carrier_plans.each do |patient_carrier_plan| %>
+                        <div id="<%= 'insurance_detail_' + patient_carrier_plan.id %>">
+                                <%= render :partial => 'insurance/insurance_detail', :locals => { :patient_carrier_plan => patient_carrier_plan, :editing_controls => true } %>
+                        </div>
+                <% end %>
+        <% end %>
+        <div id="insurance_detail_new"></div>
+</div>
+
+<div id="add_insurance_link"><%=link_to_remote 'Add an Insurance Carrier', :update => 'insurance_detail_new', :url => new_create_referral_insurance_url( @target_referral ), :method => :get, :html => { :class => 'section_add' }-%></div>
+
+<%#=link_to_remote 'Done', :update => 'referral_insurance', :url => create_referral_insurance_index_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+<%=link_to_remote 'Done', :url => create_referral_insurance_index_url( @target_referral ), :method => :get, :html => { :class => 'section_save' }-%>
+
+<div class="clear">&nbsp;</div>
+<script>
+the_add_insurance_link = $('add_insurance_link');
+if(the_add_insurance_link) {
+  the_add_insurance_link.show();
+}
+</script>

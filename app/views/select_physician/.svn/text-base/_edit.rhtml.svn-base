@@ -1,0 +1,17 @@
+<div class="bevel"> <strong><%=@target_referral.request_referral? ? "Consulting Physician" : "Referring Physician"%>:</strong></div>
+
+<div class="el_problemo" <%="style=\"display:none\"" if ! flash[:partial] %> ><%=flash[:partial]%></div>
+
+<% form_remote_tag :method => :put, :url => create_referral_select_physician_url(@target_referral) do %>
+
+<div class="referrer">
+        <label style="padding-bottom: 5px; display: block;">Pick a Physician</label>
+        <%= select_referring_physician @target_referral unless @target_referral.request_referral? %>
+        <%= select_target_physician @target_referral  if @target_referral.request_referral? %>
+</div>
+
+<%= submit_tag 'Done', :class => 'section_save' %>
+
+<% end %>
+
+<div class="clear">&nbsp;</div>

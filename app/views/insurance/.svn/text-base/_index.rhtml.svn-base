@@ -1,0 +1,14 @@
+<div class="bevel"><%=link_to_remote 'Edit', :update => 'referral_insurance', :url => create_referral_insurance_index_url( @target_referral ), :method => :get, :with => "'edit_mode=true'", :html => { :class => 'section_control' } unless edit_disabled -%> <strong>Insurance:</strong></div>
+
+<div class="insurance">
+        <% unless @target_referral.referral_insurance_plans.nil? || @target_referral.referral_insurance_plans.empty? %>
+                <% @target_referral.referral_insurance_plans.each do |patient_carrier_plan| %>
+                        <div id="insurance_detail">
+                                <%= render :partial => 'insurance/insurance_detail', :locals => { :patient_carrier_plan => patient_carrier_plan, :editing_controls => false } %>
+                        </div>
+                <% end %>
+        <% else %>
+                (click 'Edit' to enter insurance information)
+        <% end %>
+</div>
+

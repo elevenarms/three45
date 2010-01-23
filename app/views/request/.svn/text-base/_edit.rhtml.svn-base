@@ -1,0 +1,32 @@
+<% referral_type = @target_referral.referral_type_selections.first unless @target_referral.referral_type_selections == nil %>
+
+<div class="bevel"> <strong>Edit Services Requested:</strong></div>
+
+<% #form_remote_tag :update => 'referral_request', :url => create_referral_request_url(@target_referral) do %>
+<% form_remote_tag :url => create_referral_request_url(@target_referral) do %>
+
+<div class="edit_request">
+        <fieldset>
+                <table><tr>
+                <% unless referral_type == nil %>
+                        <td><label>Referral Type</label><%= select_tag 'type', request_type_options( @referral_tag_type_id ) %></td>
+                        <td><label>Referral Diagnosis</label><%= text_field_tag 'diagnosis', referral_type.diagnosis_text, :size => 50 %></td>
+                        </tr><tr>
+                        <td colspan="2"><label>Additional Instructions</label><%= text_area_tag 'instructions', referral_type.additional_instructions, :size => '76x10' %></td>
+                <% else %>
+                        <td><label>Referral Type</label><%= select_tag 'type', request_type_options( @referral_tag_type_id ) %></td>
+                        <td><label>Referral Diagnosis</label><%= text_field_tag 'diagnosis', '', :size => 50 %></td>
+                        </tr><tr>
+                        <td colspan="2"><label>Additional Instructions</label><%= text_area_tag 'instructions', '', :size => '76x10' %></td>
+                <% end %>
+                </tr></table>
+        </fieldset>
+</div>
+
+<%= submit_tag 'Done', :class => 'section_save' %>
+
+<% end %>
+
+<div class="clear">&nbsp;</div>
+
+<%= observe_field( 'type', :update => 'referral_request', :url => edit_create_referral_request_url( @target_referral ), :method => :get ) %>

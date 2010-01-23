@@ -1,0 +1,21 @@
+tag_logo_one:
+    id: tag_logo_one
+    tag_id: tag_specialty_pediatry
+    path: path_tbd
+    height: 85
+    width: 155
+    
+tag_logo_two:
+    id: tag_logo_two
+    tag_id: tag_specialty_pediatry
+    path: path_tbd
+    height: 85
+    width: 155
+
+tag_logo_three:
+    id: tag_logo_three
+    tag_id: tag_location_downtown_austin
+    path: path_tbd
+    height: 85
+    width: 155
+

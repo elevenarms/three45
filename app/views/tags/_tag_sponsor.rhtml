@@ -1,0 +1,15 @@
+<div class="tag_sponsor">
+
+  <div class="thumbnail">
+    <%=image_tag tag_sponsor.image_path, :alt=>""%>
+  </div>
+
+  <div class="details">
+    <%=tag_sponsor.detail_text%>
+  </div>
+
+  <div class="end"></div>
+
+  <div class="more_info"><%=link_to "See More Information >", network_sponsor_path(tag_sponsor) if tag_sponsor.has_link_url?%></div>
+
+</div>

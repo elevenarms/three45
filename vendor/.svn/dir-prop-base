@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 59
+rails http://dev.rubyonrails.org/svn/rails/tags/rel_2-0-2/
+
+END

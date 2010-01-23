@@ -1,0 +1,8 @@
+
+  <br /><p><strong>To make changes, click "Edit".</strong></p>
+  <p>Name: <%=@user.full_name %>&nbsp&nbsp&nbsp 
+     <%= link_to_remote  "   Edit", { :url => { :controller => "customer_admin", :action => "remote_edit_user_subset" } , :update => "user_subset" },
+           :href => url_for(:controller => "customer_admin", :action => "remote_edit_user_subset" ) %></p>
+  <p>Login: <%= @user.login %>
+  <p>Email: <%= "not set yet" if @user.email.nil? %><%= @user.email unless @user.email.nil? %> </p><br />
+

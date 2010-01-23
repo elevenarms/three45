@@ -1,0 +1,9 @@
+page.replace_html 'referral_faxes', :partial => 'faxes/index', :locals=>{ :edit_disabled => false }
+page.show 'referral_submit'
+
+# unless @target_referral.created_by_user.is_physician?
+#   page.replace_html 'referral_referrer', :partial => 'select_physician/edit', :locals=>{ :edit_disabled => false }
+#   page.show 'referral_referrer'
+# else
+#   page.show 'referral_submit'
+# end

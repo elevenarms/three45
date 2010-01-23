@@ -1,0 +1,5 @@
+<tr class="<%= cycle('odd', 'even') -%>">
+  <td><%= tag_old.name -%></td> 
+  <td><%= link_to "Edit", :action => "#{'edit_' + String(tag_old[:tag_type_id])}", :id => "#{tag_old.id}" -%>  </td>
+ 
+</tr>

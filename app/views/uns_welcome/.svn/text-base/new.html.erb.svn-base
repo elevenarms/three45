@@ -1,0 +1,47 @@
+<%- @page_title = "Welcome to three45 Automated Patient Referral Management" -%>
+
+<p>&nbsp;</p>
+
+<h3>Welcome to three45 Automated Patient Referral Management.</h3>
+
+
+<p>
+<%- if @referral -%>
+There is at least one patient referral for you in the system from <%=@referral.display_from_name %>.
+<%- end -%>
+To get the referral(s), you just need to activate your account. You do not have to register and it will not cost you anything. You are making no commitments to use this service in the future.
+</p>
+
+<p>To get your referral(s):</p>
+
+<ol>
+<%- if @user.nil? or !@user.has_logged_in? -%>
+  <li>Enter the Login and Password from the Fax you received</li>
+<%- else -%>
+  <li>Enter your login and the password you chose the first time you visited the system. If you have forgotten that password, please call 1-877-345-3553 ext. 205</li>
+<%- end -%>
+  <li>Review and agree to the items below</li>
+  <li>Click the "Log in" button. You will be asked to change your password to something you will remember.</li>
+  <li>After changing your password, you are taken to the Dashboard showing your referral(s).</li>
+  <li>Click anywhere on a referral to open a summary</li>
+  <li>Click "Open Referral" to see all the patient information. You may print this page. If there are documents or faxes attached to the referral, just click on them to open them.</li>
+</ol>
+
+<p>Please review our <%=link_to "HIPAA Business Associate Agreement", "http://www.three45.com/hippa_baa", :target=>"_new"%> and <%=link_to "Service Agreement", "http://www.three45.com/service_agreement", :target=>"_new"%>. If you have any questions about them, please call 1-877-345-3553 ext. 205.</p>
+
+<p>&nbsp;</p>
+
+<% form_tag uns_welcome_path do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login' %></p>
+
+<p><label for="password">Password</label><br/>
+<%= password_field_tag 'password' %></p>
+
+<%=check_box_tag "agree"%> I agree to the terms of the HIPAA Business Associate Agreement and the Service Agreement.
+
+<p>&nbsp;</p>
+
+<p><%= submit_tag 'Log in' %></p>
+
+<%- end -%>

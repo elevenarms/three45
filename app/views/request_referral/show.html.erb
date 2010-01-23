@@ -1,0 +1,35 @@
+<%- @page_title = "Request a Referral" -%>
+
+<div class="left">
+
+  <fieldset>
+
+    <%=render :partial=>"/shared/pagination_bar", :locals=>{:context=>@context}%>
+
+    <div class="search_results">
+
+      <%=render :partial=>"/shared/profile_snippet", :collection=>@profile_results, :locals=>{:context=>"request_referral"}%>
+
+    </div>
+
+  </fieldset>
+
+</div>
+
+<div class="right">
+
+  <fieldset>
+
+        <% form_tag( start_referral_search_url ) do -%>
+
+                <div id="search_form">
+
+                <%=render_search_form%>
+
+                </div>
+
+        <% end -%>
+
+  </fieldset>
+
+</div>

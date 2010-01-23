@@ -1,0 +1,40 @@
+
+
+
+<p><h3>User <%= @created_user.full_name %> created:</h3></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<h3>Create a new user and put him or her in workgroup: <BR><%= @wkgrp.name %></h3>
+
+<% form_for :user, :url => { :action => 'create_user', :id => @wkgrp } do |f| -%>
+  
+      <% fields_for :group do |g| %>
+        <p>What type of user is this: </p>
+        <p><%= g.select(:id, @groups) %> </p>
+      <% end %>
+
+
+  
+  <p><label for="login">Login</label><br/>
+  <%= f.text_field :login %></p>
+
+  <p><label for="email">Email</label><br/>
+  <%= f.text_field :email %></p>
+
+  <p><label for="password">Password</label><br/>
+  <%= f.password_field :password %></p>
+
+  <p><label for="password_confirmation">Confirm Password</label><br/>
+  <%= f.password_field :password_confirmation %></p>
+  
+  <p><label for="fax number">User's fax number (if different from workgroup's)</label><br/>
+  <%= f.text_field :fax_number %></p>  
+
+  <p>Last name:</p>  
+  <p><%= f.text_field :last_name %> </p>
+  <p>First name:</p>  
+  <p><%= f.text_field :first_name %> </p>
+  <p>Middle name:</p>  
+  <p><%= f.text_field :middle_name %> </p>
+
+  <p><%= submit_tag 'Create user' %></p>
+<% end -%>

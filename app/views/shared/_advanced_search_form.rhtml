@@ -1,0 +1,171 @@
+<div class='advanced_search'>
+
+  <div class="tabs">
+
+        <%= link_to_remote "Basic Search", :update => 'search_form', :url => { :controller => "search", :action => "toggle_basic_mode" }, :html => { :class => 'submit_as_link' } %>
+
+        <%= hidden_field_tag 'search_mode', 'advanced' %>
+        <%= hidden_field_tag 'context', @context || params[:context] %>
+
+        &nbsp;|&nbsp;<strong>Advanced Search</strong>
+
+  </div>
+
+<fieldset>
+
+  <h5>Name</h5>
+
+  <%= combo_suggest_tag 'display_name', @search_criteria.display_name, nil, 20 %>&nbsp;&nbsp;<%= submit_tag "Search" %>
+
+<!-- </fieldset>
+
+<h4>Include</h4>
+
+<fieldset>
+
+  <p>
+  <%#= radio_button_tag 'network', 'my_network', @search_criteria.scope_of_search == 'my_network' %> My Network<br>
+  <%#= radio_button_tag 'network', 'workgroup_network', @search_criteria.scope_of_search == 'workgroup_network' %> My Workgroup's Network<br>
+  <%#= radio_button_tag 'network', 'entire_network', @search_criteria.scope_of_search == 'entire_network' || @search_criteria.scope_of_search == nil %> Entire three45 Network<br>
+  </p> -->
+
+<!--
+
+  <h5>Provider Type</h5>
+
+  <%= combo_suggest_tag 'provider_types', @search_criteria.provider_types %>
+-->
+
+  <h5>Specialty</h5>
+
+  <%= combo_suggest_tag 'specialties', @search_criteria.specialties %>
+
+  <%#= observe_field 'specialties', :update => 'search_form', :url => { :controller => "search", :action => "scope_sub_specialty" }, :method => :get %>
+
+  <h5>Sub-Specialty</h5>
+
+  <%= combo_suggest_tag 'sub_specialties', @search_criteria.sub_specialties, 'specialties' %>
+
+</fieldset>
+
+<% if params['insurance_show_hide_state'] && params['insurance_show_hide_state'] == 'visible' %>
+
+<%= show_hide_link_tag 'insurance', 'hide' %>
+
+<h4>Insurance</h4>
+
+<fieldset id="insurance">
+
+<% else %>
+
+<%= show_hide_link_tag 'insurance' %>
+
+<h4>Insurance</h4>
+
+<fieldset id="insurance" style="display:none">
+
+<% end %>
+
+  <h5>Carrier</h5>
+
+  <%= combo_suggest_tag 'insurance_carriers', @search_criteria.insurance_carriers %>
+
+  <%#= observe_field 'insurance_carriers', :update => 'search_form', :url => { :controller => "search", :action => "scope_insurance_plan" }, :method => :get %>
+
+  <h5>Plan</h5>
+
+  <%= combo_suggest_tag 'insurance_carrier_plans', @search_criteria.insurance_carrier_plans, 'insurance_carriers' %>
+
+</fieldset>
+
+<!-- <h4>Location</h4>
+
+<fieldset>
+
+  <p>Within: <%#= combo_suggest_tag "proximity_in_miles", @search_criteria.proximity_in_miles %></p>
+
+  <p>Of: 123 Main Street<br>
+  Anytown, USA</p>
+
+</fieldset> -->
+
+<% if params['services_diagnostics_show_hide_state'] && params['services_diagnostics_show_hide_state'] == 'visible' %>
+
+<%= show_hide_link_tag 'services_diagnostics', 'hide' %>
+
+<h4>Services &amp; Diagnostics</h4>
+
+<fieldset id="services_diagnostics">
+
+<% else %>
+
+<%= show_hide_link_tag 'services_diagnostics' %>
+
+<h4>Services &amp; Diagnostics</h4>
+
+<fieldset id="services_diagnostics" style="display:none">
+
+<% end %>
+
+  <h5>Services</h5>
+
+  <%= combo_suggest_tag 'services', @search_criteria.services %>
+
+  <h5>Diagnostic Images</h5>
+
+  <%= combo_suggest_tag 'diag_images', @search_criteria.diag_images %>
+
+  <h5>Diagnostic Tests</h5>
+
+  <%= combo_suggest_tag 'diag_tests', @search_criteria.diag_tests %>
+
+  <!-- <p><%#= check_box_tag 'board_certified', 'Y', @search_criteria.board_certified == 'Y' %> Board Certified</p>
+ -->
+
+</fieldset>
+
+<% if params['training_affiliations_show_hide_state'] && params['training_affiliations_show_hide_state'] == 'visible' %>
+
+<%= show_hide_link_tag 'training_affiliations', 'hide' %>
+
+<h4> Training &amp; Affiliations</h4>
+
+<fieldset id="training_affiliations">
+
+<% else %>
+
+<%= show_hide_link_tag 'training_affiliations' %>
+
+<h4> Training &amp; Affiliations</h4>
+
+<fieldset id="training_affiliations" style="display:none">
+
+<% end %>
+
+  <h5>Medical School</h5>
+
+  <%= combo_suggest_tag 'medical_school', @search_criteria.medical_school %>
+
+  <h5>Residency</h5>
+
+  <%= combo_suggest_tag 'residency', @search_criteria.residency %>
+
+  <h5>Fellowships</h5>
+
+  <%= combo_suggest_tag 'fellowships', @search_criteria.fellowships %>
+
+  <h5>Undergraduate</h5>
+
+  <%= combo_suggest_tag 'undergraduate', @search_criteria.undergraduate %>
+
+  <h5>Hospital Privileges</h5>
+
+  <%= combo_suggest_tag 'hospital_privileges', @search_criteria.hospital_privileges %>
+
+  <h5>Organizations</h5>
+
+  <%= combo_suggest_tag 'organization', @search_criteria.organization %>
+
+</fieldset>
+
+</div>

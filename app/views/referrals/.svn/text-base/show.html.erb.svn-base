@@ -1,0 +1,127 @@
+<%- @page_title = "Referral Details" -%>
+
+<%- content_for :header do -%>
+<%= stylesheet_link_tag 'calendar-system.css' %>
+<%= javascript_include_tag 'calendar', 'calendar-en', 'calendar-setup' %>
+<%- end -%>
+
+<%- content_for :page_scripts do -%>
+Event.addBehavior({
+  'table tr.data:mouseover' : function(e) {
+    this.addClassName('hover');
+  },
+  'table tr.data:mouseout' : function(e) {
+    this.removeClassName('hover');
+  },
+  'table tr.data:click' : function(e) {
+    referral_id = this.nextElement().getAttribute('referral_id');
+    message_id = this.nextElement().getAttribute('message_id');
+    the_id = message_id+"_summary_content";
+    $(the_id).update("<div class='loading'>Loading...</div>");
+    this.nextElement().toggle();
+    this.toggle();
+
+    new Ajax.Updater(the_id, '/referrals/'+referral_id+'/messages/'+message_id, {method: 'get',asynchronous:true, evalScripts:true, onSuccess:function(request){ } });
+
+  },
+  'table tr.summary div.close_window a:click' : function(e) {
+    this.up('tr').toggle();
+    this.up('tr').previous().toggle();
+  }
+});
+
+function check_accept_and_submit() {
+  if($('physician_user').value != "") {
+    $('accept_form').submit();
+  } else {
+    alert("Please select a physician before accepting this referral.");
+    return false;
+  }
+}
+
+function handleProviderSelectionBecauseIENeverWorksRight(e) {
+    carrier_id = e.options[e.selectedIndex].value
+    referral_id = '<%=@target_referral.id%>';
+    new Ajax.Updater('select_plan', '/create_referral/'+referral_id+'/insurance/carrier_plan_options?carrier_tag_id='+carrier_id, {method: 'get',asynchronous:true, evalScripts:true, onSuccess:function(request){ } });
+}
+
+function validateNumberOfVisits(e) {
+    if(e.value == null || e.value == "") { return true; }
+    var isInteger = /^-?\d+$/.test(e.value)
+    if(!isInteger) {
+      alert("Please enter a number between 0 and 99");
+      e.focus();
+      e.select();
+    }
+}
+
+<%- end -%>
+
+<%- content_for :page_styles do -%>
+
+div.message_link_bar {
+  text-align:right;
+  padding-bottom: 5px;
+}
+
+<%- end -%>
+
+  <p><%=link_to "Back to Dashboard", hash_for_dashboard_index_url.merge({:expand=>@target_referral.id})%></p>
+
+  <%- if @accept_decline_required -%>
+  <div class="accept_decline_withdraw">
+  <div class="section" id="accept_decline">
+    <%= render :partial => 'accept_decline' %>
+  </div>
+  </div>
+  <%- end -%>
+
+  <%- if @withdraw_allowed -%>
+  <div class="accept_decline_withdraw">
+  <div class="section" id="withdraw">
+    <%= render :partial => 'withdraw' %>
+  </div>
+  </div>
+  <%- end -%>
+
+<div class="edit_referral">
+
+         <div class="section clearfix" id="referral_messages">
+
+          <div class="bevel"> <strong>Messages</strong></div>
+
+          <div id="grid" class="message_results">
+            <%=render :partial=>"/messages/results"%>
+          </div>
+
+          <div style="border-top: 1px solid #d9d9d9;padding:3px 0px 3px 10px;" class="new_message"><%=link_to "Compose a New Message", new_referral_message_url(@target_referral) unless @edit_disabled%></div>
+        </div>
+        <div class="section" id="referral_patient">
+                <%= render :partial => 'patient/show', :locals=>{ :edit_disabled => @edit_disabled} %>
+        </div>
+        <div class="section clearfix" id="referral_insurance">
+                <%= render :partial => 'insurance/index', :locals=>{ :edit_disabled => @edit_disabled} %>
+        </div>
+        <div class="section clearfix" id="referral_request">
+                <%= render :partial => 'request/show', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="section clearfix" id="referral_provider">
+                <%= render :partial => 'create_referral/provider', :locals=>{ :edit_disabled => !@change_consultant_allowed } %>
+        </div>
+        <div class="section clearfix" id="referral_referring">
+                <%= render :partial => 'create_referral/referring_provider', :locals=>{ :edit_disabled => true} %>
+        </div>
+       
+
+        <div class="section" id="referral_faxes">
+                <%= render :partial => 'faxes/index', :locals=>{ :edit_disabled => true } %>
+        </div>
+        <div class="section" id="referral_files">
+                <%= render :partial => 'files/index', :locals=>{ :edit_disabled => true} %>
+        </div>
+
+</div>
+
+<div class="ad">
+  <%=render_ad%>
+</div>

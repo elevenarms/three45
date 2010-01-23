@@ -1,0 +1,86 @@
+provider_types:
+    id: provider_types
+    name: Provider Types
+
+specialties:
+    id: specialties
+    name: Specialties
+
+sub_specialties:
+    id: sub_specialties
+    name: Sub-Specialties
+    parent_tag_type_id: specialties
+
+certifications:
+    id: certifications
+    name: Certifications
+
+location:
+    id: location
+    name: Location
+
+insurance_carriers:
+    id: insurance_carriers
+    name: Insurance Carriers
+
+insurance_carrier_plans:
+    id: insurance_carrier_plans
+    name: Insurance Carrier Plans
+    parent_tag_type_id: insurance_carriers
+
+clinical_interests:
+    id: clinical_interests
+    name: Clinical Interests
+
+hospital_privileges:
+    id: hospital_privileges
+    name: Hospital Privilegess
+
+techniques:
+    id: techniques
+    name: Techniques
+
+education_undergrad:
+    id: education_undergrad
+    name: Undergraduate
+    show_details_flag: true
+
+education_medical:
+    id: education_medical
+    name: Medical School
+    show_details_flag: true
+
+education_residency:
+    id: education_residency
+    name: Residency
+    show_details_flag: true
+
+education_fellowships:
+    id: education_fellowships
+    name: Fellowships
+    show_details_flag: true
+
+referral_standard_types:
+    id: referral_standard_types
+    name: Standard Referral Types
+    show_details_flag: false
+
+referral_fax_content_types:
+    id: referral_fax_content_types
+    name: Content Types for Referral Faxes
+    show_details_flag: false
+
+services:
+    id: services
+    name: Services
+    show_details_flag: false
+
+diag_images:
+    id: diag_images
+    name: Diagnostic Images
+    show_details_flag: false
+
+diag_tests:
+    id: diag_tests
+    name: Diagnostic Tests
+    show_details_flag: false

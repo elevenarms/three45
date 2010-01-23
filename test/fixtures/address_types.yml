@@ -1,0 +1,7 @@
+address_type_billing:
+    id: address_type_billing
+    name: Billing Address
+
+address_type_office:
+    id: address_type_office
+    name: Office Address

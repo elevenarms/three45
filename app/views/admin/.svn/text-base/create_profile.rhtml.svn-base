@@ -1,0 +1,8 @@
+
+
+
+<p><h3>Profile created:</h3></p>
+<p>Name = <%= @profile.display_name%>, Type = <%= @profile.profile_type[:name]%></p>
+<p><%= link_to "Another new profile", :action => 'new_profile' %></p>
+<p><%= link_to "List all profiles", :action => 'list_profiles' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>

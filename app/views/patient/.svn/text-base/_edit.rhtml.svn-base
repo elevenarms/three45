@@ -1,0 +1,45 @@
+<% patient = @target_referral.referral_patients.first unless @target_referral.referral_patients == nil %>
+
+<div class="bevel"> <strong>Edit Patient:</strong></div>
+
+<% #form_remote_tag :update => 'referral_patient', :url => create_referral_patient_url(@target_referral) do %>
+<% form_remote_tag :url => create_referral_patient_url(@target_referral) do %>
+
+<div class="edit_patient">
+        <fieldset>
+                <table><tr>
+                <% unless patient == nil %>
+                        <td><label>First</label><%= text_field_tag 'first', patient.first_name, :size => 20 %></td>
+                        <td><label>MI</label><%= text_field_tag 'mi', patient.middle_name, :size => 2 %></td>
+                        <td><label>Last</label><%= text_field_tag 'last', patient.last_name, :size => 20 %></td>
+                        <td><label>SSN</label><%= text_field_tag 'ssn', patient.ssn, :size => 15 %></td>
+                        <td><label>Email</label><%= text_field_tag 'email', patient.email, :size => 20 %></td>
+                        </tr><tr>
+                        <td><label>Phone #</label><%= text_field_tag 'phone', patient.phone, :size => 20 %></td>
+                        <td colspan="2"><label>Date of Birth</label><%= select_date patient.dob, { :name => 'dob', :include_blank => true, :start_year => 1901, :order => [:day, :month, :year] } %></td>
+                        <% if patient.female? %>
+                                <td><label>Gender</label><%= select_tag 'gender', "<option></option><option>Male</option><option selected='selected'>Female</option>" %></td>
+                        <% elsif patient.male?%>
+                        <td><label>Gender</label><%= select_tag 'gender', "<option></option><option selected='selected'>Male</option><option>Female</option>" %></td>
+                        <% else %>
+                        <td><label>Gender</label><%= select_tag 'gender', "<option selected='selected'></option><option>Male</option><option>Female</option>" %></td>
+                        <% end %>
+                <% else %>
+                        <td><label>First</label><%= text_field_tag 'first', '', :size => 20 %></td>
+                        <td><label>MI</label><%= text_field_tag 'mi', '', :size => 2 %></td>
+                        <td><label>Last</label><%= text_field_tag 'last', '', :size => 20 %></td>
+                        <td><label>SSN</label><%= text_field_tag 'ssn', '', :size => 15 %></td>
+                        </tr><tr>
+                        <td><label>Phone #</label><%= text_field_tag 'phone', '', :size => 20 %></td>
+                        <td colspan="2"><label>Date of Birth</label><%= select_date nil, { :name => 'dob', :include_blank => true, :start_year => 1901, :order => [:day, :month, :year] } %></td>
+                        <td><label>Gender</label><%= select_tag 'gender', "<option></option><option>Male</option><option>Female</option>" %></td>
+                <% end %>
+                </tr></table>
+        </fieldset>
+</div>
+
+<%= submit_tag 'Done', :class => 'section_save',:onClick=>"return (validateSSN($('ssn')) && validatePhone($('phone')))" %>
+
+<% end %>
+
+<div class="clear">&nbsp;</div>

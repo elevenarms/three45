@@ -1,0 +1,29 @@
+<p><%= link_to "Back to Admin Home Page", :controller => session[:admin_type], :action => 'index' %></p>
+<H3> Edit User Information for  <%= @user.full_name %> in group <%= @user.workgroup_user.workgroup.name %>(<%= @user.workgroup_user.workgroup.subdomain %>)   </H3>
+<% form_for :user,
+            :url => user_url(@user),
+            :html => { :method => :put } do |f| -%>
+
+  <p>Username:<br /><%= f.text_field :login, :size => 60 %></p>
+  <p>Email:<br /><%= f.text_field :email, :size => 60 %></p>
+  <p>User's fax number (if different from workgroup's)<br /><%= f.text_field :fax_number, :size => 60 %></p>
+  <p>First name:<br /><%= f.text_field :first_name, :size => 60 %></p>
+  <p>Middle name:<br /><%= f.text_field :middle_name, :size => 60 %></p>
+  <p>Last name:<br /><%= f.text_field :last_name, :size => 60 %></p>
+  
+<% unless @prfle.nil?  then %>
+  <% fields_for :profile do |p| %>
+  <p>Display name:<br /><%= p.text_field :display_name, :size => 60, :value => @prfle.display_name %></p>
+  <p>Notification email:<br /><%= p.text_field :notify_email, :size => 60, :value => @prfle.notify_email %></p>
+  <p>Description:<br /><%= p.text_area :description, :rows => 5, :cols => 60, :value => @prfle.description  %></p>
+  <p>NPI Identifier:<br /><%= p.text_field :npi_identifier, :size => 20, :value => @prfle.npi_identifier  %></p>
+  <p>Medical License ID:<br /><%= p.text_field :medical_license_id, :size => 20, :value => @prfle.medical_license_id  %></p>
+  <% end %>
+<% else %>
+  <% fields_for :profile do |p| %>
+    <%= p.hidden_field :display_name, :size => 60, :value => 'no profile' %> 
+  <% end %>
+<% end %>
+
+  <%= submit_tag 'Save' %>
+<% end -%>

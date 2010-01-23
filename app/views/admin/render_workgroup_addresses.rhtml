@@ -1,0 +1,17 @@
+<h3> Addresses for workgroup: <%= @wkgrp.name %>
+</h3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% @wkgrp.workgroup_addresses.each do |wa| %>
+  <p>
+    <%= link_to "delete", :action => 'delete_address', :id => wa.id %>
+    <%= wa.address_type[:name]%>: 
+    <%= wa.address.street1 %>, 
+    <%= wa.address.street2 %>, 
+    <%= wa.address.city %>, 
+    <%= wa.address.state %>, 
+    <%= wa.address.zip_code %>,
+    <%= wa.address.latlng %>
+  </p>
+<% end %>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>

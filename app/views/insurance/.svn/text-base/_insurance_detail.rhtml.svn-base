@@ -1,0 +1,10 @@
+<% if editing_controls %>
+        <%=link_to_remote 'edit', :update => 'insurance_detail_' + patient_carrier_plan.id, :url => edit_create_referral_insurance_url(:id => @target_referral.id, :patient_carrier_plan_id => patient_carrier_plan.id), :method => :get, :html => { :class => 'section_edit_control' }-%>
+        <%=link_to_remote 'delete', :update => 'referral_insurance', :url => create_referral_insurance_url(:id => @target_referral.id, :patient_carrier_plan_id => patient_carrier_plan.id), :method => :delete, :html => { :class => 'section_edit_control' }-%>
+<% end %>
+<b><i><small>Provider:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.insurance_carrier_tag == nil ? 'Unknown' : patient_carrier_plan.insurance_carrier_tag.name  %>&nbsp;&nbsp;
+<b><i><small>Plan:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.insurance_carrier_plan_tag == nil ? 'Unknown' : patient_carrier_plan.insurance_carrier_plan_tag.name %>&nbsp;&nbsp;
+<b><i><small>Details:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.policy_details %>&nbsp;&nbsp;
+<b><i><small>Authorization:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.authorization %>&nbsp;&nbsp;
+<b><i><small>Number of Visits:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.number_of_visits %>&nbsp;&nbsp;
+<b><i><small>Expiration Date:&nbsp;&nbsp;</small></i></b><%= patient_carrier_plan.expiration_date.nil? ? "" : patient_carrier_plan.expiration_date.strftime("%Y-%m-%d") %>&nbsp;&nbsp;

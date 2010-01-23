@@ -1,0 +1,14 @@
+file_one:
+  id: file_one
+  referral_id: mccoy_to_kildare_3
+  referral_file_type_id: mri
+  mime_type_id: jpg
+  content_type: image/jpg
+  filename: test2.jpg # must be located at /files/0000/0000/test2.jpg
+
+file_missing:
+  id: file_missing
+  referral_id: mccoy_to_kildare_3
+  referral_file_type_id: mri
+  mime_type_id: jpg
+  filename: does_not_exist.jpg # must be located at /files/0000/0000/test2.jpg

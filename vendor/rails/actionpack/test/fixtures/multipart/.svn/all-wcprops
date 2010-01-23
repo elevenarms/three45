@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart
+END
+mona_lisa.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/mona_lisa.jpg
+END
+single_parameter
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/single_parameter
+END
+binary_file
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/binary_file
+END
+text_file
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/text_file
+END
+bracketed_param
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/bracketed_param
+END
+mixed_files
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/mixed_files
+END
+large_text_file
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/actionpack/test/fixtures/multipart/large_text_file
+END

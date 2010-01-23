@@ -1,0 +1,9 @@
+
+<%= debug(@profile_tag) -%>
+<%= debug(@tag) -%>  
+<%= debug(@tag_type) -%>
+<p><h3>Tag created:</h3></p>
+<p>Name = <%= @tag.name%>, Type = <%= @tag.tag_type[:name]%></p>
+<p><%= link_to "Another new tag", :action => 'new_tag' %></p>
+<p><%= link_to "List all tags", :action => 'list_tags' %></p>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>

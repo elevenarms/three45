@@ -1,0 +1,11 @@
+<div id ='<%= "ancillary_study_" + study_detail.id %>' >
+<% if editing_controls %>
+	<%=link_to_remote 'edit', :update => 'ancillary_study_' + study_detail.id, :url => edit_create_referral_study_url(:id => @target_referral.id, :referral_study_id => study_detail.id), :method => :get, :html => { :class => 'section_edit_control' }-%>
+	<%=link_to_remote 'delete', :update => 'ancillary_studies', :url => create_referral_study_url(:id => @target_referral.id, :referral_study_id => study_detail.id), :method => :delete, :html => { :class => 'section_edit_control' }-%>
+<% end %>
+<b><i><small><%= study_detail.study_type_tag.name %>:&nbsp;&nbsp;</small></i></b>
+<%= study_detail.study_modality_tag.name %>
+&nbsp;&nbsp;
+<b><i><small>Subject:&nbsp;&nbsp;</small></i></b>
+<%= study_detail.additional_comments %>
+</div>

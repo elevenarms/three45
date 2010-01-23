@@ -1,0 +1,8 @@
+<script>
+the_target_link = $('friendship_link_<%=@target_profile.id%>');
+the_target_snippet = $('profile_<%=@target_profile.id%>');
+
+if(the_target_link) { the_target_link.update("Suspended Relationship"); }
+if(the_target_snippet) { new Effect.Highlight(the_target_snippet); }
+</script>
+

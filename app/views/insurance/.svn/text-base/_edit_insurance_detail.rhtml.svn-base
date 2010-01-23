@@ -1,0 +1,39 @@
+<% form_remote_tag :update => 'insurance_detail_' + patient_carrier_plan.id, :url => create_referral_insurance_url(:id => @target_referral.id, :patient_carrier_plan_id => patient_carrier_plan.id), :method => :put do %>
+<fieldset style="margin-right:20px; margin-top:10px; margin-bottom:10px;">
+
+<div class="el_problemo" <%= flash[:partial] ? "style='border:none'" : "style='display:none'" %> ><%= flash[:partial] %></div>
+<table><tr>
+        <td><label>Provider</label><%= select_tag 'provider', insurance_carrier_options_for(@target_referral.active_target.workgroup, patient_carrier_plan.insurance_carrier_tag_id), {:onChange=>"handleProviderSelectionBecauseIENeverWorksRight(this)"}  %></td>
+        <td><label>Plan</label><div id="select_plan"><%= select_tag 'plan', insurance_carrier_plan_options_for(@target_referral.active_target.workgroup, patient_carrier_plan.insurance_carrier_tag_id, patient_carrier_plan.insurance_carrier_plan_tag_id) %></div></td>
+        <td><label>Details</label><%= text_field_tag 'details', patient_carrier_plan ? patient_carrier_plan.policy_details : '', :size => 30 %></td>
+</tr>
+<tr>
+        <td><label>Authorization</label><%= text_field_tag 'authorization', patient_carrier_plan ? patient_carrier_plan.authorization : '', :size => 30, :maxlength=>30  %></td>
+        <td><label>Number of Visits</label><%= text_field_tag 'number_of_visits', patient_carrier_plan ? patient_carrier_plan.number_of_visits : '', :size => 2, :maxlength=>2, :onBlur=>"validateNumberOfVisits(this)"  %></td>
+        <td><label>Expiration Date</label><%= calendar_field 'patient_carrier_plan', 'expiration_date',
+                      { :class => 'date',
+                        :field_title => 'Date',
+                        :button_title => 'Show calendar',
+                        :button_image => "/images/calendar.png"
+                      },
+                      { :firstDay => 1,
+                        :step => 1,
+                        :showOthers => true,
+                        :cache => true,
+                        :ifFormat => '%Y-%m-%d'
+                      }
+                %>
+</td>
+</tr></table>
+
+
+<%= submit_tag 'Save', :class => 'section_save_control' %>
+
+</fieldset>
+<% end %>
+<script>
+the_add_insurance_link = $('add_insurance_link');
+if(the_add_insurance_link) {
+  the_add_insurance_link.hide();
+}
+</script>

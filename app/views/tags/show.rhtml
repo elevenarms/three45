@@ -1,0 +1,32 @@
+<%- @page_title = "Viewing #{@target_tag.name}" -%>
+
+<div class="clearfix">
+
+<%=render_tag_details%>
+<%=render_tag_sponsor%>
+
+&nbsp;
+</div>
+
+<h3>Profiles tagged '<%=tag_name(@target_tag)%>'</h3>
+
+<div class="left">
+
+  <fieldset>
+
+    <%=render :partial=>"/shared/pagination_bar"%>
+
+    <div class="search_results">
+
+      <%=render :partial=>"/shared/profile_snippet", :collection=>@profile_results, :locals=>{:context=>params[:context]}%>
+
+    </div>
+
+  </fieldset>
+
+</div>
+
+<div class="right">
+
+</div>
+

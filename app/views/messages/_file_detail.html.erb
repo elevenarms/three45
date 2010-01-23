@@ -1,0 +1,5 @@
+<div id="<%= 'file_detail_' + file.id %>">
+	<b><i><small>Type:&nbsp;&nbsp;</small></i></b><%= file.referral_file_type.name %>&nbsp;&nbsp;
+	<b><i><small>Comment:&nbsp;&nbsp;</small></i></b><%= file.description %>&nbsp;&nbsp;
+	<b><i><small>Filename:&nbsp;&nbsp;</small></i></b><%= link_to file.filename, download_file_path(file) %>&nbsp;&nbsp;
+</div>

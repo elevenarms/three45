@@ -1,0 +1,15 @@
+<div class="tag_details">
+
+  <div class="thumbnail">
+    <%=image_tag "missing.gif", :alt=>""%>
+  </div>
+
+  <div class="details">
+    <%=@target_tag.detail_text%>
+  </div>
+
+  <div class="end"></div>
+
+  <div class="more_info"><%=link_to "See More Information >", @target_tag.contact_details if @target_tag.has_contact_details?%></div>
+
+</div>

@@ -1,0 +1,22 @@
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p><br/>
+<p>Current view is: <strong><%= @show_what %></strong>
+<% if @show_what == "show all"  then %>
+  <%= link_to "  Change to show only accepted referrals (first 50)", :action=>'referrals_index', :show_what=>'show only real', :sort => @sort %>
+<% else  %>
+  <%= link_to "Change to show all (first 50)", :action=>'referrals_index', :show_what=>'show all', :sort => @sort %>
+<% end %></p>
+<table>
+  <tr>
+    <th><%= link_to "From",  :action => 'referrals_index', :sort=>'from_name', :show_what=>@show_what %><%= link_to " D", :action => 'referrals_index', :sort=>'from_name DESC', :show_what=>@show_what  %></th>
+    <th><%= link_to "To",  :action => 'referrals_index', :sort=>'to_name', :show_what=>@show_what  %><%= link_to " D", :action => 'referrals_index', :sort=>'to_name DESC', :show_what=>@show_what  %></th>
+    <th>Patient</th>
+    <th><%= link_to "Updated",  :action => 'referrals_index', :sort=>'updated_at', :show_what=>@show_what  %><%= link_to " D", :action => 'referrals_index', :sort=>'updated_at DESC', :show_what=>@show_what  %></th>
+    <th><%= link_to "Ref State",  :action => 'referrals_index', :sort=>'referral_state_id', :show_what=>@show_what  %><%= link_to " D", :action => 'referrals_index', :sort=>'referral_state_id DESC', :show_what=>@show_what  %></th>
+    <% if @show_what == 'show all' then %>
+        <th><%= link_to "Wizard",  :action => 'referrals_index', :sort=>'wizard_step', :show_what=>@show_what  %><%= link_to " D", :action => 'referrals_index', :sort=>'wizard_step DESC', :show_what=>@show_what  %></th>
+    <% end  %>
+    <th><%= link_to "Created",  :action => 'referrals_index', :sort=>'created_at', :show_what=>@show_what  %><%= link_to " D", :action => 'referrals_index', :sort=>'created_at DESC', :show_what=>@show_what  %></th>
+  </tr>
+  <%= render :partial => 'referral', :collection => @referrals %>
+</table>

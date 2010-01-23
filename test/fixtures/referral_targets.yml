@@ -1,0 +1,119 @@
+kildare_to_mccoy_new_target:
+  id: kildare_to_mccoy_new_target
+  referral_id: kildare_to_mccoy_new_referral
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: new
+  display_name: Medical Offices of Dr. Leonard McCoy
+
+welby_to_stretch_in_progress_target:
+  id: welby_to_stretch_in_progress_target
+  referral_id: welby_to_stretch_in_progress
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_target_state_id: in_progress
+  display_name: Dr. Stretch
+
+# the closed referral was previously declined by the first consultant
+welby_to_stretch_declined_target:
+  id: welby_to_stretch_declined_target
+  referral_id: welby_to_stretch_closed_referral
+  user_id: 3
+  workgroup_id: workgroup_chiro
+  referral_target_state_id: declined
+  display_name: Dr. Stretch
+
+# this is the actual target that handled the referral, after the first declined target
+welby_to_stretch_closed_target:
+  id: welby_to_stretch_closed_target
+  referral_id: welby_to_stretch_closed_referral
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_target_state_id: closed
+  display_name: Dr. Stretch
+
+#
+# targets for the quentin/mccoy referrals
+#
+
+mccoy_to_kildare_1_target:
+  id: mccoy_to_kildare_1_target
+  referral_id: mccoy_to_kildare_1
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_target_state_id: new
+  display_name: Gillespie, Leonard
+
+mccoy_to_kildare_2_target:
+  id: mccoy_to_kildare_2_target
+  referral_id: mccoy_to_kildare_2
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_target_state_id: new
+  display_name: Gillespie, Leonard
+
+mccoy_to_kildare_3_target:
+  id: mccoy_to_kildare_3_target
+  referral_id: mccoy_to_kildare_3
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_target_state_id: in_progress
+  display_name: Gillespie, Leonard
+
+kildare_to_mccoy_4_target:
+  id: kildare_to_mccoy_4_target
+  referral_id: kildare_to_mccoy_4
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: in_progress
+  display_name: Smith, Quentin A.
+
+kildare_to_mccoy_5_target:
+  id: kildare_to_mccoy_5_target
+  referral_id: kildare_to_mccoy_5
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: new
+  display_name: Smith, Quentin A.
+
+mccoy_to_stretch_6_target:
+  id: mccoy_to_stretch_6_target
+  referral_id: mccoy_to_stretch_6
+  workgroup_id: workgroup_phys_therapy
+  referral_target_state_id: new
+  display_name: Dr. Stretch
+
+mccoy_to_stretch_7_target:
+  id: mccoy_to_stretch_7_target
+  referral_id: mccoy_to_stretch_7
+  workgroup_id: workgroup_phys_therapy
+  referral_target_state_id: new
+  display_name: Dr. Stretch
+
+stretch_to_mccoy_8_target:
+  id: stretch_to_mccoy_8_target
+  referral_id: stretch_to_mccoy_8
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: new
+  display_name: Smith, Quentin A.
+
+stretch_to_mccoy_9_target:
+  id: stretch_to_mccoy_9_target
+  referral_id: stretch_to_mccoy_9
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: closed
+  display_name: Medical Offices of Dr. Leonard McCoy
+
+stretch_to_mccoy_10_target:
+  id: stretch_to_mccoy_10_target
+  referral_id: stretch_to_mccoy_10
+  workgroup_id: workgroup_mccoy
+  referral_target_state_id: new
+  display_name: Medical Offices of Dr. Leonard McCoy
+
+stretch_to_nonsub_target:
+  id: stretch_to_nonsub_target
+  referral_id: stretch_to_nonsub
+  workgroup_id: workgroup_nonsub
+  referral_target_state_id: waiting_acceptance
+  display_name: A Non-Subscriber Practice

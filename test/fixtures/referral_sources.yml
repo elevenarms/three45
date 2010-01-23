@@ -1,0 +1,102 @@
+kildare_to_mccoy_new_source:
+  id: kildare_to_mccoy_new_source
+  referral_id: kildare_to_mccoy_new_referral
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_source_state_id: new
+
+welby_to_stretch_in_progress_source:
+  id: welby_to_stretch_in_progress_source
+  referral_id: welby_to_stretch_in_progress
+  user_id: 2
+  workgroup_id: workgroup_welby
+  referral_source_state_id: in_progress
+
+welby_to_stretch_closed_source:
+  id: welby_to_stretch_closed_source
+  referral_id: welby_to_stretch_closed_referral
+  user_id: 2
+  workgroup_id: workgroup_welby
+  referral_source_state_id: closed
+
+#
+# sources for the quentin/mccoy referrals
+#
+
+mccoy_to_kildare_1_source:
+  id: mccoy_to_kildare_1_source
+  referral_id: mccoy_to_kildare_1
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_source_state_id: new
+
+mccoy_to_kildare_2_source:
+  id: mccoy_to_kildare_2_source
+  referral_id: mccoy_to_kildare_2
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_source_state_id: new
+
+mccoy_to_kildare_3_source:
+  id: mccoy_to_kildare_3_source
+  referral_id: mccoy_to_kildare_3
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_source_state_id: waiting_response
+
+kildare_to_mccoy_4_source:
+  id: kildare_to_mccoy_4_source
+  referral_id: kildare_to_mccoy_4
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_source_state_id: in_progress
+
+kildare_to_mccoy_5_source:
+  id: kildare_to_mccoy_5_source
+  referral_id: kildare_to_mccoy_5
+  user_id: dr_gillespie
+  workgroup_id: workgroup_kildare
+  referral_source_state_id: new
+
+mccoy_to_stretch_6_source:
+  id: mccoy_to_stretch_6_source
+  referral_id: mccoy_to_stretch_6
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_source_state_id: new
+
+mccoy_to_stretch_7_source:
+  id: mccoy_to_stretch_7_source
+  referral_id: mccoy_to_stretch_7
+  user_id: 1
+  workgroup_id: workgroup_mccoy
+  referral_source_state_id: new
+
+stretch_to_mccoy_8_source:
+  id: stretch_to_mccoy_8_source
+  referral_id: stretch_to_mccoy_8
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_source_state_id: new
+
+stretch_to_mccoy_9_source:
+  id: stretch_to_mccoy_9_source
+  referral_id: stretch_to_mccoy_9
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_source_state_id: closed
+
+stretch_to_mccoy_10_source:
+  id: stretch_to_mccoy_10_source
+  referral_id: stretch_to_mccoy_10
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_source_state_id: new
+
+stretch_to_nonsub_source:
+  id: stretch_to_nonsub_source
+  referral_id: stretch_to_nonsub
+  user_id: stretch_brewster
+  workgroup_id: workgroup_phys_therapy
+  referral_source_state_id: waiting_acceptance
+

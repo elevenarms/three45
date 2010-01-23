@@ -1,0 +1,167 @@
+profile_mpcurie:
+  id: profile_mpcurie
+  profile_type_id: user
+  display_name: Dr. Marie Paris Curie
+  user_id: marie_paris_curie
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_hqmann:
+  id: profile_hpmann
+  profile_type_id: user
+  display_name: Dr. Horace Quinn Mann
+  user_id: horace_quinn_mann
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_fictitious:
+  id: profile_fictitious
+  profile_type_id: workgroup
+  display_name: Fictitious Family Practice
+  workgroup_id: workgroup_fictitious
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_quentin:
+  id: profile_quentin
+  profile_type_id: user
+  display_name: Quentin
+  user_id: 1
+  npi_identifier: some npi
+  medical_license_id: some license id
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_aaron:
+  id: profile_aaron
+  profile_type_id: user
+  display_name: Aaron
+  user_id: 2
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_dr_gillespie:
+  id: profile_dr_gillespie
+  profile_type_id: user
+  display_name: Leonard Gillespie
+  user_id: dr_gillespie
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+# Represents user_id = 3, mike_the_chiro, who is in an APW workgroup
+profile_workgroup_chiro:
+  id: profile_workgroup_chiro
+  profile_type_id: workgroup
+  display_name: Austin Chiropractic
+  workgroup_id: workgroup_chiro
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+# APW Workgroup for Dr. Stretch
+profile_workgroup_phys_ther:
+  id: profile_workgroup_phys_ther
+  profile_type_id: workgroup
+  display_name: Outpatient Physical Therapy of Dr. Stretch
+  workgroup_id: workgroup_phys_therapy
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_quentin_jr:
+    id: profile_quentin_jr
+    profile_type_id: user
+    display_name: Quentin Jr
+    user_id: quentin_jr
+    created_at: <%= 1.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_quentin_admin:
+    id: quentin_admin
+    profile_type_id: user
+    display_name: Mabel Lamb, Admin
+    user_id: quentin_admin
+    created_at: <%= 1.days.ago.to_s :db %>
+    updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_workgroup_mccoy:
+    id: profile_workgroup_mccoy
+    profile_type_id: workgroup
+    display_name: Medical Office of Dr. Leonard McCoy
+    workgroup_id: workgroup_mccoy
+    created_at: <%= 3.days.ago.to_s :db %>
+    updated_at: <%= 3.days.ago.to_s :db %>
+
+profile_workgroup_kildare:
+    id: profile_workgroup_kildare
+    profile_type_id: workgroup
+    display_name: General Practice of Dr. Kildare
+    workgroup_id: workgroup_kildare
+    created_at: <%= 3.days.ago.to_s :db %>
+    updated_at: <%= 3.days.ago.to_s :db %>
+
+profile_workgroup_welby:
+    id: profile_workgroup_welby
+    profile_type_id: workgroup
+    display_name: General Practice of Dr. Welby
+    workgroup_id: workgroup_welby
+    created_at: <%= 3.days.ago.to_s :db %>
+    updated_at: <%= 3.days.ago.to_s :db %>
+
+
+# Capital Cardio Workgroup Profile
+profile_workgroup_cap_cardio:
+  id: profile_workgroup_cap_cardio
+  profile_type_id: workgroup
+  display_name: Capital Cardiovascular
+  workgroup_id: capital_cardio
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+
+profile_thomas_c_baldacchino:
+  id: profile_thomas_c_baldacchino
+  profile_type_id: user
+  user_id: thomas_c_baldacchino
+  display_name: Thomas C. Baldacchino, M.D., F.A.C.C.
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+  description: Dr. Baldacchino is the Director of the only ICANL (Intersocietal Commission for the Accreditation of Nuclear Medicine Labs) and has a special interest in Stress echocardiography. He was previously the Non-invasive Cardiology Director at Columbia St. David's South Austin Hospital. Dr. Baldacchino speaks fluent Italian. He enjoys boating, skiing and radio-controlled airplanes.
+  #photo: tbaldacchino.jpg
+
+profile_james_b_williams:
+  id: profile_james_b_williams
+  profile_type_id: user
+  user_id: james_b_williams
+  display_name: James B. Williams, M.D., F.A.C.C.
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+ # description: Dr. Williams is the Chief of Cardiology at Columbia St. David's Austin South Hospital. Dr. Williams is an avid fisherman and is married with three children.
+ # photo: jbwilliams.jpg
+
+profile_eric_j_frischhertz:
+  id: profile_eric_j_frischhertz
+  profile_type_id: user
+  user_id: eric_j_frischhertz
+  display_name: Eric J. Frischhertz, M.D.
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+  description: Dr. Frischhertz brings expertise in general and preventive cardiology. He has specialized skills in advanced diagnostic testing and the assessment of the heart and vascular system. He is interests include nuclear cardiology, CT angiography, and noninvasive vascular and cardiac testing. He is married with four children and enjoys activities such as reading, fishing, and martial arts.
+ # photo: ejfrischhertz.jpg
+
+profile_samuel_j_dimaio:
+  id: profile_samuel_j_dimaio
+  profile_type_id: user
+  user_id: samuel_j_dimaio
+  display_name: Samuel J. DeMaio, M.D., F.A.C.C.
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+  description: Dr. DeMaio is involved in coronary and peripheral vascular interventional research. He sits on the Medical Advisory Board of Cordis, Johnson & Johnson, Medtronic and Boston Scientific. He previously served as Assistant Editor of the American Journal of Cardiology. In addition, he is involved in various interventional cardiology studies. He has a special interest in healthcare law and is a graduate of Southern Methodist University School of Law in Dallas. Dr. DeMaio is married with two children.
+  #photo: sjdimaio.jpg
+
+profile_osvaldo_s_gigliotti:
+  id: profile_osvaldo_s_gigliotti
+  profile_type_id: user
+  user_id: osvaldo_s_gigliotti
+  display_name: Osvaldo S. Gigliotti
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>
+  description: Dr. Gigliotti has several publications in peer reviewed journals and special interests in acute coronary syndromes, peripheral vascular disease, and noninvasive imaging. Dr. Gigliotti is married with 2 children.
+  #photo: osgigliotti.gif

@@ -1,0 +1,20 @@
+
+<H3>Values for Tag Type <%= @tag_type[:name] %></H3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<br/>
+<% form_for :tag, :url => { :action => 'create_tag_value', :id => @tag } do |t| -%>
+  <p>Add  value for Tag Type <%= @tag_type[:name] %></p>
+  <p><%= t.text_field :name %>  
+  <%= t.hidden_field :id, :value => @tag_type[:id] %>
+  <%= submit_tag "#{'Add ' + String(@tag_type[:name]) + ' value'}" %></p>
+<% end %>
+<HR>
+<p><strong>Current values for Tag Type <%= @tag_type[:name] %></strong></p>
+<table id="tags">
+  <tr>
+    <th>Tag Value</th>
+    <th></th>
+  </tr>
+  <%= render :partial => 'tag', :collection => @tags %>
+</table>
+ 

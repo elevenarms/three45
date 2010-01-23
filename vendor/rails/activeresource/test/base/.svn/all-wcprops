@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base
+END
+load_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base/load_test.rb
+END
+custom_methods_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base/custom_methods_test.rb
+END
+equality_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/test/base/equality_test.rb
+END

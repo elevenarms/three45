@@ -1,0 +1,181 @@
+#
+# A new referral that hasn't fully created yet. It is being sent to a workgroup,
+# so it will have to be assigned to a specific physician as well
+#
+kildare_to_mccoy_new_referral:
+  id: kildare_to_mccoy_new_referral
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: dr_gillespie
+  created_by_workgroup_id: workgroup_kildare
+  active_source_id: kildare_to_mccoy_new_source
+  active_target_id: kildare_to_mccoy_new_target
+  from_name: Fake Referrer For Testing
+  to_name: Fake Consultant For Testing
+
+#
+# A referral that is active today
+#
+welby_to_stretch_in_progress:
+  id: welby_to_stretch_in_progress
+  referral_state_id: in_progress
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 2
+  created_by_workgroup_id: workgroup_welby
+  active_source_id: welby_to_stretch_in_progress_source
+  active_target_id: welby_to_stretch_in_progress_target
+  from_name: Jones, Aaron B.
+  to_name: Brewster, Stretch
+
+#
+# we'll develop this as a closed referral that was successfully treated
+#
+welby_to_stretch_closed_referral:
+  id: welby_to_stretch_closed_referral
+  referral_state_id: closed
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 2
+  created_by_workgroup_id: workgroup_welby
+  active_source_id: welby_to_stretch_closed_source
+  active_target_id: welby_to_stretch_closed_target
+  from_name: Jones, Aaron B.
+  to_name: Brewster, Stretch
+
+#
+# Loading up quentin's workgroup (workgroup_mccoy) with some referrals for testing
+#
+
+mccoy_to_kildare_1:
+  id: mccoy_to_kildare_1
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 1
+  created_by_workgroup_id: workgroup_mccoy
+  active_source_id: mccoy_to_kildare_1_source
+  active_target_id: mccoy_to_kildare_1_target
+  from_name: Smith, Quentin A.
+  to_name: Gillespie, Leonard
+
+mccoy_to_kildare_2:
+  id: mccoy_to_kildare_2
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 1
+  created_by_workgroup_id: workgroup_mccoy
+  active_source_id: mccoy_to_kildare_2_source
+  active_target_id: mccoy_to_kildare_2_target
+  from_name: Smith, Quentin A.
+  to_name: Gillespie, Leonard
+
+mccoy_to_kildare_3:
+  id: mccoy_to_kildare_3
+  referral_state_id: in_progress
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 1
+  created_by_workgroup_id: workgroup_mccoy
+  active_source_id: mccoy_to_kildare_3_source
+  active_target_id: mccoy_to_kildare_3_target
+  from_name: Smith, Quentin A.
+  to_name: Gillespie, Leonard
+
+kildare_to_mccoy_4:
+  id: kildare_to_mccoy_4
+  referral_state_id: in_progress
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: dr_gillespie
+  created_by_workgroup_id: workgroup_kildare
+  active_source_id: kildare_to_mccoy_4_source
+  active_target_id: kildare_to_mccoy_4_target
+  from_name: Gillespie, Leonard
+  to_name: Smith, Quentin A.
+
+kildare_to_mccoy_5:
+  id: kildare_to_mccoy_5
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: dr_gillespie
+  created_by_workgroup_id: workgroup_kildare
+  active_source_id: kildare_to_mccoy_5_source
+  active_target_id: kildare_to_mccoy_5_target
+  from_name: Gillespie, Leonard
+  to_name: Smith, Quentin A.
+
+mccoy_to_stretch_6:
+  id: mccoy_to_stretch_6
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 1
+  created_by_workgroup_id: workgroup_mccoy
+  active_source_id: mccoy_to_stretch_6_source
+  active_target_id: mccoy_to_stretch_6_target
+  from_name: Smith, Quentin A.
+  to_name: Dr. Stretch
+
+mccoy_to_stretch_7:
+  id: mccoy_to_stretch_7
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: 1
+  created_by_workgroup_id: workgroup_mccoy
+  active_source_id: mccoy_to_stretch_7_source
+  active_target_id: mccoy_to_stretch_7_target
+  from_name: Smith, Quentin A.
+  to_name: Dr. Stretch
+
+stretch_to_mccoy_8:
+  id: stretch_to_mccoy_8
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: stretch_brewster
+  created_by_workgroup_id: workgroup_phys_therapy
+  active_source_id: stretch_to_mccoy_8_source
+  active_target_id: stretch_to_mccoy_8_target
+  from_name: Brewster, Stretch
+  to_name: Smith, Quentin A.
+
+stretch_to_mccoy_9:
+  id: stretch_to_mccoy_9
+  referral_state_id: closed
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: stretch_brewster
+  created_by_workgroup_id: workgroup_phys_therapy
+  active_source_id: stretch_to_mccoy_9_source
+  active_target_id: stretch_to_mccoy_9_target
+  from_name: Brewster, Stretch
+  to_name: Medical Offices of Dr. Leonard McCoy
+
+stretch_to_mccoy_10:
+  id: stretch_to_mccoy_10
+  referral_state_id: new
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: stretch_brewster
+  created_by_workgroup_id: workgroup_phys_therapy
+  active_source_id: stretch_to_mccoy_10_source
+  active_target_id: stretch_to_mccoy_10_target
+  from_name: Brewster, Stretch
+  to_name: Medical Offices of Dr. Leonard McCoy
+
+stretch_to_nonsub:
+  id: stretch_to_nonsub
+  referral_state_id: provisional
+  cpt_code_id:
+  icd9_code_id:
+  created_by_user_id: stretch_brewster
+  created_by_workgroup_id: workgroup_phys_therapy
+  active_source_id: stretch_to_nonsub_source
+  active_target_id: stretch_to_nonsub_target
+  from_name: Brewster, Stretch
+  to_name: A Non-Subscriber Practice

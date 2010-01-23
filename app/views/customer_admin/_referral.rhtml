@@ -1,0 +1,12 @@
+
+<tr class="<%= cycle('odd', 'even') -%>">
+  <td><%= referral.from_name -%></td>
+  <td><%= referral.to_name -%></td>
+  <td><% patient = ReferralPatient.find_by_referral_id(referral.id) %>
+      <%= patient[:last_name] unless patient == nil %></td> 
+      <td><%= referral.updated_at -%></td>
+  <td><%= referral.referral_state_id -%></td>
+  <td><%= referral.wizard_step -%></td>
+  <td><%= referral.created_at -%></td>
+  </td>
+</tr>

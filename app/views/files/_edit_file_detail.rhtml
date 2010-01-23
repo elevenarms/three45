@@ -1,0 +1,19 @@
+<% form_remote_tag :update => 'file_detail_' + file.id, :url => create_referral_file_url(:create_referral_id => @target_referral.id, :id => file.id), :html => { :multipart => true }, :method => :put do %>
+<fieldset style="margin-right:20px; margin-top:10px; margin-bottom:10px;">
+
+<div class="el_problemo" <%= flash[:partial] ? "style='border:none'" : "style='display:none'" %> ><%= flash[:partial] %></div>
+<table><tr>
+	<% unless file.filename == nil %>
+	<td><span style="color:gray">File:</span>&nbsp;&nbsp;<%= file.filename %></td>
+	<% else %>
+	<td><span style="color:gray">File:</span>&nbsp;&nbsp;<%= file_field_tag :uploaded_data %></td>
+	<% end %>
+	<td><span style="color:gray">&nbsp;&nbsp;Comment:</span>&nbsp;&nbsp;<%= text_field_tag 'description', file.description, :size => 29 %></td>
+	</tr><tr>
+	<td  style="padding-top: 10px;" colspan="2"><span style="color:gray">Type:</span>&nbsp;&nbsp;<%= file_type_radio_buttons(file.referral_file_type) %></td>
+</tr></table>
+
+<%= submit_tag 'Save', :class => 'section_save_control' %>
+
+</fieldset>
+<% end %>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/bin/process
+END
+spawner
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/bin/process/spawner
+END
+inspector
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/bin/process/inspector
+END
+reaper
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/bin/process/reaper
+END

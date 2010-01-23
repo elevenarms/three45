@@ -1,0 +1,22 @@
+<%- @page_title = "Select a user" -%>
+<h3> Select a user to be added to the selected workgroup</h3>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user, :url => { :action => 'add_user_to_workgroup', :id => @user } do |f| -%>
+  
+  <p>Select a user: </p>
+  <p><%= f.select(:id, @users) %> </p>
+
+  <% fields_for :workgroup do |w| %>
+    <p>Workgroup to which user will be added: </p>
+    <p><%= w.select(:id, @wkgrps) %> </p>
+  <% end %>
+    
+  
+
+<p><%= submit_tag 'Add user to workgroup' %></p>
+
+<% end %>  
+

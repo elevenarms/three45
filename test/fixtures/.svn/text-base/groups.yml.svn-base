@@ -1,0 +1,39 @@
+---
+three45_data_entry:
+  name: three45 Data Entry
+  updated_at:
+  workgroup_type_id: ppw
+  id: three45_data_entry
+  created_at:
+
+ppw_physician_user:
+  name: Physician User
+  updated_at:
+  workgroup_type_id: ppw
+  id: ppw_physician_user
+  created_at:
+
+ppw_admin:
+  name: Admin
+  updated_at:
+  workgroup_type_id: ppw
+  id: ppw_admin
+  created_at:
+apw_admin:
+  name: Admin
+  updated_at:
+  workgroup_type_id: apw
+  id: apw_admin
+  created_at:
+apw_proxy:
+  name: Proxy
+  updated_at:
+  workgroup_type_id: apw
+  id: apw_proxy
+  created_at:
+ppw_physician_proxy:
+  name: Physician Proxy
+  updated_at:
+  workgroup_type_id: ppw
+  id: ppw_physician_proxy
+  created_at:

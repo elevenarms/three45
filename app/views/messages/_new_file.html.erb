@@ -1,0 +1,17 @@
+<% form_for :referral_file, :url => formatted_attach_file_referral_messages_url(:id => @target_referral.id, :format => 'js'), :html => { :multipart => true, :target => 'upload_frame' } do |form| %>
+        <fieldset style="margin-right:20px; margin-top:10px; margin-bottom:10px;">
+
+        <div class="el_problemo" <%= flash[:partial] ? "style='border:none'" : "style='display:none'" %> ><%= flash[:partial] %></div>
+        <table><tr>
+                <td><span style="color:gray">File:</span>&nbsp;&nbsp;<%= form.file_field :uploaded_data %></td>
+                <td><span style="color:gray">&nbsp;&nbsp;Comment:</span>&nbsp;&nbsp;<%= form.text_field :description, :size => 29 %></td>
+                </tr><tr>
+                <td  style="padding-top: 10px;" colspan="2"><span style="color:gray">Type:</span>&nbsp;&nbsp;<%= file_type_radio_buttons( ReferralFileType.find_by_name( 'Other' ) ) %></td>
+        </tr></table>
+
+        <%= submit_tag 'Upload', :class => 'section_save_control' %>
+
+        </fieldset>
+<% end %>
+
+<iframe id='upload_frame' name="upload_frame" style="width:1px;height:1px;border:0px" src="javascript:false;"></iframe>

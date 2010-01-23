@@ -1,0 +1,13 @@
+# an ad that shows for referrals that have a referral target ("consultant") of workgroup_mccoy
+ad_for_mccoy:
+  id: ad_for_mccoy
+  workgroup_id: workgroup_mccoy
+  image_path: /ads/images/ad_for_mccoy.jpg
+  link_url: /ads/files/kyphoplasty_ad.pdf
+
+# an ad that shows for referrals that have a referral target ("consultant") of workgroup_mccoy
+ad_for_kildare:
+  id: ad_for_kildare
+  workgroup_id: workgroup_kildare
+  image_path: /ads/images/ad_for_kildare.jpg
+  link_url: /ads/files/ad_2.pdf

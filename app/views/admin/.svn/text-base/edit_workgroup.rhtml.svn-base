@@ -1,0 +1,37 @@
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<H3> Edit workgroup Information for  <%= @wkgrp.name %> </H3>
+<strong>Users</strong>
+<% @wkgrp_users.each do |wu| %>  <p>
+    <%= wu.user[:first_name]%> <%= wu.user[:middle_name] %> <%= wu.user[:last_name] %> ---
+    <%= wu.user[:login] %> ---
+    <% ug = UserGroup.find_by_user_id(wu.user[:id]).group_id %>
+    <% group_name = Group.find(ug)[:name] %>
+    <%= group_name %>
+  </p>
+<% end %>
+<HR>
+<% form_for :workgroup,
+            :url => { :action => 'update_workgroup', :id => @wkgrp } ,
+            :html => { :method => :put } do |f| -%>
+
+  <p>Workgroup name:<br /><%= f.text_field :name, :size => 60, :value => @wkgrp.name %></p>
+  <p>Sub-domain:<br /><%= f.text_field :subdomain, :size => 60, :value => @wkgrp.subdomain  %></p>
+  <p>Subscriber Status: </p>
+  <p><%= select_tag("workgroup[subscriber_flag]", options_for_select(@subscriber_types, @wkgrp.subscriber? ? "true" : "false"))  %> </p>
+  <p>Office phone:<br /><%= f.text_field :office_number, :size => 60, :value => @wkgrp.office_number  %></p>
+  <p>Office fax:<br /><%= f.text_field :fax_number, :size => 60, :value => @wkgrp.fax_number  %></p>
+  <p>Workgroup Subtype ID:<br /><%= f.text_field :workgroup_subtype_id, :size => 60, :value => @wkgrp.workgroup_subtype_id  %></p>
+  <p>Workgroup State:<br /><%= f.text_field :workgroup_state_id, :size => 60, :value => @wkgrp.workgroup_state_id  %></p>
+  <p>Workgroup Type ID:<br /><%= f.text_field :workgroup_type_id, :size => 60, :value => @wkgrp.workgroup_type_id  %></p>
+  <p>Description in workgroup table:<br /><%= f.text_area :description, :rows => 4, :cols => 60, :value => @wkgrp.description  %></p>
+  <p>Anyone can sign referral?:<br /><%= f.text_field :anyone_can_sign_referral_flag, :size => 1, :value => @wkgrp.anyone_can_sign_referral_flag  %></p>
+
+<% unless @prfle.nil? then %>
+  <% fields_for :profile do |p| %>
+  <p>Display name:<br /><%= p.text_field :display_name, :size => 60, :value => @prfle.display_name %></p>
+  <p>Description from the workgroup PROFILE:<br /><%= p.text_area :description, :rows => 5, :cols => 60, :value => @prfle.description %></p>
+  <% end %>
+<% end %>
+
+  <%= submit_tag 'Save' %>
+<% end -%>

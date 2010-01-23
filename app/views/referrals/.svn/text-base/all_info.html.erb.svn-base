@@ -1,0 +1,62 @@
+<%- @page_title = "Referral Detail" -%>
+<%- @page_header = "Referral Details" -%>
+
+<div class="edit_referral">
+
+        <div class="section" id="referral_patient">
+                <%= render :partial => 'patient/show', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="clearfix">
+          <br/>
+        </div>
+        <div class="section clearfix" id="referral_insurance">
+                <%= render :partial => 'insurance/index', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="section clearfix" id="referral_request">
+                <%= render :partial => 'request/show', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="section clearfix" id="referral_provider">
+                <%= render :partial => 'create_referral/provider', :locals=>{ :edit_disabled => true} %>
+        </div>
+
+        <div class="clearfix ad">
+          <%=render_ad%><br/><br/>
+        </div>
+
+        <div class="section clearfix" id="referral_referring">
+                <%= render :partial => 'create_referral/referring_provider', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="section clearfix" id="referral_messages">
+
+          <div class="bevel"> <strong>Messages</strong></div>
+
+          <%- @all_messages.each do |message| -%>
+          <div class="message">
+            <%=render :partial=>"/messages/message", :object => message, :locals => { :skip_close_button => true }%>
+
+            <%- if message.is_reply? -%>
+            <hr/>
+            <%=render :partial=>"/messages/message", :object => message.reply_to_message, :locals => { :skip_close_button => true } %>
+            <%- end -%>
+
+            <%- if message.has_reply? -%>
+            <hr/>
+            <%=render :partial=>"/messages/message", :object => message.reply_message, :locals => { :skip_close_button => true } %>
+            <%- end -%>
+
+          </div>
+          <%- end -%>
+          <%- if @all_messages.empty? -%>
+          No messages
+          <%- end -%>
+
+        </div>
+
+        <div class="section" id="referral_faxes">
+                <%= render :partial => 'faxes/index', :locals=>{ :edit_disabled => true} %>
+        </div>
+        <div class="section" id="referral_files">
+                <%= render :partial => 'files/index', :locals=>{ :edit_disabled => true} %>
+        </div>
+
+</div>

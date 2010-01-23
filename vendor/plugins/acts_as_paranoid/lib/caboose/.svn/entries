@@ -1,0 +1,31 @@
+9
+
+dir
+334
+svn+ssh://67.207.139.58/usr/local/svn/repos/trunk/webapp/vendor/plugins/acts_as_paranoid/lib/caboose
+svn+ssh://67.207.139.58/usr/local/svn/repos
+
+
+
+2007-12-31T17:45:38.084435Z
+8
+mw
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b3cc8395-7613-4221-9100-3ee0cd30621b
+
+acts
+dir
+

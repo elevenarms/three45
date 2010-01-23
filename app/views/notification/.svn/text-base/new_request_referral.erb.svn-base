@@ -1,0 +1,14 @@
+There is a new request for referral from <%=@r.active_target.workgroup.name%> waiting.  Click the link below to go directly to the referral, review and accept it. 
+
+
+https://<%=@s.subdomain%>.three45.net/referrals/<%=@r.id%>
+
+If clicking on the link does not take you to the referral, copy and paste the link into the address bar of your web browser. 
+
+This is an automated message from the three45 Referral Management System. Please do not reply to it.
+
+If you have questions, send them to support@three45.com or call 1-(888)-345-3553 ext.205
+
+Thank you, 
+
+three45 Referral Robot

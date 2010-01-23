@@ -1,0 +1,7 @@
+# A bi-directional friendship between profile_aaron and workgroup_chiro (blocked by aaron)
+aaron_blocking_workgroup_chiro:
+  id: aaron_blocking_workgroup_chiro
+  source_profile_id: profile_aaron
+  target_profile_id: profile_workgroup_chiro
+  created_at: <%= 1.days.ago.to_s :db %>
+  updated_at: <%= 1.days.ago.to_s :db %>

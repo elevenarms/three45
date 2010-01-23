@@ -1,0 +1,15 @@
+<%- @page_title = "Select a user" -%>
+<h3> Select a user.</h3>
+
+
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<% form_for :user, :url => { :action => 'list_tags_for_user', :id => @user } do |f| -%>
+  
+  <p>Select a user: </p>
+  <p><%= f.select(:id, @users) %> </p>
+
+<p><%= submit_tag 'Show tags for user' %></p>
+
+<% end %>  
+

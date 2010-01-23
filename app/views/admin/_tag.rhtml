@@ -1,0 +1,10 @@
+
+
+<tr class="<%= cycle('odd', 'even') -%>">
+  <td><%= tag.name -%></td> 
+  <td><%= link_to "edit", :action => "edit_tag_value", :id => tag[:id], :tag_type_id => @tag_type[:id] -%>  </td>
+  <% if @tag_type[:name] != "Insurance Carriers" &&  @tag_type[:name] != "Specialties"  then%>
+      <td><%= link_to "delete", :action => "delete_tag_value", :id => tag[:id], :tag_type_id => @tag_type[:id] -%>  </td>
+  <% end %>
+ 
+</tr>

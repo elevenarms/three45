@@ -1,0 +1,19 @@
+tag_sponser_click_one:
+    id: tag_sponser_click_one
+    tag_sponsor_id: tag_sponser_osteopath
+    user_id: aaron
+
+tag_sponser_click_two:
+    id: tag_sponser_click_two
+    tag_sponsor_id: tag_sponser_osteopath
+    user_id: quentin
+
+tag_sponser_click_three:
+    id: tag_sponser_click_three
+    tag_sponsor_id: tag_sponser_osteopath
+    user_id: aaron
+
+tag_sponser_click_four:
+    id: tag_sponser_click_four
+    tag_sponsor_id: tag_sponser_osteopath_too
+    user_id: aaron

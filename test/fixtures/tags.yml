@@ -1,0 +1,504 @@
+tag_provider_type_physician:
+    id: tag_provider_type_physician
+    tag_type_id: provider_types
+    name: Physician Provider
+
+tag_provider_type_ancillary:
+    id: tag_provider_type_ancillary
+    tag_type_id: provider_types
+    name: Ancillary Provider
+
+tag_specialty_ontology:
+    id: tag_specialty_ontology
+    tag_type_id: specialties
+    name: Ontology
+    detail_text: Practice limited to ontology
+    contact_details: 800-555-1212
+
+tag_specialty_pediatry:
+    id: tag_specialty_pediatry
+    tag_type_id: specialties
+    name: Pediatry
+    detail_text: Practice limited to pediatry
+    contact_details: 800-555-1212
+
+tag_certification_cert_osteopath:
+    id: tag_certification_cert_osteopath
+    tag_type_id: certifications
+    name: Board Certified Osteopath
+    detail_text: Board-Certified Osteopath
+    contact_details: 512-555-1212
+
+tag_location_downtown_austin:
+    id: tag_location_downtown_austin
+    tag_type_id: location
+    name: Downtown Austin
+    detail_text: 5th and Congress Ave
+    contact_details: 866-555-1212
+
+tag_location_north_austin:
+    id: tag_location_north_austin
+    tag_type_id: location
+    name: North Austin
+    detail_text: Arboretum Blvd
+    contact_details: 877-555-1212
+
+tag_location_south_austin:
+    id: tag_location_south_austin
+    tag_type_id: location
+    name: South Austin
+    detail_text: Circle C Ranch
+    contact_details: 888-555-1212
+
+# TODO: remove this one
+tag_education_undergrad_ut:
+    id: tag_education_undergrad_ut
+    tag_type_id: education_undergrad
+    name: University of Texas
+    detail_text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer dolor diam, faucibus eget, malesuada in, tempor nec, lorem. Praesent cursus vehicula tortor. Duis diam eros, vestibulum nec, ullamcorper ac, ornare id, dui. Ut aliquet nonummy lectus. Nullam lacinia mi tincidunt libero. Nullam et mi. Pellentesque gravida lorem non nibh. Morbi leo est, gravida quis, mattis ac, tincidunt at, augue. Aliquam erat volutpat. Nulla tellus.
+    contact_details:
+
+tag_consultation_type:
+    id: tag_consultation_type
+    tag_type_id: referral_standard_types
+    name: Consultation
+    detail_text:
+    contact_details:
+
+tag_treatment_type:
+    id: tag_treatment_type
+    tag_type_id: referral_standard_types
+    name: Treatment
+    detail_text:
+    contact_details:
+
+tag_second_opinion_type:
+    id: tag_second_opinion_type
+    tag_type_id: referral_standard_types
+    name: Second Opinion
+    detail_text:
+    contact_details:
+
+tag_ancillary_studies_type:
+    id: tag_ancillary_studies_type
+    tag_type_id: referral_standard_types
+    name: Ancillary Studies
+    detail_text:
+    contact_details:
+
+tag_transfer_patient_type:
+    id: tag_transfer_patient_type
+    tag_type_id: referral_standard_types
+    name: Transfer Patient
+    detail_text:
+    contact_details:
+
+fax_radiology_report:
+    id: fax_radiology_report
+    tag_type_id: referral_fax_content_types
+    name: Radiology Report
+    detail_text:
+    contact_details:
+
+fax_blood_work:
+    id: fax_blood_work
+    tag_type_id: referral_fax_content_types
+    name: Blood Work
+    detail_text:
+    contact_details:
+
+fax_urinalysis:
+    id: fax_urinalysis
+    tag_type_id: referral_fax_content_types
+    name: Urinalysis
+    detail_text:
+    contact_details:
+
+fax_medical_history:
+    id: fax_medical_history
+    tag_type_id: referral_fax_content_types
+    name: Medical History
+    detail_text:
+    contact_details:
+
+fax_list_of_meds:
+    id: fax_list_of_meds
+    tag_type_id: referral_fax_content_types
+    name: List Of Medications
+    detail_text:
+    contact_details:
+
+fax_lab_results:
+    id: fax_lab_results
+    tag_type_id: referral_fax_content_types
+    name: Lab Results
+    detail_text:
+    contact_details:
+
+fax_high_visiblity:
+    id: fax_high_visiblity
+    tag_type_id: referral_fax_content_types
+    name: High Visiblity
+    detail_text:
+    contact_details:
+
+fax_results_of_last_visit:
+    id: fax_results_of_last_visit
+    tag_type_id: referral_fax_content_types
+    name: Results of Last Visit
+    detail_text:
+    contact_details:
+
+fax_other:
+    id: fax_other
+    tag_type_id: referral_fax_content_types
+    name: Other
+    detail_text:
+    contact_details:
+
+tag_edu_under_brook_coll:
+    id: tag_edu_under_brook_coll
+    tag_type_id: education_undergrad
+    name: Brooklyn College - Brooklyn, New York
+
+tag_edu_med_u_rome:
+    id: tag_edu_med_u_rome
+    tag_type_id: education_medical
+    name: University of Rome - Rome, Italy
+
+tag_edu_res_set_hal_st_jo:
+    id: tag_edu_res_set_hal_st_jo
+    tag_type_id: education_residency
+    name: Seton Hall University, St. Joseph's Hospital - Paterson, New Jersey
+
+tag_edu_fsp_set_hal_st_jo:
+    id: tag_edu_fsp_set_hal_st_jo
+    tag_type_id: education_fellowships
+    name: Seton Hall University, St. Joseph's Hospital - Paterson, New Jersey
+
+tag_specialties_internal_medicine:
+    id: tag_specialties_internal_medicine
+    tag_type_id: specialties
+    name: Internal Medicine
+
+tag_specialties_nuclear_medicine:
+    id: tag_specialties_nuclear_medicine
+    tag_type_id: specialties
+    name: Nuclear Medicine
+
+tag_specialties_cardiology:
+    id: tag_specialties_cardiology
+    tag_type_id: specialties
+    name: Cardiology
+
+tag_sub_spec_interventional_cardio:
+    id: tag_sub_spec_interventional_cardio
+    tag_type_id: sub_specialties
+    parent_tag_id: tag_specialties_cardiology
+    name: Interventional Cardiology (IM)
+
+tag_sub_spec_cardiovascular_disease:
+    id: tag_sub_spec_cardiovascular_disease
+    tag_type_id: sub_specialties
+    parent_tag_id: tag_specialties_cardiology
+    name: Cardiovascular Disease (IM)
+
+tag_sub_spec_nuclear_cardio:
+    id: tag_sub_spec_nuclear_cardio
+    tag_type_id: sub_specialties
+    parent_tag_id: tag_specialties_cardiology
+    name: Nuclear Cardiology
+
+tag_edu_under_rutgers:
+    id: tag_edu_under_rutgers
+    tag_type_id: education_undergrad
+    name: Rutgers College of Engineering - New Brunswick, New Jersey
+
+tag_edu_under_lsuno:
+    id: tag_edu_under_lsuno
+    tag_type_id: education_undergrad
+    name: Louisiana State University - New Orleans, Louisiana
+
+tag_edu_under_umdcp:
+    id: tag_edu_under_umdcp
+    tag_type_id: education_undergrad
+    name: University of Maryland-College Park , College Park, Maryland
+
+tag_edu_under_tulane:
+    id: tag_edu_under_tulane
+    tag_type_id: education_undergrad
+    name: Tulane University, New Orleans, Louisiana
+
+tag_edu_under_u_sth_caro:
+    id: tag_edu_under_u_sth_caro
+    tag_type_id: education_undergrad
+    name: University of South Carolina, Columbia, South Carolina
+
+tag_edu_med_tulane:
+    id: tag_edu_med_tulane
+    tag_type_id: education_medical
+    name: Tulane University School of Medicine, New Orleans, La
+
+tag_edu_med_pitt:
+    id: tag_edu_med_pitt
+    tag_type_id: education_medical
+    name: University of Pittsburgh School of Medicine, Pittsburgh, Pennsylvania
+
+tag_edu_med_lsu:
+    id: tag_edu_med_lsu
+    tag_type_id: education_medical
+    name: Louisiana State University Medical Center - New Orleans, Louisiana
+
+tag_edu_med_n_j_med_sch:
+    id: tag_edu_med_n_j_med_sch
+    tag_type_id: education_medical
+    name: New Jersey Medical School - New Brunswick, New Jersey
+
+tag_edu_res_baylor:
+    id: tag_edu_res_baylor
+    tag_type_id: education_residency
+    name: Baylor University Medical Center - Dallas, Texas
+
+tag_edu_res_u_c_fresno:
+    id: tag_edu_res_u_c_fresno
+    tag_type_id: education_residency
+    name: University of California, Valley Medical Center of Fresno - Fresno, California
+
+tag_edu_res_hopkins_bayview:
+    id: tag_edu_res_hopkins_bayview
+    tag_type_id: education_residency
+    name: Johns Hopkins Bayview Medical Center, Baltimore, Maryland
+
+tag_edu_res_tulane:
+    id: tag_edu_res_tulane
+    tag_type_id: education_residency
+    name: Tulane University Health Science Center, New Orleans, La
+
+tag_edu_fsp_tulane:
+    id: tag_edu_fsp_tulane
+    tag_type_id: education_fellowship
+    name: Tulane University Health Science Center, New Orleans, La
+
+tag_edu_fsp_u_fl_jax_ic:
+    id: tag_edu_fsp_u_fl_jax_ic
+    tag_type_id: education_fellowship
+    name: University of Florida Interventional Cardiology, University of Florida, Jacksonville, Florida
+
+tag_edu_fsp_baylor_st_luke:
+    id: tag_edu_fsp_baylor_st_luke
+    tag_type_id: education_fellowship
+    name: Baylor College of Medicine, St. Luke's Episcopal Hospital - Houston, Texas
+
+tag_edu_fsp_emory_cardio:
+    id: tag_edu_fsp_emory_cardio
+    tag_type_id: education_fellowship
+    name: Emory University - Cardiovascular Disease and Interventional Cardiovascular Disease - Atlanta, Georgia
+
+tag_edu_fsp_munich:
+    id: tag_edu_fsp_munich
+    tag_type_id: education_fellowship
+    name: University of Munich - Peripheral Vascular Disease - Munich, Germany
+
+tag_cert_internal_medicine:
+    id: tag_cert_internal_medicine
+    tag_type_id: certifications
+    name: Internal Medicine
+
+tag_cert_cardiovascular_disease:
+    id: tag_cert_cardiovascular_disease
+    tag_type_id: certifications
+    name: Cardiovascular Disease
+
+tag_cert_nuclear_medicine:
+    id: tag_cert_nuclear_medicine
+    tag_type_id: certifications
+    name: Nuclear Medicine
+
+tag_cert_interventional_cardiology:
+    id: tag_cert_interventional_cardiology
+    tag_type_id: certifications
+    name: Interventional Cardiology
+
+tag_cert_nuclear_cardiology:
+    id: tag_cert_nuclear_cardiology
+    tag_type_id: certifications
+    name: Nuclear Cardiology
+
+tag_clin_int_non_inv_image:
+    id: tag_clin_int_non_inv_image
+    tag_type_id: clinical_interests
+    name: Non-invasive Imaging
+
+tag_clin_int_stress_echo:
+    id: tag_clin_int_stress_echo
+    tag_type_id: clinical_interests
+    name: Stress Echochardiography
+
+tag_hosp_priv_:
+    id: tag_hosp_priv_
+    tag_type_id: hospital_privileges
+    name: Hospital Privileges
+
+tag_hosp_priv_s_aus_s_david:
+    id: tag_hosp_priv_s_aus_s_david
+    tag_type_id: hospital_privileges
+    name: Columbia St. David's South Austin Hospital
+
+tag_services_carotid_dup:
+    id: tag_services_carotid_dup
+    tag_type_id: services
+    name: Carotid Duplex
+
+tag_services_ren_dup:
+    id: tag_services_ren_dup
+    tag_type_id: services
+    name: Renal Duplex
+
+tag_services_le_dup:
+    id: tag_services_le_dup
+    tag_type_id: services
+    name: LE Duplex
+
+tag_services_low_extr_art:
+    id: tag_services_low_extr_art
+    tag_type_id: services
+    name: Lower Extremity Arterial (arterial brachial index with segmental pressures lower extremity
+
+tag_diag_tests_2d_dopp_echo_tt:
+    id: tag_diag_tests_2d_dopp_echo_tt
+    tag_type_id: diag_tests
+    name: 2D/Doppler Echocardiogram (Transthoracic)
+
+tag_diag_tests_ecg_w_interp:
+    id: tag_diag_tests_ecg_w_interp
+    tag_type_id: diag_tests
+    name: Echocardiagram with Interpretation
+
+tag_diag_tests_ev_mon:
+    id: tag_diag_tests_ev_mon
+    tag_type_id: diag_tests
+    name: Event Monitoring
+
+tag_diag_tests_holter_mon:
+    id: tag_diag_tests_holter_mon
+    tag_type_id: diag_tests
+    name: Holter Monitor
+
+tag_diag_tests_pacer_chk:
+    id: tag_diag_tests_pacer_chk
+    tag_type_id: diag_tests
+    name: Pacer and ICD Check
+
+tag_diag_tests_trans_echo:
+    id: tag_diag_tests_trans_echo
+    tag_type_id: diag_tests
+    name: Transesophageal Echocardiogram
+
+tag_diag_tests_tread_stress_echo:
+    id: tag_diag_tests_tread_stress_echo
+    tag_type_id: diag_tests
+    name: Treadmill Stess Echocardiogram
+
+tag_diag_tests_ct_angio:
+    id: tag_diag_tests_ct_angio
+    tag_type_id: diag_tests
+    name: CT Angiography (specify target)
+
+tag_diag_images_muga:
+    id: tag_diag_images_muga
+    tag_type_id: diag_images
+    name: MUGA
+
+tag_diag_images_tread_stress_nuc:
+    id: tag_diag_images_tread_stress_nuc
+    tag_type_id: diag_images
+    name: Treadmill Stress (Nuclear)
+
+tag_diag_images_dubu_stres_nuc:
+    id: tag_diag_images_dubu_stres_nuc
+    tag_type_id: diag_images
+    name: Dobutamine Stress Nuclear
+
+tag_diag_images_aden_stres_nuc:
+    id: tag_diag_images_aden_stres_nuc
+    tag_type_id: diag_images
+    name: Adenosine Stress Nuclear
+
+tag_study_type_diag_images:
+    id: diag_images
+    tag_type_id: diag_study_type
+    name: Diagnostic Image
+
+tag_study_type_diag_tests:
+    id: diag_tests
+    tag_type_id: diag_study_type
+    name: Diagnostic Test
+
+tag_carrier_blue_cross:
+    id: tag_carrier_blue_cross
+    tag_type_id: insurance_carriers
+    name: Blue Cross-Blue Shield
+    detail_text: Blue Cross-Blue Shield
+    contact_details:
+
+tag_carrier_blue_cross_1:
+    id: tag_carrier_blue_cross_1
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_blue_cross
+    name: Standard
+    detail_text: Standard
+    contact_details:
+
+tag_carrier_blue_cross_2:
+    id: tag_carrier_blue_cross_2
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_blue_cross
+    name: Gold
+    detail_text: Gold
+    contact_details:
+
+tag_carrier_aetna:
+    id: tag_carrier_aetna
+    tag_type_id: insurance_carriers
+    name: Aetna
+    detail_text: Aetna
+    contact_details:
+
+tag_carrier_aetna_1:
+    id: tag_carrier_aetna_1
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_aetna
+    name: Select
+    detail_text: Select
+    contact_details:
+
+tag_carrier_aetna_2:
+    id: tag_carrier_aetna_2
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_aetna
+    name: Gold
+    detail_text: Gold
+    contact_details:
+
+tag_carrier_phcs:
+    id: tag_carrier_phcs
+    tag_type_id: insurance_carriers
+    name: PHCS
+    detail_text: PHCS
+    contact_details:
+
+tag_carrier_phcs_1:
+    id: tag_carrier_phcs_1
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_phcs
+    name: Gold
+    detail_text: Gold
+    contact_details:
+
+tag_carrier_phcs_2:
+    id: tag_carrier_phcs_2
+    tag_type_id: insurance_carrier_plans
+    parent_tag_id: tag_carrier_phcs
+    name: Platinum
+    detail_text: Platinum
+    contact_details:

@@ -1,0 +1,96 @@
+kildare_to_mccoy_type:
+  id: kildare_to_mccoy_type
+  referral_id: kildare_to_mccoy_new_referral
+  tag_type_id: referral_standard_types
+  tag_id: tag_consultation_type
+  diagnosis_text: Some diagnosis might go here
+  additional_instructions: Patient is a smoker, needs tested for basal cell carcinoma (BCC)
+
+welby_to_stretch_type:
+  id: welby_to_stretch_type
+  referral_id: welby_to_stretch_in_progress
+  tag_type_id: referral_standard_types
+  tag_id: tag_consultation_type
+  additional_instructions: Patient appears to have Vertebral subluxation
+
+welby_to_stretch_closed_type:
+  id: welby_to_stretch_closed_type
+  referral_id: welby_to_stretch_closed_referral
+  tag_type_id: referral_standard_types
+  tag_id: tag_consultation_type
+  additional_instructions: Patient complains of severe pain in neck and upper back
+
+#
+# type entries for the quentin/mccoy referrals
+#
+
+mccoy_to_kildare_1_type:
+  id: mccoy_to_kildare_1_type
+  referral_id: mccoy_to_kildare_1
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+mccoy_to_kildare_2_type:
+  id: mccoy_to_kildare_2_type
+  referral_id: mccoy_to_kildare_2
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+mccoy_to_kildare_3_type:
+  id: mccoy_to_kildare_3_type
+  referral_id: mccoy_to_kildare_3
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+kildare_to_mccoy_4_type:
+  id: kildare_to_mccoy_4_type
+  referral_id: kildare_to_mccoy_4
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+kildare_to_mccoy_5_type:
+  id: kildare_to_mccoy_5_type
+  referral_id: kildare_to_mccoy_5
+  tag_type_id: referral_standard_types
+  tag_id: tag_second_opinion_type
+  additional_instructions:
+
+mccoy_to_stretch_6_type:
+  id: mccoy_to_stretch_6_type
+  referral_id: mccoy_to_stretch_6
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+mccoy_to_stretch_7_type:
+  id: mccoy_to_stretch_7_type
+  referral_id: mccoy_to_stretch_7
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+stretch_to_mccoy_8_type:
+  id: stretch_to_mccoy_8_type
+  referral_id: stretch_to_mccoy_8
+  tag_type_id: referral_standard_types
+  tag_id: tag_consultation_type
+  additional_instructions:
+
+stretch_to_mccoy_9_type:
+  id: stretch_to_mccoy_9_type
+  referral_id: stretch_to_mccoy_9
+  tag_type_id: referral_standard_types
+  tag_id: tag_treatment_type
+  additional_instructions:
+
+stretch_to_mccoy_10_type:
+  id: stretch_to_mccoy_10_type
+  referral_id: stretch_to_mccoy_10
+  tag_type_id: referral_standard_types
+  tag_id: tag_transfer_patient_type
+  additional_instructions:
+

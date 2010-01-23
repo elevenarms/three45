@@ -1,0 +1,35 @@
+medications:
+  id: medications
+  name: Medications
+  referral_message_type_id: request
+
+blood_work:
+  id: blood_work
+  name: Blood Work
+  referral_message_type_id: request
+
+urinalysis:
+  id: urinalysis
+  name: Urinalysis
+  referral_message_type_id: request
+
+results_of_last_office_visit:
+  id: results_of_last_office_visit
+  name: Results of Last Office Visit
+  referral_message_type_id: request
+
+medical_history:
+  id: medical_history
+  name: Medical History
+  referral_message_type_id: request
+
+images:
+  id: images
+  name: Images
+  referral_message_type_id: request
+
+other_lab_results:
+  id: other_lab_results
+  name: Other Lab Results
+  referral_message_type_id: request
+

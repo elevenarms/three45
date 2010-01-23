@@ -1,0 +1,4 @@
+page.replace_html 'referral_files', :partial => 'files/index', :locals=>{ :edit_disabled => false }
+page.replace_html 'referral_faxes', :partial => 'faxes/edit_index'
+page.replace_html 'fax_detail_new', :partial=>"faxes/edit_new_fax_detail"
+page.show 'referral_faxes'

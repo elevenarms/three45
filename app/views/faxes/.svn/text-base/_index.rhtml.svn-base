@@ -1,0 +1,17 @@
+<% faxes = @target_referral.referral_faxes %>
+
+<div class="bevel"> <%=link_to_remote 'Edit', :update => 'referral_faxes', :url => create_referral_faxes_url( @target_referral ), :method => :get, :with => "'edit_mode=true'", :html => { :class => 'section_control' } unless edit_disabled -%> <strong>Faxes:</strong></div>
+
+<div class="faxes">
+        <% unless faxes == nil || faxes.count == 0 %>
+                <% faxes.each do |fax| %>
+                        <div id="fax_detail">
+                                <%= render :partial => 'faxes/fax_detail', :locals => { :fax => fax, :edit_disabled =>true, :editing_controls => false } %>
+                        </div>
+                <% end %>
+        <% else %>
+          <%- if !edit_disabled -%>
+                (click 'Edit' to add a fax)
+          <% end %>
+        <% end %>
+</div>

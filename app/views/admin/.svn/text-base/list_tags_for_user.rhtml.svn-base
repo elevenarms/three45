@@ -1,0 +1,13 @@
+<h3> All tags in the system for user <%= @user.full_name -%></h3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+
+<table id="tags">
+  <tr>
+    <th>Tag</th>
+    <th>Tag Type</th>
+  </tr>
+  <%= render :partial => 'tag', :collection => @tags %>
+</table>
+
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+        <meta name="author" content="Blue Jazz Consulting (www.bluejazzconsulting.com)" />
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <%- if @meta_keywords -%>
+        <meta name="keywords" content="<%=@meta_keywords%>"/>
+        <%- end -%>
+        <%- if @meta_description -%>
+        <meta name="description" content="<%=@meta_description%>"/>
+        <%- end -%>
+
+        <%=stylesheet_link_tag "style", :media=>"screen, projection" %>
+        <% if @content_for_page_styles -%>
+        <style>
+        <%= @content_for_page_styles %>
+        </style>
+        <% end -%>
+
+        <%=javascript_include_tag "prototype"%>
+        <%=javascript_include_tag "scriptaculous"%>
+        <%=javascript_include_tag "lowpro"%>
+        <%=javascript_include_tag "application"%>
+        <%=add_js_requires%>
+
+        <% if @content_for_page_scripts -%>
+        <script type="text/javascript">
+         // <![CDATA[
+         <%= @content_for_page_scripts %>
+         // ]]>
+        </script>
+        <% end -%>
+
+        <% if @content_for_header -%>
+        <%= @content_for_header %>
+        <% end -%>
+
+        <title>three45 - <%=@page_title || "" %></title>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div id="top_header">
+    <div id="top_bar">
+        <div class="login-box">
+          <div>
+            <p>
+			<%- if logged_in? -%>
+            <%=link_to "Logged in as #{current_user.login}", :controller=>'account', :action=>'settings' %> | <%=link_to "Logout", :controller=>'sessions', :action=>'destroy'%>
+            <%- else -%>
+            <%=link_to "Login", :controller=>'sessions', :action=>'new'%>
+            <%- end -%>
+          </div>
+          <div>
+            <%- if logged_in? -%>
+            <strong><%=@workgroup.name if @workgroup%> </strong>
+            <%- end -%>
+          </div>
+
+        </div>
+    </div>
+    <div id="feature_tabs">
+      <%=render_tab("dashboard", "dashboard.jpg", "dashboard-down.jpg", dashboard_index_path)%>
+      <%=render_tab_space%>
+
+      <%=render_tab("create_referral", "referral.jpg", "referral-down.jpg", (@workgroup and @workgroup.subscriber? ? start_referral_path : "http://www.three45.com/make_a_referral"))%>
+      <%=render_tab_space%>
+
+      <%=render_tab("request", "request.jpg", "request-down.jpg",(@workgroup and @workgroup.subscriber? ? request_referral_path : "http://www.three45.com/make_a_referral"))%>
+      <%=render_tab_space%>
+
+      
+      <%=render_tab_space("156px")%>
+      <%=render_tab_space("103px")%>
+      
+
+      <%=render_tab("account", "account.jpg", "account.jpg", (@workgroup and @workgroup.subscriber? ? "/customer_admin": "http://www.three45.com/make_a_referral"))%>
+      <%=render_tab_space("4px")%>
+
+      <%=render_tab("help", "help.jpg", "help-down.jpg", "http://help.three45.com")%>
+    </div>
+  </div> <!-- end: top_header -->
+
+  <div class="container2 clearfix">
+
+    <div id="notice" class="notice" <%="style=\"display:none\"" if !flash[:notice]%>><%=flash[:notice]%></div>
+
+    <%- if flash[:warning] -%>
+
+    <div class="warning"><%=flash[:warning]%></div>
+
+    <%- end -%>
+
+    <%- if flash[:error] -%>
+
+    <div class="error"><%=flash[:error]%></div>
+
+    <%- end -%>
+
+    <%=@content_for_layout%>
+
+    <div id="scratch" style="display:none;"></div>
+
+  </div>
+
+  <div class="page_footer"></div>
+
+</div>
+
+</body>
+
+</html>

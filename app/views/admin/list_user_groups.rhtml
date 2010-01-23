@@ -1,0 +1,11 @@
+<h3> "All users in the system and which type they are"
+</h3>
+<p><%= link_to "Back to Admin Home Page", :action => 'index' %></p>
+<p><%= link_to "Add a new user-type association", :action => 'new_user_group' %></p>
+<table id="user_group">
+  <tr>
+    <th>User ID</th>
+    <th>UserGroup (Type) ID</th>
+  </tr>
+  <%= render :partial => 'user_group', :collection => @user_groups %>
+</table>

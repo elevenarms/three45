@@ -1,0 +1,246 @@
+<%- @page_title = "Viewing #{@target_profile.display_name}" -%>
+
+<fieldset>
+
+  <div class="profile_view">
+
+    <div class="thumbnail"><%=display_thumbnail_or_empty(@target_profile)%></div>
+
+    <div class="details">
+
+      <div class="name"><%=@target_profile.display_name%></div>
+      <div class="stats"><%=render_profile_referral_in_count(@target_profile)%> / <%=render_profile_referral_out_count(@target_profile)%></div>
+      <%- if @target_profile.user_profile? -%>
+      <div class="belongs_to"><%=render_belongs_to(@target_profile)%></div>
+      <%- end -%>
+
+      <div class="specialty">Specialty: <%=tag_list(@target_profile.tags_for_type(:specialties))%></div>
+      <div class="sub_specialty">Sub-Specialty: <%=tag_list(@target_profile.tags_for_type(:sub_specialties))%></div>
+
+      <div class="address">
+        <%- if !@target_workgroup.workgroup_addresses.empty? -%>
+          <%- address = @target_workgroup.workgroup_addresses.first.address -%>
+          <div class="street1"><%=address.street1%></div>
+          <div class="street2"><%=address.street2%></div>
+          <div class="city_state_zip"> <%=address.city%>, <%=address.state%> <%=address.zip_plus_4%></div>
+        <%- else -%>
+          (No address on file)
+        <%- end -%>
+        <br/>
+      </div>
+
+      <%- if !@target_profile.npi_identifier.nil? and !@target_profile.npi_identifier.empty? -%>
+      <div class="medical_id">NPI ID: <%=@target_profile.npi_identifier%></div>
+      <%- end -%>
+      <%- if !@target_profile.medical_license_id.nil? and !@target_profile.medical_license_id.empty? -%>
+      <div class="medical_id">Medical License ID: <%=@target_profile.medical_license_id%></div>
+      <%- end -%>
+
+      <div id="profile_<%=@target_profile.id%>" class="network_box">
+
+        <div id="friendship_link_<%=@target_profile.id%>" class="link">
+          <%- if @context == "network" -%>
+          <!--
+              Removed for the Alpha
+
+            <%- friendship = profile_in_friendship_with(@target_profile) -%>
+            <%- if friendship -%>
+              <%=render_block_open_ajax_links(friendship)%>
+            <%- else -%>
+              <%=render_add_to_network_ajax_link(@target_profile)%>
+            <%- end -%>
+          -->
+          <%- elsif @context == "request_referral" and @target_profile.user_profile?-%>
+          <div id="referral_link_<%=@target_profile.id%>" style="padding-bottom:5px;">
+            <%=link_to "Pick Referrer", "/create_referral?id=#{@target_profile.id}&type=request_referral", :method => :post %>
+          </div>
+          <%- else -%>
+            <p><%=link_to "Pick Consultant", "/create_referral?id=#{@target_profile.id}", :method => :post %></p>
+            <br/>
+          <%- end -%>
+        </div>
+
+      </div>
+
+      <div class="description">
+        <%= @target_profile.description%>
+      </div>
+
+    </div>
+
+  </div>
+
+</fieldset>
+
+<div class="section">
+
+  <div class="bevel"><strong>Education</strong></div>
+  <fieldset>
+    <div class="tag_name">Undergraduate:</div>
+    <div class="tag_list"><%=tag_list(@target_profile.tags_for_type(:education_undergrad))%></div>
+
+    <div class="tag_name">Medical School:</div>
+    <div class="tag_list"><%=tag_list(@target_profile.tags_for_type(:education_medical))%></div>
+
+    <div class="tag_name">Residency:</div>
+    <div class="tag_list"><%=tag_list(@target_profile.tags_for_type(:education_residency))%></div>
+
+    <div class="tag_name">Fellowships:</div>
+    <div class="tag_list"><%=tag_list(@target_profile.tags_for_type(:education_fellowships))%></div>
+
+  </fieldset>
+
+</div>
+
+<%- unless @target_profile.tags_for_type(:services).empty? -%>
+<div class="section">
+  <div class="bevel"><strong>Services</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:services))%>
+    </div>
+
+  </fieldset>
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:diag_images).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Diagnostic Images</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:diag_images))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:diag_tests).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Diagnostic Tests</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:diag_tests))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:clinical_interests).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Clinical Interests</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:clinical_interests))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:hospital_privileges).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Hospital Privileges</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:hospital_privileges))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:techniques).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Techniques</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:techniques))%>
+    </div>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:certifications).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Certifications</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:certifications))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:insurance_carriers).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Accepted Insurance</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%- @target_profile.tags_for_type(:insurance_carriers).each do |carrier| -%>
+
+        <%=tag_list_with_parent(carrier, @target_profile.tags_for_type_with_parent(:insurance_carrier_plans, carrier.id))%><br/>
+
+      <%- end -%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- unless @target_profile.tags_for_type(:location).empty? -%>
+<div class="section">
+
+  <div class="bevel"><strong>Location</strong></div>
+  <fieldset>
+
+    <div class="tags">
+      <%=tag_list(@target_profile.tags_for_type(:location))%>
+    </div>
+
+  </fieldset>
+
+</div>
+<%- end -%>
+
+<%- if @physicians -%>
+<div class="section">
+
+  <div class="bevel"><strong>People</strong></div>
+
+  <%- unless @physicians.empty? -%>
+  <fieldset>
+    <%=render :partial=>"/shared/profile_snippet", :collection=>@physicians, :locals=>{:context=>@context} %>
+  </fieldset>
+  <%- end -%>
+
+</div>
+<%- end -%>
+
+
+<div class="clear"><br/></div>
+

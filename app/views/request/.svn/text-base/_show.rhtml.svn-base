@@ -1,0 +1,26 @@
+<% referral_type = @target_referral.referral_type_selections.first unless @target_referral.referral_type_selections == nil %>
+
+<div class="bevel"> <%=link_to_remote 'Edit', :update => 'referral_request', :url => edit_create_referral_request_url( @target_referral ), :method => :get, :html => { :class => 'section_control' } unless edit_disabled -%> <strong>Services Requested:</strong> </div>
+
+<div class="request">
+        <% unless referral_type == nil %>
+        <b><i><small>Referral Diagnosis:&nbsp;&nbsp;</small></i></b>
+        <%= referral_type.diagnosis_text %>
+        &nbsp;&nbsp;
+        <b><i><small>Referral Type:&nbsp;&nbsp;</small></i></b>
+                <%= referral_type.tag.name %>
+        <br>
+                <% unless referral_type.tag.id == 'tag_ancillary_studies_type' %>
+                <b><i><small>Additional Instructions:&nbsp;&nbsp;</small></i></b>
+                <%= referral_type.additional_instructions %>
+                <% else %>
+                        <% unless @target_referral.referral_studies.size == 0 %>
+                                <%= render :partial => 'studies/study_detail', :collection => @target_referral.referral_studies, :locals => { :editing_controls => false } %>
+                        <% else %>
+                <!-- (click 'Edit' to add one or more ancillary study requests) -->
+                        <% end %>
+                <% end %>
+        <% else %>
+            (click 'Edit' to enter service request information)
+    <% end %>
+</div>

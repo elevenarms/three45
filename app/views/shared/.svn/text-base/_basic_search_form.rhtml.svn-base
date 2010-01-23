@@ -1,0 +1,21 @@
+<div class='basic_search'>
+
+  <div class="tabs">
+        <%= link_to_remote "Advanced Search", :update => 'search_form', :url => { :controller => "search", :action => "toggle_advanced_mode" }, :html => { :class => 'submit_as_link' } %>
+
+        <%= hidden_field_tag 'search_mode', 'basic' %>
+        <%= hidden_field_tag 'context', @context || params[:context] %>
+
+        &nbsp;|&nbsp;<strong>Basic Search</strong>
+
+  </div>
+
+<fieldset>
+
+        <h5>Name</h5>
+
+        <%= combo_suggest_tag 'display_name', @search_criteria.display_name, nil, 20 %>&nbsp;&nbsp;<%= submit_tag "Search" %>
+
+</fieldset>
+
+</div>

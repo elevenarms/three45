@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/lib/active_resource/formats
+END
+json_format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/lib/active_resource/formats/json_format.rb
+END
+xml_format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/activeresource/lib/active_resource/formats/xml_format.rb
+END

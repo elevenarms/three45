@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks
+END
+tmp.rake
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/tmp.rake
+END
+log.rake
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/log.rake
+END
+routes.rake
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/routes.rake
+END
+databases.rake
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/databases.rake
+END
+documentation.rake
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/documentation.rake
+END
+statistics.rake
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/statistics.rake
+END
+misc.rake
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/misc.rake
+END
+rails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/rails.rb
+END
+annotations.rake
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/annotations.rake
+END
+framework.rake
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/framework.rake
+END
+testing.rake
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rails/!svn/ver/8430/tags/rel_2-0-2/railties/lib/tasks/testing.rake
+END

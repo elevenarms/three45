@@ -1,0 +1,4 @@
+quentin_jr_filter:
+  id: quentin_jr_filter
+  user_id: quentin_jr
+  filter_type: tag_transfer_patient_type

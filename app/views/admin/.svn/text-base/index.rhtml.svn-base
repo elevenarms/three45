@@ -1,0 +1,92 @@
+<%- @page_title = "Admin Console (internal)" -%>
+<p><h1>three45 Administration Interface</h1></p>
+<p><h3>For three45 staff only.</h3></p>
+<p>Choose an area to work on: <span><a href="#workgroup">workgroups </a></span> , <span> <a href="#User"> users </a></span> , <span>
+<%= link_to "View referrals", :action => 'referrals_index', :show_what=>"show only real", :sort=>"created_at DESC"  %>
+</p>
+<H3><a name='workgroup'>Workgroups </a></H3>
+<HR>
+<p><%= link_to "Create a new workgroup", :action => 'new_workgroup' -%> and an initial user</p>
+<HR>
+<% form_for :workgroup, :url => { :action=>'edit_workgroup', :id => @workgroup } do |f| -%>
+  <p>  <%= f.select(:id, @wkgrps) %>
+       <%= submit_tag 'Edit workgroup' %> </p>
+<% end %>
+<HR>
+<% form_for(:profile_image,
+            :url => { :action => 'create_photo_for_workgroup' },
+            :html => { :multipart => true } ) do |w| %>
+  <p>Provide photo or logo for workgroup . . .
+  <%= w.select(:profile_id, @wkgrps) %> </p>
+  <p>Photo or logo file: <%= w.file_field 'uploaded_data' %>
+    <%= submit_tag 'Upload workgroup image' %>
+  </p>
+<% end %>
+<HR>
+<% form_for :workgroup, :url => { :action=>'new_address_for_workgroup', :id => @workgroup } do |f| -%>
+  <p>  <%= f.select(:id, @wkgrps) %>
+       <%= submit_tag 'Manage workgroup addresses' %> </p>
+<% end %>
+<HR>
+<H3><a name='user'>Users </a></H3>
+<HR>
+<% form_for :workgroup, :url => { :action => 'new_user' } do |w| -%>
+  <p>Create a new user in this workgroup . . .</p>
+  <p><%= w.select(:id, @wkgrps) %>
+  <%= submit_tag 'Add user to workgroup' %></p>
+<% end %>
+<HR>
+<% form_for :user, :url => { :controller=>'users', :action=>'reset_password_on_behalf', :id => @user } do |f| -%>
+  <p>Reset this user's password and force new password next login:</p>
+  <p><%= f.select(:id, @users) %> <%= submit_tag 'Reset password' %></p>
+<% end %>
+<HR>
+<p>Edit a user's info (physician or non-physician</p>  
+<% form_for :user, :url => { :controller=>'users', :action=>'edit', :id => @user } do |f| -%>
+  <p><%= f.select(:id, @users) %> <%= submit_tag 'Edit User' %>
+</p>
+<% end %>
+<HR>
+<% form_for :user, :url => { :action=>'different_user_group', :id => @user } do |f| -%>
+    <p>Change the type of this user (physician or non-physician):</p><p> <%= f.select(:id, @users) %> 
+<%= submit_tag 'Change user type' %></p>
+<% end %>
+<HR>
+<% form_for(:profile_image,
+            :url => { :action => 'create_photo' },
+            :html => { :multipart => true } ) do |f| %>
+  <p>Provide photo for physician users only . . .
+  <%= f.select(:profile_id, @users) %> </p>
+  <p>Photo file:<%= f.file_field 'uploaded_data' %>
+    <%= submit_tag "Upload user's photo" %>
+  </p>
+<% end %>
+<HR>
+<H3><p>Create, Read, Update, and Destroy for values for this tag type:</p></H3>
+<% form_for :tag_type, :url => {:action => 'index_tag_values_fix', :id => @tag_type} do |tt| %>
+    <%= tt.select(:id, @tag_types) %>
+    <%= submit_tag "Show values" %>
+<% end %>
+<HR>
+<H3>Registrations </H3>
+<% form_tag :controller=>'registrations', :action=>'list' do %>
+  <p>Number of registrations to show, most recent first:</p>
+  <p><%= text_field_tag :num_reg, "10" %></p>
+  <p><%= submit_tag "List registrations" %></p>
+<% end %>  
+<% form_tag :controller=>'registrations', :action=>'show' do %>
+  <p>Find referral with this subdomain</p>
+  <p><%= text_field_tag :reg_subdomain %></p>
+  <p><%= submit_tag "Show registration" %></p>
+<% end %> 
+<HR>
+<H3>Find User and/or Workgroup by id</H3>
+<% form_tag :action=>'show_workgroup_user_by_id' do  %>
+  <p>User id:</p>
+  <p><%= text_field_tag :uid %></p>
+  <p>Workgroup id:</p>
+  <p><%= text_field_tag :wid %></p>
+  <p><%= submit_tag "Find workgroup and/or user" %></p>
+<% end %>
+ 
+
